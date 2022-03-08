@@ -5,6 +5,7 @@ module.exports = {
 		'./pages/**/*.{js,ts,jsx,tsx}',
 		'./components/**/*.{js,ts,jsx,tsx}',
 		'./out/index.html',
+		'./out/**/*.{js,html}',
 	],
 	safelist: [
 		'leading-87.5',
