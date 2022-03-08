@@ -4,6 +4,7 @@ module.exports = {
 		process.env.NODE_ENV === 'production'
 			? [
 					'@fullhuman/postcss-purgecss',
+					{ cssnano: {} },
 					{
 						content: [
 							'./pages/**/*.{js,jsx,ts,tsx}',
