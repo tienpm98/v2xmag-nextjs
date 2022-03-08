@@ -12,7 +12,7 @@ export async function getStaticPaths() {
 	const data = await request({ query: `{ allPosts { category {id} } }` })
 	return {
 		paths: data.allPosts.map((post) => `/category/${post.category.id}`),
-		fallback: true,
+		fallback: false,
 	}
 }
 

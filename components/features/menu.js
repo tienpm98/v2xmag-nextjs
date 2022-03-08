@@ -7,33 +7,33 @@ const menuItems = [
 	{
 		id: 0,
 		name: 'Art',
-		path: '/category/14',
+		path: '#',
 	},
-	{ id: 1, name: 'Culture', path: '/category/14' },
+	{ id: 1, name: 'Culture', path: '#' },
 	{
 		id: 2,
 		name: 'Fashion',
-		path: '/category/14',
+		path: '#',
 	},
 	{
 		id: 3,
 		name: 'Life',
-		path: '/category/14',
+		path: '#',
 	},
 	{
 		id: 4,
 		name: 'Music',
-		path: '/category/14',
+		path: '#',
 	},
 	{
 		id: 5,
 		name: 'News',
-		path: '/category/14',
+		path: '#',
 	},
 	{
 		id: 6,
 		name: 'People',
-		path: '/category/14',
+		path: '#',
 	},
 	{
 		id: 7,
