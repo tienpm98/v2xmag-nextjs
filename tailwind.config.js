@@ -30,7 +30,7 @@ module.exports = {
 				'-1': -1,
 			},
 			lineHeight: {
-				87.5: '87.5%',
+				tight: '87.5%',
 			},
 			fontFamily: {
 				normal: 'HelveticaNowDisplay',

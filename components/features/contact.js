@@ -17,12 +17,12 @@ const Contact = () => {
 		>
 			<div className='w-full h-full lg:h-fit flex flex-col items-center lg:flex-row justify-around lg:justify-between font-black text-center md:text-left md:pl-36 md:pr-36'>
 				<ul className='h-fit lg:h-full'>
-					<li className='text-60 md:text-100 uppercase text-black leading-87.5'>
+					<li className='text-60 md:text-100 uppercase text-black leading-tight'>
 						<a href='#'>Contact</a>
 					</li>
 				</ul>
 
-				<div className='text-20 md:text-20 text-black leading-87.5 text-right'>
+				<div className='text-20 md:text-20 text-black leading-tight text-right'>
 					<p className='m-5'>
 						V2X magazine 69
 						<br />

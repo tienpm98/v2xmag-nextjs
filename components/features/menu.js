@@ -73,7 +73,7 @@ export default function Menu() {
 				{menuItems.map((item, index) => (
 					<li
 						key={index}
-						className='text-60 md:text-100 uppercase text-black leading-87.5'
+						className='text-60 md:text-100 uppercase text-black leading-tight'
 						onMouseEnter={() => onMouseEnter(item.id)}
 						onMouseLeave={() => setHover(-1)}
 						style={{
