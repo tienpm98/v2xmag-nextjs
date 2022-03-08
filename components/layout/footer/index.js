@@ -54,7 +54,7 @@ export default function Footer() {
 
 					<Divide />
 
-					<span className='text-sm text-[#666666] py-8'>
+					<span className='text-sm text-zinc-400 py-8'>
 						*If you submitted your e-mail address and placed an order, we may
 						use your e-mail address to inform you regularly about similar
 						products without prior consent. You can object to the use of your

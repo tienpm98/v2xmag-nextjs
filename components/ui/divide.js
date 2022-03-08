@@ -1,5 +1,5 @@
 const Divide = () => {
-	return <div className='border-[#9f9f9f] border-b' />
+	return <div className='border-zinc-600 border-b' />
 }
 
 export default Divide
