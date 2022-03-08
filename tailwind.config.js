@@ -4,18 +4,8 @@ module.exports = {
 	content: [
 		'./pages/**/*.{js,ts,jsx,tsx}',
 		'./components/**/*.{js,ts,jsx,tsx}',
-		'./out/index.html',
-		'./out/**/*.{js,html}',
 	],
-	safelist: [
-		'leading-87.5',
-		'text-20',
-		'text-60',
-		'text-100',
-		'min-w-300',
-		'z-[-1]',
-		'text-black',
-	],
+
 	theme: {
 		extend: {
 			colors: {
@@ -37,7 +27,7 @@ module.exports = {
 				100: '100px',
 			},
 			zIndex: {
-				'-1': '-1',
+				'-1': -1,
 			},
 			lineHeight: {
 				87.5: '87.5%',
