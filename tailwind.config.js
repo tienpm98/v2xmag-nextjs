@@ -4,6 +4,7 @@ module.exports = {
 		'./pages/**/*.{js,ts,jsx,tsx}',
 		'./components/**/*.{js,ts,jsx,tsx}',
 	],
+	purge: ['./components/**/*.{js,jsx}', './out/index.html'],
 	theme: {
 		extend: {
 			colors: {
