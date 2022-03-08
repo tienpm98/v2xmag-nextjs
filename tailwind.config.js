@@ -3,9 +3,8 @@ module.exports = {
 	content: [
 		'./pages/**/*.{js,ts,jsx,tsx}',
 		'./components/**/*.{js,ts,jsx,tsx}',
-		'./out/index.html',
+		'./out/**/*.{js,html,jsx,tsx}',
 	],
-	purge: ['./components/**/*.{js,jsx}', './out/index.html'],
 	theme: {
 		extend: {
 			colors: {
