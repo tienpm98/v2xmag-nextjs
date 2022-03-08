@@ -4,11 +4,13 @@ module.exports = {
 		process.env.NODE_ENV === 'production'
 			? [
 					'@fullhuman/postcss-purgecss',
-					{ cssnano: {} },
 					{
 						content: [
 							'./pages/**/*.{js,jsx,ts,tsx}',
 							'./components/**/*.{js,jsx,ts,tsx}',
+							'./out/index.html',
+							'./out/**/*.html'
+
 						],
 						defaultExtractor: (content) =>
 							content.match(/[\w-/:]+(?<!:)/g) || [],
