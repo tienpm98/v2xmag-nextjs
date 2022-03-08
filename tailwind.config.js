@@ -1,11 +1,20 @@
 module.exports = {
 	mode: 'jit',
+	enabled: process.env.NODE_ENV === 'production',
 	content: [
 		'./pages/**/*.{js,ts,jsx,tsx}',
 		'./components/**/*.{js,ts,jsx,tsx}',
-		'./out/index.html'
+		'./out/index.html',
 	],
-	safelist: ['leading-87.5', 'text-20', 'text-60', 'text-100', 'min-w-300', 'z-[-1]', 'text-black' ],
+	safelist: [
+		'leading-87.5',
+		'text-20',
+		'text-60',
+		'text-100',
+		'min-w-300',
+		'z-[-1]',
+		'text-black',
+	],
 	theme: {
 		extend: {
 			colors: {
@@ -64,5 +73,6 @@ module.exports = {
 	variants: {
 		extend: {},
 	},
+
 	plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')],
 }
