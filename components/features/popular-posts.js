@@ -4,7 +4,7 @@ import Section from '../layout/section'
 
 export default function PopularPost({ title, posts }) {
 	return (
-		<Section title={title}>
+		<Section title={title} showViewAll>
 			<ListPostsLayout
 				isCol={true}
 				children={posts.map((post) => (

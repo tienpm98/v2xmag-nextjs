@@ -1,4 +1,4 @@
-const Section = ({ title, className, children }) => {
+const Section = ({ title, className, showViewAll, children }) => {
 	return (
 		<section className={className}>
 			<div className='flex justify-between py-9'>
@@ -7,9 +7,11 @@ const Section = ({ title, className, children }) => {
 						{title}
 					</h2>
 				)}
-				<span className='font-displayNormal uppercase underline cursor-pointer'>
-					View all
-				</span>
+				{showViewAll && (
+					<span className='font-displayNormal uppercase underline cursor-pointer'>
+						View all
+					</span>
+				)}
 			</div>
 
 			{children}
