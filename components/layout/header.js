@@ -22,8 +22,8 @@ export default function Header() {
 	return (
 		<>
 			<div className='flex h-14 w-full py-10 bg-black '>
-				<div className='container mx-auto flex justify-between  items-center text-white'>
-					<div>
+				<div className='container mx-auto flex justify-between items-center text-white'>
+					<div className='flex gap-2'>
 						<span className='font-black px-2.5 py-2 text-xs cursor-pointer'>
 							SECTIONS
 						</span>
