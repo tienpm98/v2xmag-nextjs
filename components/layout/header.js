@@ -21,29 +21,29 @@ export default function Header() {
 	}
 	return (
 		<>
-			<div className='flex justify-between items-center h-14 w-full'>
-				<MenuIcon onClick={clickMenu} />
-				<div className='flex justify-center absolute mx-auto left-0 right-0'>
-					<a href='/' className='w-28'>
-						<Logo />
-					</a>
-				</div>
-				<div className='flex items-center gap-4 z-10'>
-					<span className='text-xs font-black  cursor-pointer hover:underline'>
-						FOLLOW
-					</span>
-					<MoonIcon />
-					<GolbeIcon />
-					<PersonIcon />
-					<SearchIcon />
-					<button className='rounded-md px-2.5 py-2 bg-black text-white text-xs'>
-						SHOP HBX
-					</button>
+			<div className='flex h-14 w-full py-10 bg-black '>
+				<div className='container mx-auto flex justify-between  items-center text-white'>
+					<div>
+						<span className='font-black px-2.5 py-2 text-xs cursor-pointer'>
+							SECTIONS
+						</span>
+						<span className='font-black px-2.5 py-2 text-xs cursor-pointer'>
+							SHOP
+						</span>
+					</div>
+					<div className='flex justify-center'>
+						<a href='/' className='w-28'>
+							<Logo />
+						</a>
+					</div>
+					<div className='flex items-center gap-8'>
+						<MoonIcon />
+						<GolbeIcon />
+						<PersonIcon />
+						<SearchIcon />
+					</div>
 				</div>
 			</div>
-
-			<Menu />
-			<Contact />
 		</>
 	)
 }

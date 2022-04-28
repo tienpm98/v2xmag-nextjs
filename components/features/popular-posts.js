@@ -2,9 +2,9 @@ import ListPostsLayout from '../layout/list-post-layout'
 import PostPreviewVertical from './post-preview-vertical'
 import Section from '../layout/section'
 
-export default function PopularPost({ title, posts, isSmallFont }) {
+export default function PopularPost({ title, posts }) {
 	return (
-		<Section title={title} isSmallFont={isSmallFont}>
+		<Section title={title}>
 			<ListPostsLayout
 				isCol={true}
 				children={posts.map((post) => (

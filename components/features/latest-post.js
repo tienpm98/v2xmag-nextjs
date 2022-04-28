@@ -8,6 +8,7 @@ export default function LatestPosts({ title, posts }) {
 		<Section title={title}>
 			<ListPostsLayout
 				hasAds={true}
+				hasBorderBottom={true}
 				children={posts.map((post) => (
 					<PostPreviewHorizontal
 						key={post.slug}
@@ -18,14 +19,9 @@ export default function LatestPosts({ title, posts }) {
 						slug={post.slug}
 						category={post.category}
 						excerpt={post.excerpt}
+						showAuthor
 					/>
 				))}
-				adsVertical={
-					<AdsLayout>
-						<span>adsVertical 1</span>
-						<span>adsVertical 2</span>
-					</AdsLayout>
-				}
 				adsHorizontal={<AdsLayout isHorizontal={true}>adsHorizontal</AdsLayout>}
 			/>
 		</Section>

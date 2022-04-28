@@ -8,7 +8,10 @@ export default function Layout({ children }) {
 			<div className='min-h-screen'>
 				<Container>
 					<Header />
+					<div className='px-24'>
+
 					{children}
+					</div>
 				</Container>
 			</div>
 			<Footer />

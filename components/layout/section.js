@@ -1,15 +1,17 @@
-const Section = ({ title, isSmallFont, className, children }) => {
+const Section = ({ title, className, children }) => {
 	return (
 		<section className={className}>
-			{title && (
-				<h2
-					className={`my-9 ${
-						isSmallFont ? 'md:text-4xl' : 'md:text-8xl'
-					} text-4xl font-bold tracking-tighter leading-tight`}
-				>
-					{title}
-				</h2>
-			)}
+			<div className='flex justify-between py-9'>
+				{title && (
+					<h2 className={`text-xl font-bold tracking-tighter leading-tight`}>
+						{title}
+					</h2>
+				)}
+				<span className='font-displayNormal uppercase underline cursor-pointer'>
+					View all
+				</span>
+			</div>
+
 			{children}
 		</section>
 	)

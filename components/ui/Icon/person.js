@@ -7,7 +7,7 @@ export default function PersonIcon({ onClick }) {
 				height='20'
 				fill='currentColor'
 				viewBox='0 0 16 16'
-				className='fill-black '
+				className='fill-white '
 			>
 				<path d='M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z' />
 				<path

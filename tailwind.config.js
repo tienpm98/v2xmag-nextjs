@@ -21,6 +21,8 @@ module.exports = {
 			},
 			fontSize: {
 				20: '20px',
+				40: '40px',
+				45: '45px',
 				60: '60px',
 				100: '100px',
 			},
@@ -29,9 +31,10 @@ module.exports = {
 			},
 			lineHeight: {
 				tight: '87.5%',
+				topTitle: '47px',
 			},
 			fontFamily: {
-				normal: 'HelveticaNowDisplay',
+				displayNormal: 'HelveticaNowDisplay',
 				black: 'HelveticaNowDisplayBlack',
 			},
 			backgroundColor: {

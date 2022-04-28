@@ -1,5 +1,22 @@
 export const footerMenu = [
 	{
+		title: 'SECTIONS',
+		menuItems: [
+			{
+				name: 'Culture',
+			},
+			{
+				name: 'Design',
+			},
+			{
+				name: 'Sneakers',
+			},
+			{
+				name: 'Styles',
+			},
+		],
+	},
+	{
 		title: 'SHOP',
 		menuItems: [
 			{
@@ -19,43 +36,21 @@ export const footerMenu = [
 			},
 		],
 	},
-	{
-		title: 'SECTIONS',
-		menuItems: [
-			{
-				name: 'Selects',
-			},
-			{
-				name: 'Life',
-			},
-			{
-				name: 'Design',
-			},
-			{
-				name: 'Movies',
-			},
-			{
-				name: 'Feature Content',
-			},
-		],
-	},
+
 	{
 		title: 'MORE',
 		menuItems: [
 			{
-				name: 'Print Magazine',
+				name: 'V2X Radio',
 			},
 			{
-				name: 'Podcast',
+				name: 'V2X Studio',
 			},
 			{
-				name: 'Video',
+				name: 'Talent Management',
 			},
 			{
-				name: 'Newsletter',
-			},
-			{
-				name: 'Archive',
+				name: 'Partners',
 			},
 		],
 	},
@@ -89,22 +84,16 @@ export const footerMenu = [
 				name: 'How to Clean Sneakers',
 			},
 			{
-				name: 'Supreme Drop List',
+				name: 'Drop List',
 			},
 			{
-				name: 'Best Italian Fashion Brands',
+				name: 'Best Fashion Brands',
 			},
 			{
-				name: 'Best Japanese Fashion Brands',
+				name: `A-Z of Rappers's Profiles`,
 			},
 			{
-				name: 'Best German Fashion Brands',
-			},
-			{
-				name: `A-Z of Rappers's Real Names`,
-			},
-			{
-				name: 'Under the Radar 20',
+				name: 'Under the Radar',
 			},
 		],
 	},
@@ -119,7 +108,7 @@ export const footerNavigation = [
 	},
 
 	{
-		name: 'Store Terms',
+		name: 'Store Items',
 	},
 	{
 		name: 'Terms',
