@@ -8,7 +8,7 @@ import FooterNavigation from './footer-navigation'
 
 export default function Footer() {
 	return (
-		<footer className='bg-black text-white px-2.5'>
+		<footer className='bg-black text-white px-3.5'>
 			<Container className='container mx-auto'>
 				<div className='py-6 md:py-12 flex flex-col'>
 					<div className='flex justify-between items-center'>
