@@ -42,9 +42,7 @@ export default function TopPosts({ posts }) {
 								excerpt={post.excerpt}
 							/>
 						))}
-						adsHorizontal={
-							<AdsLayout isHorizontal={true}>adsHorizontal</AdsLayout>
-						}
+						adsHorizontal={<AdsLayout isHorizontal={true}></AdsLayout>}
 					/>
 				</Section>
 			</div>

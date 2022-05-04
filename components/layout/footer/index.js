@@ -13,7 +13,7 @@ import Accordion from '@/components/ui/Accordion/accordion'
 
 export default function Footer() {
 	return (
-		<footer className='bg-black text-white px-3.5'>
+		<footer className='bg-black text-white px-15'>
 			<Container className='container mx-auto'>
 				<div className='py-6 md:py-50 flex flex-col'>
 					<div className='flex justify-center md:justify-between items-center pb-6 md:pb-45'>

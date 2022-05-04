@@ -7,7 +7,7 @@ const AdsLayout = ({ children, isHorizontal }) => {
 				isHorizontal ? '' : 'lg:basis-1/6'
 			} text-center py-8 md:py-10`}
 		>
-			{children}
+			<div className='h-250 md:h-350 bg-gray-400'>{children}</div>
 		</div>
 	)
 }

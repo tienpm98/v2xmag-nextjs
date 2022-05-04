@@ -6,6 +6,9 @@ module.exports = {
 
 	theme: {
 		extend: {
+			flex: {
+				50: '1 1 50%',
+			},
 			colors: {
 				'accent-1': '#FAFAFA',
 				'accent-2': '#EAEAEA',
@@ -15,6 +18,7 @@ module.exports = {
 				'gray-menu': '#DADADA',
 			},
 			spacing: {
+				15: '15px',
 				18: '18px',
 				20: '20px',
 				23: '23px',
@@ -24,8 +28,12 @@ module.exports = {
 				30: '30px',
 				45: '45px',
 				50: '50px',
+				250: '250px',
+				350: '350px',
+				'10%': '10%',
 			},
 			gap: {
+				20: '20px',
 				26: '26px',
 				30: '30px',
 				35: '35px',
