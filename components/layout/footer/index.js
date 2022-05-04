@@ -42,7 +42,7 @@ export default function Footer() {
 					<Accordion />
 					<Divide />
 
-					<div className='flex flex-wrap gap-4 justify-end py-16 md:py-10 items-center'>
+					<div className='flex flex-wrap gap-4 justify-end py-16 md:py-45 items-center'>
 						<div className='flex flex-wrap justify-center md:justify-between gap-4 md:gap-12'>
 							<FooterNavigation footerNavigation={footerNavigation} />
 

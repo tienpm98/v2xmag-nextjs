@@ -11,7 +11,7 @@ export default function TopPosts({ posts }) {
         the rest-post should be slice from 1 to 4
     */
 	return (
-		<div className='flex flex-wrap justify-between py-4 md:py-6'>
+		<div className='flex flex-wrap justify-between pt-4 md:pt-60'>
 			<div className='basis-auto'>
 				<PostPreviewHorizontal
 					key={topPost.slug}
