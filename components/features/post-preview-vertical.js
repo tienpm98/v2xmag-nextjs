@@ -15,7 +15,7 @@ export default function PostPreviewVertical({
 					title={title}
 					responsiveImage={coverImage.responsiveImage}
 				/>
-				<h3 className='pb-2.5 pt-5 font-displayNormal font-bold text-xl break-words'>
+				<h3 className='pb-0 md:pb-2.5 pt-5 font-displayNormal font-bold text-xl break-words'>
 					<Link href={`/posts/${slug}`}>
 						<a>{title}</a>
 					</Link>

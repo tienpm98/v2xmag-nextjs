@@ -24,7 +24,7 @@ export default function PostPreviewHorizontal({
 					responsiveImage={coverImage.responsiveImage}
 				/>
 			</div>
-			<div className='flex flex-col text-center md:text-left justify-between basis-6 md:basis-1/2'>
+			<div className='flex flex-col text-center md:text-left justify-between basis-6 md:basis-1/2 pt-15 md:pt-0'>
 				<div className='flex flex-col md:pt-10%'>
 					<h3
 						className={`mb-2 md:mb-2.5 font-displayNormal font-bold text-3xl ${

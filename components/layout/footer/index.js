@@ -15,8 +15,8 @@ export default function Footer() {
 	return (
 		<footer className='bg-black text-white px-15'>
 			<Container className='container mx-auto'>
-				<div className='py-6 md:py-50 flex flex-col'>
-					<div className='flex justify-center md:justify-between items-center pb-6 md:pb-45'>
+				<div className='md:py-50 flex flex-col'>
+					<div className='flex justify-center md:justify-between items-center pt-23 pb-26 md:pb-45'>
 						<a className='hidden md:flex w-fit flex-start' href='/'>
 							<Logo className='text-white' />
 						</a>
@@ -28,7 +28,7 @@ export default function Footer() {
 							<Tiktok />
 						</div>
 					</div>
-					<Divide className='border-white' />
+					<Divide />
 
 					<div className='hidden md:flex flex-wrap justify-between'>
 						{footerMenu.map((menu, index) => (
@@ -40,9 +40,9 @@ export default function Footer() {
 						))}
 					</div>
 					<Accordion />
-					<Divide className='border-white' />
+					<Divide />
 
-					<div className='flex flex-wrap gap-4 justify-end py-6 md:py-10 items-center'>
+					<div className='flex flex-wrap gap-4 justify-end py-16 md:py-10 items-center'>
 						<div className='flex flex-wrap justify-center md:justify-between gap-4 md:gap-12'>
 							<FooterNavigation footerNavigation={footerNavigation} />
 
@@ -50,7 +50,7 @@ export default function Footer() {
 						</div>
 					</div>
 
-					<Divide className='border-white' />
+					<Divide className='hidden md:block' />
 				</div>
 			</Container>
 		</footer>

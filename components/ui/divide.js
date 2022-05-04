@@ -1,5 +1,5 @@
-const Divide = () => {
-	return <div className='border-white border-b' />
+const Divide = ({ className }) => {
+	return <div className={`${className} border-white border-b`} />
 }
 
 export default Divide
