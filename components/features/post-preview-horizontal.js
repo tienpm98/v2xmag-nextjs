@@ -41,9 +41,9 @@ export default function PostPreviewHorizontal({
 					<div className='flex flex-col'>
 						<span className='pb-2 md:pb-2.5 text-xs md:text-15'>{excerpt}</span>
 						{showAuthor && (
-							<p className='text-xs hidden md:flex'>
+							<p className='text-xs text-gray-8 hidden md:flex'>
 								<span>by&nbsp;</span>
-								<span className='text-gray-400'>{author.name}</span>
+								<span>{author.name}</span>
 								&nbsp;/&nbsp;
 								<span className='text-xs hidden md:block'>
 									<TimeAgo />
@@ -53,7 +53,7 @@ export default function PostPreviewHorizontal({
 					</div>
 				</div>
 
-				<h5 className='text-gray-400 uppercase underline font-black text-xs md:pt-1.5 text-xs'>
+				<h5 className='text-gray-8 uppercase underline font-black text-xs md:pt-1.5 text-xs'>
 					<Link href={`/category/${category.id}`}>
 						<a>{category.name}</a>
 					</Link>

@@ -16,6 +16,7 @@ module.exports = {
 				success: '#0070f3',
 				cyan: '#79FFE1',
 				'gray-menu': '#DADADA',
+				'gray-8': '#888888',
 			},
 			spacing: {
 				15: '15px',
