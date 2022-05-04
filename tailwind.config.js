@@ -74,7 +74,7 @@ module.exports = {
 			borderWidth: {
 				DEFAULT: '1px',
 				0: '0',
-				0.5: '0.5px',
+				section: '0.5px',
 			},
 			boxShadow: {
 				small: '0 5px 10px rgba(0, 0, 0, 0.12)',

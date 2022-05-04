@@ -8,8 +8,8 @@ export default function Layout({ children }) {
 			<div className='min-h-screen'>
 				<Container>
 					<Header />
-					<div className='md:hidden flex w-full border-b-0.5 border-gray-menu font-black'>
-						<span className='flex-50 py-18 text-center uppercase border-r-0.5 border-gray-menu'>
+					<div className='md:hidden flex w-full border-b-section border-gray-menu font-black'>
+						<span className='flex-50 py-18 text-center uppercase border-r-section border-gray-menu'>
 							sections
 						</span>
 						<span className='flex-50 py-18 text-center uppercase'>shop</span>
