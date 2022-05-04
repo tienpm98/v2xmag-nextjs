@@ -1,9 +1,11 @@
 const Section = ({ title, className, showViewAll, children }) => {
 	return (
-		<section className={className}>
+		<section className={`${className} px-4 md:px-0`}>
 			<div className='flex justify-between py-9'>
 				{title && (
-					<h2 className={`text-xl font-bold tracking-tighter leading-tight`}>
+					<h2
+						className={`text-xl font-bold tracking-tighter leading-tight uppercase`}
+					>
 						{title}
 					</h2>
 				)}

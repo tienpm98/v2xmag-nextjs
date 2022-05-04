@@ -9,6 +9,7 @@ import LatestPost from '@/components/features/latest-post'
 import PopularPost from '@/components/features/popular-posts'
 import TopPost from '@/components/features/top-posts'
 import Container from '@/components/layout/container'
+import Podcast from '@/components/features/podcast'
 
 export async function getStaticProps({ preview }) {
 	const graphqlRequest = {
@@ -78,7 +79,6 @@ export default function Index({ subscription }) {
 		data: { allPosts, site, blog },
 	} = useQuerySubscription(subscription)
 
-	// const heroPost = allPosts[0]
 	const morePosts = allPosts.slice(0, 3)
 	const metaTags = blog.seo.concat(site.favicon)
 
@@ -86,14 +86,15 @@ export default function Index({ subscription }) {
 		<>
 			<Layout>
 				<Head>{renderMetaTags(metaTags)}</Head>
-				<div className='container mx-auto'>
+				<div className='md:container mx-auto'>
 					{morePosts.length > 0 && <TopPost posts={allPosts} />}
 					{morePosts.length > 0 && (
-						<LatestPost title='LATEST NEWS' posts={morePosts} />
+						<LatestPost title='latest news' posts={morePosts} />
 					)}
 					{morePosts.length > 0 && (
-						<PopularPost title='POPULAR' posts={morePosts} />
+						<PopularPost title='popular' posts={morePosts} />
 					)}
+					<Podcast title='podcast' />
 				</div>
 			</Layout>
 		</>

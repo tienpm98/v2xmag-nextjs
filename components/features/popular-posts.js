@@ -4,9 +4,10 @@ import Section from '../layout/section'
 
 export default function PopularPost({ title, posts }) {
 	return (
-		<Section title={title} showViewAll>
+		<Section title={title}>
 			<ListPostsLayout
 				isCol={true}
+				hasBorderBottom
 				children={posts.map((post) => (
 					<PostPreviewVertical
 						key={post.slug}

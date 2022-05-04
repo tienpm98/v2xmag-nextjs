@@ -5,7 +5,7 @@ const AdsLayout = ({ children, isHorizontal }) => {
 		<div
 			className={`flex flex-col w-full basis-auto ${
 				isHorizontal ? '' : 'lg:basis-1/6'
-			} text-center`}
+			} text-center py-8 md:py-10`}
 		>
 			{children}
 		</div>

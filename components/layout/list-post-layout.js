@@ -1,7 +1,6 @@
 const ListPostsLayout = ({
 	children,
 	adsHorizontal,
-	hasAds,
 	isCol,
 	hasBorderBottom,
 }) => {
@@ -12,7 +11,7 @@ const ListPostsLayout = ({
 			} `}
 		>
 			<div
-				className={`flex gap-4 ${hasAds ? 'max-w-6xl' : ''}  ${
+				className={`flex gap-4 ${
 					isCol ? 'flex-col md:flex-row' : 'flex-col'
 				}  ${isCol ? 'basis-full' : 'basis-5/6'}
 				`}

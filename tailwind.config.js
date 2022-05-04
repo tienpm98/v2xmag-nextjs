@@ -12,14 +12,29 @@ module.exports = {
 				'accent-7': '#333',
 				success: '#0070f3',
 				cyan: '#79FFE1',
+				'gray-menu': '#DADADA',
 			},
 			spacing: {
+				18: '18px',
+				20: '20px',
+				23: '23px',
+				24: '24px',
+				27: '27px',
 				28: '7rem',
+				30: '30px',
+				45: '45px',
+				50: '50px',
+			},
+			gap: {
+				26: '26px',
+				30: '30px',
+				35: '35px',
 			},
 			letterSpacing: {
 				tighter: '-.04em',
 			},
 			fontSize: {
+				15: '15px',
 				20: '20px',
 				40: '40px',
 				45: '45px',
@@ -39,6 +54,11 @@ module.exports = {
 			},
 			backgroundColor: {
 				blur: 'rgba(255, 255, 255, 0.9)',
+			},
+			borderWidth: {
+				DEFAULT: '1px',
+				0: '0',
+				0.5: '0.5px',
 			},
 			boxShadow: {
 				small: '0 5px 10px rgba(0, 0, 0, 0.12)',

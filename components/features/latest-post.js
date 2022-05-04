@@ -5,7 +5,7 @@ import AdsLayout from '../layout/ads-layout'
 
 export default function LatestPosts({ title, posts }) {
 	return (
-		<Section title={title}>
+		<Section title={title} showViewAll>
 			<ListPostsLayout
 				hasAds={true}
 				hasBorderBottom={true}
