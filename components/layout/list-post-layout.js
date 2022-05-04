@@ -11,7 +11,7 @@ const ListPostsLayout = ({
 			} `}
 		>
 			<div
-				className={`flex gap-4 ${
+				className={`flex gap-4 pb-20 md:pb-40 ${
 					isCol ? 'flex-col md:flex-row' : 'flex-col'
 				}  ${isCol ? 'basis-full' : 'basis-5/6'}
 				`}
