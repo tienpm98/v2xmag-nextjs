@@ -1,6 +1,6 @@
 const Section = ({ title, className, showViewAll, children }) => {
 	return (
-		<section className={`${className} px-4 md:px-0`}>
+		<section className={`${className} px-4 md:px-0 last:pb-16`}>
 			<div className='flex justify-between pt-20 pb-6 md:py-9'>
 				{title && (
 					<h2

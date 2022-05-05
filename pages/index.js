@@ -9,7 +9,7 @@ import LatestPost from '@/components/features/latest-post'
 import PopularPost from '@/components/features/popular-posts'
 import TopPost from '@/components/features/top-posts'
 import Container from '@/components/layout/container'
-import Podcast from '@/components/features/podcast'
+import Podcast from '@/components/features/podcast/podcast'
 
 export async function getStaticProps({ preview }) {
 	const graphqlRequest = {

@@ -21,6 +21,8 @@ module.exports = {
 			},
 			spacing: {
 				6: '6px',
+				7: '7px',
+				8: '8px',
 				10: '10px',
 				12: '12px',
 				15: '15px',
@@ -34,15 +36,25 @@ module.exports = {
 				27: '27px',
 				28: '7rem',
 				30: '30px',
+				36: '36px',
 				40: '40px',
 				45: '45px',
 				50: '50px',
+				56: '56px',
 				60: '60px',
+				70: '70px',
+				88: '88px',
+				102: '102px',
+				140: '140px',
 				250: '250px',
 				350: '350px',
+
 				'10-percen': '10%',
+				'40-percent': '40%',
+				'50-percent': '50%',
 			},
 			gap: {
+				10: '10px',
 				20: '20px',
 				26: '26px',
 				30: '30px',
@@ -52,7 +64,9 @@ module.exports = {
 				tighter: '-.04em',
 			},
 			fontSize: {
+				12: '12px',
 				15: '15px',
+				17: '17px',
 				20: '20px',
 				40: '40px',
 				45: '45px',
@@ -82,12 +96,22 @@ module.exports = {
 				small: '0 5px 10px rgba(0, 0, 0, 0.12)',
 				medium: '0 8px 30px rgba(0, 0, 0, 0.12)',
 			},
+			width: {
+				190: '190px',
+				545: '545px',
+			},
 			height: {
 				128: '560px',
+				190: '190px',
+				364: '364px',
+			},
+			minHeight: {
+				318: '318px',
 			},
 			minWidth: {
 				300: '300px',
 			},
+
 			typography: {
 				lg: {
 					css: {
