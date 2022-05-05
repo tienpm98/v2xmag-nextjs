@@ -11,7 +11,7 @@ export default function TopPosts({ posts }) {
         the rest-post should be slice from 1 to 4
     */
 	return (
-		<div className='flex flex-wrap justify-between pt-4 md:pt-60'>
+		<div className='flex flex-wrap justify-between pt-4 lg:pt-60'>
 			<div className='basis-auto'>
 				<PostPreviewHorizontal
 					key={topPost.slug}
@@ -28,8 +28,8 @@ export default function TopPosts({ posts }) {
 				<Section title='Highlights'>
 					<ListPostsLayout
 						hasAds={true}
-						isCol={true}
 						hasBorderBottom={true}
+						isScrollHorizontal
 						children={restPosts.map((post) => (
 							<PostPreviewVertical
 								key={post.slug}
@@ -40,6 +40,7 @@ export default function TopPosts({ posts }) {
 								slug={post.slug}
 								category={post.category}
 								excerpt={post.excerpt}
+								isScrollHorizontal
 							/>
 						))}
 						adsHorizontal={<AdsLayout isHorizontal={true}></AdsLayout>}

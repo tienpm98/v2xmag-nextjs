@@ -2,6 +2,7 @@ const ListPostsLayout = ({
 	children,
 	adsHorizontal,
 	isCol,
+	isScrollHorizontal,
 	hasBorderBottom,
 }) => {
 	return (
@@ -11,9 +12,15 @@ const ListPostsLayout = ({
 			} `}
 		>
 			<div
-				className={`flex gap-4 pb-20 md:pb-40 ${
-					isCol ? 'flex-col md:flex-row' : 'flex-col'
-				}  ${isCol ? 'basis-full' : 'basis-5/6'}
+				className={`
+				flex gap-4 pb-20 lg:pb-40 
+				${
+					isScrollHorizontal
+						? 'flex-row basic-full overflow-x-auto lg:overflow-auto '
+						: 'flex-col'
+				}
+				${isCol && 'flex-col lg:flex-row'}  
+				${isCol && 'basis-full' }
 				`}
 			>
 				{children}

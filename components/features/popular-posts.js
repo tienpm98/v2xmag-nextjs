@@ -6,11 +6,12 @@ export default function PopularPost({ title, posts }) {
 	return (
 		<Section title={title}>
 			<ListPostsLayout
-				isCol={true}
+				isScrollHorizontal
 				hasBorderBottom
 				children={posts.map((post) => (
 					<PostPreviewVertical
 						key={post.slug}
+						isScrollHorizontal
 						title={post.title}
 						coverImage={post.coverImage}
 						date={post.date}
