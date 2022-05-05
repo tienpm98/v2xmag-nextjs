@@ -7,13 +7,13 @@ const TopPostsLayout = ({
 }) => {
 	return (
 		<div
-			className={`flex flex-col flex-wrap pb-8 lg:flex-row ${
+			className={`flex flex-col flex-wrap pb-0 lg:pb-20 lg:flex-row ${
 				hasBorderBottom ? 'border-b' : ''
 			} `}
 		>
 			<div
 				className={`flex gap-4 ${
-					isCol ? 'flex-col md:flex-row' : 'flex-col'
+					isCol ? 'flex-col lg:flex-row' : 'flex-col'
 				}  ${isCol ? 'basis-full' : 'basis-5/6'}
 				`}
 			>

@@ -22,12 +22,12 @@ export default function Header() {
 	return (
 		<>
 			<div className='flex w-full bg-black '>
-				<div className='container mx-auto flex justify-between items-center text-white px-30 md:px-0 py-20 md:pt-27 md:pb-23'>
-					<div className='hidden md:flex gap-26'>
+				<div className='container mx-auto flex justify-between items-center text-white px-30 lg:px-0 py-20 lg:pt-27 lg:pb-23'>
+					<div className='hidden lg:flex gap-26'>
 						<span className='font-black text-xs cursor-pointer'>SECTIONS</span>
 						<span className='font-black text-xs cursor-pointer'>SHOP</span>
 					</div>
-					<div className='md:hidden flex'>
+					<div className='lg:hidden flex'>
 						<PersonIcon />
 					</div>
 					<div className='flex justify-center'>
@@ -35,14 +35,14 @@ export default function Header() {
 							<HeaderLogo />
 						</a>
 					</div>
-					<div className='hidden md:flex items-center gap-30'>
+					<div className='hidden lg:flex items-center gap-30'>
 						<MoonIcon />
 						<GolbeIcon />
 						<PersonIcon />
 						<SearchIcon />
 					</div>
 
-					<div className='md:hidden flex '>
+					<div className='lg:hidden flex '>
 						<SearchIcon />
 					</div>
 				</div>

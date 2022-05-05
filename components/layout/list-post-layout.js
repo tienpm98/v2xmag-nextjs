@@ -7,13 +7,13 @@ const ListPostsLayout = ({
 }) => {
 	return (
 		<div
-			className={`flex flex-col flex-wrap pb-8 lg:flex-row justify-between ${
+			className={`flex flex-col flex-wrap pb-20 lg:flex-row justify-between ${
 				hasBorderBottom ? 'border-b border-black' : ''
 			} `}
 		>
 			<div
 				className={`
-				flex gap-4 pb-20 lg:pb-40 
+				flex gap-4 pb-0 lg:pb-20 
 				${
 					isScrollHorizontal
 						? 'flex-row basic-full overflow-x-auto lg:overflow-auto '

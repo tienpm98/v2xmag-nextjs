@@ -4,7 +4,7 @@ const Accordion = () => {
 	const [activeIndex, setActiveIndex] = useState(0)
 
 	return (
-		<div className='flex md:hidden flex-col justify-center items-center'>
+		<div className='flex lg:hidden flex-col justify-center items-center'>
 			<AccordionLayout
 				title='Sections'
 				index={1}

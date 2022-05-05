@@ -15,9 +15,9 @@ export default function Footer() {
 	return (
 		<footer className='bg-black text-white px-15'>
 			<Container className='container mx-auto'>
-				<div className='md:py-50 flex flex-col'>
-					<div className='flex justify-center md:justify-between items-center pt-23 pb-26 md:pb-45'>
-						<a className='hidden md:flex w-fit flex-start' href='/'>
+				<div className='lg:py-50 flex flex-col'>
+					<div className='flex justify-center lg:justify-between items-center pt-23 pb-26 lg:pb-45'>
+						<a className='hidden lg:flex w-fit flex-start' href='/'>
 							<Logo className='text-white' />
 						</a>
 						<div className='flex gap-35'>
@@ -30,7 +30,7 @@ export default function Footer() {
 					</div>
 					<Divide />
 
-					<div className='hidden md:flex flex-wrap justify-between'>
+					<div className='hidden lg:flex flex-wrap justify-between'>
 						{footerMenu.map((menu, index) => (
 							<FooterMenu
 								key={index}
@@ -42,15 +42,15 @@ export default function Footer() {
 					<Accordion />
 					<Divide />
 
-					<div className='flex flex-wrap gap-4 justify-end py-16 md:py-45 items-center'>
-						<div className='flex flex-wrap justify-center md:justify-between gap-4 md:gap-12'>
+					<div className='flex flex-wrap gap-4 justify-end py-16 lg:py-45 items-center'>
+						<div className='flex flex-wrap justify-center lg:justify-between gap-4 lg:gap-12'>
 							<FooterNavigation footerNavigation={footerNavigation} />
 
 							<p className='text-sm'>© V2X Media 2022</p>
 						</div>
 					</div>
 
-					<Divide className='hidden md:block' />
+					<Divide className='hidden lg:block' />
 				</div>
 			</Container>
 		</footer>

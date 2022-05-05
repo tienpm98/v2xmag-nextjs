@@ -8,13 +8,13 @@ export default function Layout({ children }) {
 			<div className='min-h-screen'>
 				<Container>
 					<Header />
-					<div className='md:hidden flex w-full border-b-section border-gray-menu font-black'>
+					<div className='lg:hidden flex w-full border-b-section border-gray-menu font-black'>
 						<span className='flex-50 py-18 text-center uppercase border-r-section border-gray-menu'>
 							sections
 						</span>
 						<span className='flex-50 py-18 text-center uppercase'>shop</span>
 					</div>
-					<div className='md:px-24'>{children}</div>
+					<div className='lg:px-24'>{children}</div>
 				</Container>
 			</div>
 			<Footer />
