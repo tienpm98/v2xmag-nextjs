@@ -8,6 +8,7 @@ module.exports = {
 		extend: {
 			flex: {
 				50: '1 1 50%',
+				'scroll-horizontal-80': '0 0 80%',
 			},
 			colors: {
 				'accent-1': '#FAFAFA',

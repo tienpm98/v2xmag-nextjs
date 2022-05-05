@@ -6,10 +6,14 @@ export default function PostPreviewVertical({
 	coverImage,
 	category,
 	slug,
-	isScrollHorizontal
+	isScrollHorizontal,
 }) {
 	return (
-		<div className={`flex flex-col gap-1 justify-between py-2.5 ${isScrollHorizontal && 'flex-[0_0_80%] lg:flex-auto'} `}>
+		<div
+			className={`flex flex-col gap-1 justify-between py-2.5 ${
+				isScrollHorizontal && 'flex-scroll-horizontal-80 lg:flex-auto'
+			} `}
+		>
 			<div className='pb-2 lg:pb-5'>
 				<CoverImage
 					slug={slug}
