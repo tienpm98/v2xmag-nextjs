@@ -94,8 +94,8 @@ export default function Index({ subscription }) {
 					{morePosts.length > 0 && (
 						<PopularPost title='popular' posts={morePosts} />
 					)}
-					<Podcast title='podcast' />
 				</div>
+				<Podcast title='podcast' />
 			</Layout>
 		</>
 	)

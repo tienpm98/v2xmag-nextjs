@@ -24,8 +24,8 @@ export default function Header() {
 			<div className='flex w-full bg-black '>
 				<div className='container mx-auto flex justify-between items-center text-white px-30 lg:px-0 py-20 lg:pt-27 lg:pb-23'>
 					<div className='hidden lg:flex gap-26'>
-						<span className='font-black text-xs cursor-pointer'>SECTIONS</span>
-						<span className='font-black text-xs cursor-pointer'>SHOP</span>
+						<span className='font-black text-xs lg:text-[15px] cursor-pointer hover:underline'>SECTIONS</span>
+						<span className='font-black text-xs lg:text-[15px] cursor-pointer hover:underline'>SHOP</span>
 					</div>
 					<div className='lg:hidden flex'>
 						<PersonIcon />

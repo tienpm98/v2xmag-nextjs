@@ -14,7 +14,7 @@ export default function Layout({ children }) {
 						</span>
 						<span className='flex-50 py-18 text-center uppercase'>shop</span>
 					</div>
-					<div className='lg:px-24'>{children}</div>
+					{children}
 				</Container>
 			</div>
 			<Footer />
