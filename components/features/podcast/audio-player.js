@@ -65,7 +65,7 @@ const AudioPlayer = () => {
 			></audio>
 
 			<button onClick={togglePlayPause}>
-				{!isPlaying ? <Pause/> : <Play id='mask0_816_1172' />}
+				{!isPlaying ? <Play id='mask0_816_1172'/> : <Pause  />}
 			</button>
 
 			<div className='hidden md:block'>

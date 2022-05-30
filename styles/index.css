@@ -24,8 +24,14 @@
 }
 
 .slide {
-	height:100% ;
+	height: calc(100% - 80px);
 	transition: 0.5s;
+}
+
+@media only screen and (max-width: 992px) {
+	.slide {
+		height: calc(100% - 131px);
+	}
 }
 
 .progressBar {

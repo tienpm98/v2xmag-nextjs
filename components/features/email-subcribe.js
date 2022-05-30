@@ -1,22 +1,23 @@
 import React from 'react'
+import RightArrow from '../ui/Icon/right-arrow'
 
 const EmailSubcribe = () => {
 	return (
-		<div className='p-5 md:p-16 flex flex-col mb-4 bg-zinc-400 items-center md:items-start'>
-			<h3 className='text-md md:text-2xl my-4 text-white'>
-				Subcribe to V2X newsletter
+		<div className='flex flex-col items-center md:items-start'>
+			<h3 className='text-md lg:text-15 py-1 text-white capitalize font-displayNormal'>
+				Sign up & Don't miss our lastest news
 			</h3>
-			<form>
+			<form className='relative'>
 				<input
-					placeholder='Your Email'
+					placeholder='Enter Your Email'
 					className='
 					placeholder:text-white
-					appearance-none py-3 block w-full md:max-w-md md:min-w-300 px-3 py-2 bg-transparent border border-white text-white text-sm md:text-base
+					appearance-none py-3 block w-full lg:max-w-md min-w-205 lg:min-w-300 py-2 bg-transparent border-0 border-b border-b-white text-white text-sm md:text-base
       				focus:outline-none 
       				disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
-      				invalid:border-pink-500 invalid:text-pink-600
       				focus:invalid:border-pink-500 focus:invalid:ring-pink-500'
 				/>
+				<RightArrow className='absolute right-0 top-5 cursor-pointer' />
 			</form>
 		</div>
 	)
