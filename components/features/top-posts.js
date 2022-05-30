@@ -3,7 +3,7 @@ import ListPostsLayout from '../layout/list-post-layout'
 import AdsLayout from '../layout/ads-layout'
 import PostPreviewVertical from './post-preview-vertical'
 import PostPreviewHorizontal from './post-preview-horizontal'
-export default function TopPosts({ posts }) {
+export default function TopPosts({ posts, isVerticalPost, hideAds }) {
 	const topPost = posts[0]
 	const restPosts = posts.slice(1, 4)
 	/*
@@ -23,6 +23,7 @@ export default function TopPosts({ posts }) {
 					category={topPost.category}
 					excerpt={topPost.excerpt}
 					uppercaseTitle={true}
+					isVerticalPost={isVerticalPost}
 				/>
 
 				<Section title='Highlights'>
@@ -43,7 +44,9 @@ export default function TopPosts({ posts }) {
 								isScrollHorizontal
 							/>
 						))}
-						adsHorizontal={<AdsLayout isHorizontal={true}></AdsLayout>}
+						adsHorizontal={
+							hideAds ? null : <AdsLayout isHorizontal={true}></AdsLayout>
+						}
 					/>
 				</Section>
 			</div>

@@ -14,9 +14,14 @@ export default function PostPreviewHorizontal({
 	uppercaseTitle,
 	topTitle,
 	showAuthor,
+	isVerticalPost,
 }) {
 	return (
-		<div className='flex flex-col gap-1 lg:flex-row lg:gap-20 py-2.5'>
+		<div
+			className={`flex flex-col gap-1 lg:flex-row lg:gap-20 py-2.5 ${
+				isVerticalPost ? 'lg:flex-col' : 'lg:flex-row'
+			}`}
+		>
 			<div className='basis-7/12'>
 				<CoverImage
 					slug={slug}
@@ -24,8 +29,16 @@ export default function PostPreviewHorizontal({
 					responsiveImage={coverImage.responsiveImage}
 				/>
 			</div>
-			<div className='flex flex-col text-center lg:text-left justify-between basis-6 lg:basis-1/2 pt-15 lg:pt-0'>
-				<div className='flex flex-col lg:pt-10-percen'>
+			<div
+				className={`flex flex-col text-center  justify-between basis-6 lg:basis-1/2 pt-15 lg:pt-0 ${
+					isVerticalPost ? 'lg:text-center' : 'lg:text-left'
+				}`}
+			>
+				<div
+					className={`flex flex-col ${
+						isVerticalPost ? 'lg:pt-20' : 'lg:pt-10-percen'
+					}`}
+				>
 					<h3
 						className={`mb-2 lg:mb-2.5 font-displayNormal font-bold text-3xl ${
 							topTitle ? 'lg:text-45' : 'lg:text-40'

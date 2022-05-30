@@ -8,6 +8,10 @@ import LatestPost from '@/components/features/latest-post'
 import PopularPost from '@/components/features/popular-posts'
 import TopPost from '@/components/features/top-posts'
 import Podcast from '@/components/features/podcast/podcast'
+import PostPreviewVertical from '@/components/features/post-preview-vertical'
+import ListPostsLayout from '@/components/layout/list-post-layout'
+import AdsLayout from '@/components/layout/ads-layout'
+import ListLatestPosts from '@/components/features/list-latest-post'
 
 export async function getStaticProps({ preview }) {
 	const graphqlRequest = {
@@ -72,28 +76,30 @@ export async function getStaticProps({ preview }) {
 	}
 }
 
-export default function Index({ subscription }) {
+export default function Section({ subscription }) {
 	const {
 		data: { allPosts, site, blog },
 	} = useQuerySubscription(subscription)
 
 	const morePosts = allPosts.slice(0, 3)
-	const metaTags = blog.seo.concat(site.favicon)
 
+	const repeat = (a, n) => Array(n).fill(a).flat(1)
+
+	const _morePosts = repeat(morePosts, 3)
+	const metaTags = blog.seo.concat(site.favicon)
+	console.log(_morePosts)
 	return (
 		<>
 			<Layout>
 				<Head>{renderMetaTags(metaTags)}</Head>
 				<div className='md:container mx-auto'>
-					{morePosts.length > 0 && <TopPost posts={allPosts} />}
 					{morePosts.length > 0 && (
-						<LatestPost title='latest news' posts={morePosts} />
+						<TopPost posts={allPosts} isVerticalPost hideAds />
 					)}
 					{morePosts.length > 0 && (
-						<PopularPost title='popular' posts={morePosts} />
+						<ListLatestPosts title='latest news' posts={_morePosts} />
 					)}
 				</div>
-				<Podcast title='podcast' />
 			</Layout>
 		</>
 	)
