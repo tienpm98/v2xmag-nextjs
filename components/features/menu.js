@@ -39,7 +39,7 @@ const subMenuItems = [
 	{
 		id: 3,
 		name: 'more',
-		path: '/section',
+		path: '/sections',
 	},
 ]
 

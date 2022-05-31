@@ -4,13 +4,7 @@ import { renderMetaTags, useQuerySubscription } from 'react-datocms'
 import { metaTagsFragment, responsiveImageFragment } from '@/lib/fragments'
 
 import Layout from '@/components/layout/layout'
-import LatestPost from '@/components/features/latest-post'
-import PopularPost from '@/components/features/popular-posts'
 import TopPost from '@/components/features/top-posts'
-import Podcast from '@/components/features/podcast/podcast'
-import PostPreviewVertical from '@/components/features/post-preview-vertical'
-import ListPostsLayout from '@/components/layout/list-post-layout'
-import AdsLayout from '@/components/layout/ads-layout'
 import ListLatestPosts from '@/components/features/list-latest-post'
 import Pagination from '@/components/features/pagination'
 
@@ -77,7 +71,7 @@ export async function getStaticProps({ preview }) {
 	}
 }
 
-export default function Section({ subscription }) {
+export default function Sections({ subscription }) {
 	const {
 		data: { allPosts, site, blog },
 	} = useQuerySubscription(subscription)

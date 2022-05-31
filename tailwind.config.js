@@ -21,6 +21,7 @@ module.exports = {
 				'gray-8': '#888888',
 			},
 			spacing: {
+				3: '3px',
 				5: '5px',
 				6: '6px',
 				7: '7px',
@@ -84,6 +85,7 @@ module.exports = {
 				5: '5px',
 			},
 			fontSize: {
+				8: '8px',
 				12: '12px',
 				15: '15px',
 				17: '17px',
