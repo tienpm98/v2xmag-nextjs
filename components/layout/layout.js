@@ -20,14 +20,14 @@ export default function Layout({ children }) {
 			<div className='min-h-screen'>
 				<Container>
 					<Header />
-					<div className='flex lg:hidden w-full border-b-section border-gray-menu font-black mt-70 fixed z-50 bg-white'>
+					<div className='flex lg:hidden w-full border-b-section border-gray-menu font-black mt-70 fixed z-50 bg-white '>
 						<span
-							className='flex-50 py-18 text-center uppercase border-r-section border-gray-menu hover:underline'
+							className='flex-50 py-18 text-center uppercase border-r-section border-gray-menu hover:underline leading-base'
 							onClick={clickMenu}
 						>
 							sections
 						</span>
-						<span className='flex-50 py-18 text-center uppercase hover:underline'>
+						<span className='flex-50 py-18 text-center uppercase hover:underline leading-base'>
 							shop
 						</span>
 					</div>

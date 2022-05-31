@@ -94,6 +94,7 @@ module.exports = {
 				'-1': -1,
 			},
 			lineHeight: {
+				base: '24px',
 				tight: '87.5%',
 				topTitle: '47px',
 				extra: '200%',
