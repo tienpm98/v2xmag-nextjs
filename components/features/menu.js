@@ -39,7 +39,7 @@ const subMenuItems = [
 	{
 		id: 3,
 		name: 'more',
-		path: '#',
+		path: '/section',
 	},
 ]
 
@@ -85,10 +85,6 @@ export default function Menu() {
 									className='text-25 lg:text-3xl uppercase text-white leading-tight font-black hover:underline leading-extra'
 									onMouseEnter={() => onMouseEnter(item.id)}
 									onMouseLeave={() => setHover(-1)}
-									// style={{
-									// 	color:
-									// 		hover === index ? 'black' : hover === -1 ? 'black' : 'gray',
-									// }}
 								>
 									<a
 										className='inline-block w-full'

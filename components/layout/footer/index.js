@@ -15,8 +15,8 @@ export default function Footer() {
 	return (
 		<footer className='bg-black text-white px-15'>
 			<Container className='container mx-auto'>
-				<div className='lg:py-50 flex flex-col'>
-					<div className='flex justify-center lg:justify-between items-center pt-23 pb-26 lg:pb-45'>
+				<div className='py-25 lg:py-50 flex flex-col'>
+					<div className='flex justify-center lg:justify-between items-center pb-26 lg:pb-45'>
 						<a className='hidden lg:flex w-fit flex-start' href='/'>
 							<Logo className='text-white' />
 						</a>
@@ -30,7 +30,7 @@ export default function Footer() {
 					</div>
 					<Divide />
 
-					<div className='hidden lg:flex flex-wrap justify-between'>
+					<div className='hidden lg:flex flex-wrap justify-between py-45'>
 						{footerMenu.map((menu, index) => (
 							<FooterMenu
 								key={index}

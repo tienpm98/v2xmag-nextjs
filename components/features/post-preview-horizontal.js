@@ -36,11 +36,11 @@ export default function PostPreviewHorizontal({
 			>
 				<div
 					className={`flex flex-col ${
-						isVerticalPost ? 'lg:pt-20' : 'lg:pt-10-percen'
+						isVerticalPost ? 'lg:pt-5' : 'lg:pt-10-percen'
 					}`}
 				>
 					<h3
-						className={`mb-2 lg:mb-2.5 font-displayNormal font-bold text-3xl ${
+						className={`mb-2 lg:mb-25 font-displayNormal font-bold text-3xl ${
 							topTitle ? 'lg:text-45' : 'lg:text-40'
 						} ${
 							uppercaseTitle ? 'uppercase' : 'capitalize'

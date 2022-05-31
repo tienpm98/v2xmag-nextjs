@@ -12,6 +12,7 @@ import PostPreviewVertical from '@/components/features/post-preview-vertical'
 import ListPostsLayout from '@/components/layout/list-post-layout'
 import AdsLayout from '@/components/layout/ads-layout'
 import ListLatestPosts from '@/components/features/list-latest-post'
+import Pagination from '@/components/features/pagination'
 
 export async function getStaticProps({ preview }) {
 	const graphqlRequest = {
@@ -85,20 +86,29 @@ export default function Section({ subscription }) {
 
 	const repeat = (a, n) => Array(n).fill(a).flat(1)
 
-	const _morePosts = repeat(morePosts, 3)
+	const latestNews = repeat(morePosts, 4)
+	const latestNewsBeforeAds = latestNews.slice(3)
+	const latestNewsAfterAds = latestNews.slice(-3)
+
 	const metaTags = blog.seo.concat(site.favicon)
-	console.log(_morePosts)
+
 	return (
 		<>
 			<Layout>
 				<Head>{renderMetaTags(metaTags)}</Head>
-				<div className='md:container mx-auto'>
+				<div className='md:container mx-auto py-65'>
 					{morePosts.length > 0 && (
 						<TopPost posts={allPosts} isVerticalPost hideAds />
 					)}
 					{morePosts.length > 0 && (
-						<ListLatestPosts title='latest news' posts={_morePosts} />
+						<ListLatestPosts
+							title='latest news'
+							posts={latestNewsBeforeAds}
+							postsAfterAds={latestNewsAfterAds}
+						/>
 					)}
+
+					<Pagination page={1} />
 				</div>
 			</Layout>
 		</>

@@ -20,11 +20,13 @@ export default function PostPreviewVertical({
 			 `}
 		>
 			<div className='pb-2 lg:pb-5'>
-				<CoverImage
-					slug={slug}
-					title={title}
-					responsiveImage={coverImage.responsiveImage}
-				/>
+				<div className='lg:pb-20'>
+					<CoverImage
+						slug={slug}
+						title={title}
+						responsiveImage={coverImage.responsiveImage}
+					/>
+				</div>
 				<h3 className='pb-0 lg:pb-2.5 pt-5 font-displayNormal font-bold text-xl break-words'>
 					<Link href={`/posts/${slug}`}>
 						<a>{title}</a>
