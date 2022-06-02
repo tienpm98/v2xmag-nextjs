@@ -19,6 +19,8 @@ module.exports = {
 				cyan: '#79FFE1',
 				'gray-menu': '#DADADA',
 				'gray-8': '#888888',
+				black: '#000000',
+				'red-c1': '#C10000',
 			},
 			spacing: {
 				3: '3px',
@@ -65,6 +67,7 @@ module.exports = {
 				250: '250px',
 				300: '300px',
 				350: '350px',
+				400: '400px',
 				500: '500px',
 				'10-percen': '10%',
 				'40-percent': '40%',
@@ -100,9 +103,12 @@ module.exports = {
 				'-1': -1,
 			},
 			lineHeight: {
+				close: '12px',
 				base: '24px',
+				normal: 1,
 				tight: '87.5%',
 				topTitle: '47px',
+				loose: '150%',
 				extra: '200%',
 			},
 			fontFamily: {
@@ -139,6 +145,12 @@ module.exports = {
 				200: '200px',
 				205: '205px',
 				300: '300px',
+			},
+			maxWidth: {
+				400: '400px',
+			},
+			maxHeight: {
+				140: '140px',
 			},
 
 			opacity: {

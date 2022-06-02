@@ -93,7 +93,7 @@ export default function Index({ subscription }) {
 						<PopularPost title='popular' posts={morePosts} />
 					)}
 				</div>
-				<Podcast title='podcast' />
+				<Podcast title='podcast' posts={morePosts} />
 			</Layout>
 		</>
 	)

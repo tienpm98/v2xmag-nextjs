@@ -1,6 +1,7 @@
 import CoverImage from '../ui/cover-image'
 import Link from 'next/link'
 import TimeAgo from '../ui/timeAgo'
+import Chip from '../ui/chip'
 
 export default function PostPreviewVertical({
 	title,
@@ -11,6 +12,7 @@ export default function PostPreviewVertical({
 	isScrollHorizontal,
 	isSectionPost,
 	showAuthor,
+	tags,
 }) {
 	return (
 		<div
@@ -53,6 +55,14 @@ export default function PostPreviewVertical({
 						</p>
 					)}
 				</div>
+
+				{tags && (
+					<div className='flex gap-5 items-center'>
+						{tags.map((tag, index) => (
+							<Chip key={index} title={tag.title} />
+						))}
+					</div>
+				)}
 			</div>
 		</div>
 	)
