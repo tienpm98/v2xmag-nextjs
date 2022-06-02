@@ -13,7 +13,7 @@ const Menu = ({ clickOutside, isShow, children }) => {
 			top-131
 			lg:top-80
 			left-0
-			
+			w-full
 			${isShow ? 'w-screen' : 'w-0'} 
 			${isShow ? 'opacity-80' : 'opacity-0'}
 			${isShow ? 'z-50' : '-z-10'}

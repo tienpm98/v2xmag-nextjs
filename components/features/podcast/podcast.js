@@ -58,7 +58,7 @@ export default function Podcast({ title, posts }) {
 							</div>
 						</div>
 
-						<div className='flex flex-col items-center'>
+						<div className='flex flex-col items-center justify-center'>
 							{posts.coverImage ? (
 								<div className='lg:w-300 lg:h-300'>
 									<CoverImage

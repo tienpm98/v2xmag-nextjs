@@ -1,8 +1,13 @@
+import Chip from '@/components/ui/chip'
+import Divide from '@/components/ui/divide'
 import { StructuredText, Image } from 'react-datocms'
 
 export default function PostBody({ content }) {
+	const tagItems = ['picante', 'class of 2022', 'danny lomas', 'spring/summer']
+
 	return (
-		<div className='max-w-2xl mx-auto'>
+		<div className='md:container mx-auto flex justify-center px-20'>
+			<div className=''></div>
 			<div className='prose prose-lg prose-blue'>
 				<StructuredText
 					data={content}
@@ -19,6 +24,12 @@ export default function PostBody({ content }) {
 						)
 					}}
 				/>
+
+				<div className='flex gap-10'>
+					{tagItems.map((tag, index) => (
+						<Chip key={index} title={tag} />
+					))}
+				</div>
 			</div>
 		</div>
 	)

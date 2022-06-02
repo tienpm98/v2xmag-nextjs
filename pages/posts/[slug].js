@@ -3,10 +3,10 @@ import { renderMetaTags, useQuerySubscription } from 'react-datocms'
 
 import Container from '@/components/layout/container'
 import Layout from '@/components/layout/layout'
-import MoreStories from '@/components/features/latest-post'
+
 import PostBody from '@/components/features/posts/post-body'
 import PostHeader from '@/components/features/posts/post-header'
-import EmailSubcribe from '@/components/features/email-subcribe'
+import ReadNext from '@/components/features/read-next'
 
 import { request } from '@/lib/datocms'
 import { metaTagsFragment, responsiveImageFragment } from '@/lib/fragments'
@@ -35,6 +35,7 @@ export async function getStaticProps({ params, preview = false }) {
           }
           title
           slug
+          excerpt
           content {
             value
             blocks {
@@ -126,24 +127,26 @@ export default function Post({ subscription, preview }) {
 	} = useQuerySubscription(subscription)
 
 	const metaTags = post.seo.concat(site.favicon)
-
+	const repeat = (a, n) => Array(n).fill(a).flat(1)
+	const nextPosts = repeat(morePosts, 3)
 	return (
 		<Layout preview={preview}>
 			<Head>{renderMetaTags(metaTags)}</Head>
-			<Container>
+			<Container className='md:container mx-auto'>
 				<article>
 					<PostHeader
 						title={post.title}
 						coverImage={post.coverImage}
 						date={post.date}
 						author={post.author}
+						excerpt={post.excerpt}
 					/>
 					<PostBody content={post.content} />
 				</article>
-				<div className='py-5'>
-					<EmailSubcribe />
-				</div>
-				{morePosts.length > 0 && <MoreStories posts={morePosts} />}
+				<div className='border-b border-black lg:pt-60'></div>
+				{morePosts.length > 0 && (
+					<ReadNext title='what to read next' posts={nextPosts} hasAds />
+				)}
 			</Container>
 		</Layout>
 	)

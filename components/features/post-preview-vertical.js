@@ -16,7 +16,7 @@ export default function PostPreviewVertical({
 }) {
 	return (
 		<div
-			className={`flex flex-col gap-1 justify-between py-2.5
+			className={`flex flex-col gap-1 justify-between
 			 ${isScrollHorizontal && 'flex-scroll-horizontal-80 lg:flex-auto'}
 			 ${isSectionPost ? 'lg:flex-3' : ''}
 			 `}
@@ -37,7 +37,7 @@ export default function PostPreviewVertical({
 			</div>
 
 			<div className='flex justify-between'>
-				<h5 className='text-gray-400 uppercase underline font-black text-xs pb-2'>
+				<h5 className='text-gray-400 uppercase underline font-black text-xs'>
 					<Link href={`/category/${category.id}`}>
 						<a>{category.name}</a>
 					</Link>
