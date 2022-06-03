@@ -22,6 +22,7 @@ module.exports = {
 				black: '#000000',
 				'red-c1': '#C10000',
 				'black-1': '#1F1F1D',
+				'black-2': '#2a2a2a',
 			},
 			spacing: {
 				3: '3px',
@@ -66,6 +67,7 @@ module.exports = {
 				200: '200px',
 				205: '205px',
 				250: '250px',
+				255: '255px',
 				300: '300px',
 				350: '350px',
 				400: '400px',
@@ -86,6 +88,7 @@ module.exports = {
 				tighter: '-.04em',
 			},
 			borderRadius: {
+				3: '3px',
 				5: '5px',
 			},
 			fontSize: {
@@ -93,6 +96,7 @@ module.exports = {
 				12: '12px',
 				15: '15px',
 				17: '17px',
+				18: '18px',
 				20: '20px',
 				25: '25px',
 				40: '40px',
@@ -125,7 +129,7 @@ module.exports = {
 				section: '0.5px',
 			},
 			boxShadow: {
-				small: '0 5px 10px rgba(0, 0, 0, 0.12)',
+				small: 'rgba(149, 157, 165, 0.2) 0px 8px 24px;',
 				medium: '0 8px 30px rgba(0, 0, 0, 0.12)',
 			},
 			width: {
@@ -143,11 +147,15 @@ module.exports = {
 				318: '318px',
 			},
 			minWidth: {
+				80: '80px',
+				90: '90px',
 				200: '200px',
 				205: '205px',
 				300: '300px',
 			},
 			maxWidth: {
+				90: '90px',
+				255: '255px',
 				400: '400px',
 			},
 			maxHeight: {

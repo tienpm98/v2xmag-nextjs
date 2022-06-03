@@ -16,7 +16,7 @@ export default function PostHeader({
 				<PostTitle>{title}</PostTitle>
 				<span className='lg:text-15 text-black-1'>{excerpt}</span>
 			</div>
-			<div className='mb-8 md:mb-16 -mx-5 sm:mx-0'>
+			<div className='pb-20 lg:pb-50 -mx-5 sm:mx-0'>
 				<CoverImage
 					title={title}
 					responsiveImage={coverImage.responsiveImage}

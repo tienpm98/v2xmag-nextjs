@@ -68,19 +68,15 @@ export default function Podcast({ title, posts }) {
 									/>
 								</div>
 							) : (
-								
-									<img
-										className='lg:w-300 lg:h-300'
-										src='https://st3.depositphotos.com/23594922/31822/v/600/depositphotos_318221368-stock-illustration-missing-picture-page-for-website.jpg'
-									/>
-							
+								<img
+									className='lg:w-300 lg:h-300'
+									src='https://st3.depositphotos.com/23594922/31822/v/600/depositphotos_318221368-stock-illustration-missing-picture-page-for-website.jpg'
+								/>
 							)}
 						</div>
 					</div>
+					<LatestReleases posts={posts} />
 				</Section>
-			</div>
-			<div className='md:container mx-auto'>
-				<LatestReleases posts={posts} />
 			</div>
 
 			<div className='bg-black text-white mb-20 lg:mb-50'>

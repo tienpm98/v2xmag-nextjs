@@ -1,15 +1,16 @@
 import Head from 'next/head'
 import { renderMetaTags, useQuerySubscription } from 'react-datocms'
+import { request } from '@/lib/datocms'
+import { metaTagsFragment, responsiveImageFragment } from '@/lib/fragments'
+import Link from 'next/link'
 
 import Container from '@/components/layout/container'
 import Layout from '@/components/layout/layout'
-
 import PostBody from '@/components/features/posts/post-body'
 import PostHeader from '@/components/features/posts/post-header'
 import ReadNext from '@/components/features/read-next'
-
-import { request } from '@/lib/datocms'
-import { metaTagsFragment, responsiveImageFragment } from '@/lib/fragments'
+import Artical from '@/components/features/artical'
+import TimeAgo from '@/components/ui/timeAgo'
 
 export async function getStaticPaths() {
 	const data = await request({ query: `{ allPosts { slug } }` })
@@ -58,6 +59,11 @@ export async function getStaticProps({ params, preview = false }) {
             responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 2000, h: 1000 }) {
               ...responsiveImageFragment
             }
+          }
+          category {
+            id
+            slug
+            name
           }
           author {
             name
@@ -129,6 +135,9 @@ export default function Post({ subscription, preview }) {
 	const metaTags = post.seo.concat(site.favicon)
 	const repeat = (a, n) => Array(n).fill(a).flat(1)
 	const nextPosts = repeat(morePosts, 3)
+
+	const articals = morePosts
+
 	return (
 		<Layout preview={preview}>
 			<Head>{renderMetaTags(metaTags)}</Head>
@@ -141,9 +150,33 @@ export default function Post({ subscription, preview }) {
 						author={post.author}
 						excerpt={post.excerpt}
 					/>
-					<PostBody content={post.content} />
+					<div className='flex'>
+						<div className='flex flex-col'>
+							<Link href={`/category/${post.category.id}`}>
+								<span className='font-black text-12 leading-1 uppercase text-gray-8 underline cursor-pointer'>
+									{post.category.name}
+								</span>
+							</Link>
+							<span className='text-12 leading-1 text-gray-8 lg:pt-20 lg:pb-40'>
+								by <strong>{post.author.name}</strong>
+								<TimeAgo />
+							</span>
+						</div>
+						<PostBody content={post.content} />
+						<div className='flex flex-col justify-between'>
+							{articals.map((artical, index) => (
+								<Artical
+									key={index}
+									slug={artical.slug}
+									coverImage={artical.coverImage}
+									title={artical.title}
+								/>
+							))}
+						</div>
+					</div>
 				</article>
-				<div className='border-b border-black lg:pt-60'></div>
+
+				<div className='border-b border-black pt-20 lg:pt-60'></div>
 				{morePosts.length > 0 && (
 					<ReadNext title='what to read next' posts={nextPosts} hasAds />
 				)}
