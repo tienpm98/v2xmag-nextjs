@@ -47,7 +47,7 @@ export default function PostPreviewVertical({
 					{showAuthor && (
 						<p className='text-xs text-gray-8 hidden lg:flex'>
 							<span>by&nbsp;</span>
-							<span>{author.name}</span>
+							<span>{author?.name}</span>
 							&nbsp;/&nbsp;
 							<span className='text-xs hidden lg:block'>
 								<TimeAgo />

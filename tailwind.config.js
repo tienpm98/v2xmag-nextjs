@@ -7,6 +7,7 @@ module.exports = {
 	theme: {
 		extend: {
 			flex: {
+				30: '1 1 30%',
 				50: '1 1 50%',
 				'scroll-horizontal-80': '0 0 80%',
 				3: '1 0 30%',
@@ -72,6 +73,7 @@ module.exports = {
 				350: '350px',
 				400: '400px',
 				500: '500px',
+				'10%': '10%',
 				'10-percen': '10%',
 				'40-percent': '40%',
 				'50-percent': '50%',
@@ -133,6 +135,7 @@ module.exports = {
 				medium: '0 8px 30px rgba(0, 0, 0, 0.12)',
 			},
 			width: {
+				'70%': '70%',
 				190: '190px',
 				545: '545px',
 				300: '300px',
@@ -141,9 +144,11 @@ module.exports = {
 				5: '5px',
 				128: '560px',
 				190: '190px',
+				300: '300px',
 				364: '364px',
 			},
 			minHeight: {
+				300: '300px',
 				318: '318px',
 			},
 			minWidth: {
