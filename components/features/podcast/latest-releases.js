@@ -2,7 +2,7 @@ import ListPostsLayout from '@/components/layout/list-post-layout'
 import Section from '@/components/layout/section'
 import PostPreviewVertical from '../post-preview-vertical'
 
-const LatestReleases = ({ posts }) => {
+const LatestReleases = ({ sectionTitle, posts }) => {
 	const tags = [
 		{
 			title: 'TECHNO',
@@ -15,7 +15,7 @@ const LatestReleases = ({ posts }) => {
 		},
 	]
 	return (
-		<Section title='latest releases'>
+		<Section title={sectionTitle ? sectionTitle : 'latest releases'}>
 			<ListPostsLayout
 				isScrollHorizontal
 				children={posts.map((post) => (

@@ -5,7 +5,7 @@ const Button = ({ title, className, onClick, disabled }, props) => {
 		<div
 			className={
 				className +
-				` w-100 h-40 text-white flex items-center justify-center rounded-5 cursor-pointer 
+				` w-100 h-40 text-white flex items-center justify-center rounded-42 cursor-pointer 
                 ${disabled ? 'bg-gray-menu' : 'bg-black'}
                 `
 			}

@@ -92,6 +92,7 @@ module.exports = {
 			borderRadius: {
 				3: '3px',
 				5: '5px',
+				42: '42px',
 			},
 			fontSize: {
 				8: '8px',
@@ -154,6 +155,7 @@ module.exports = {
 			minWidth: {
 				80: '80px',
 				90: '90px',
+				100: '100px',
 				200: '200px',
 				205: '205px',
 				300: '300px',
@@ -162,6 +164,7 @@ module.exports = {
 				90: '90px',
 				255: '255px',
 				400: '400px',
+				690: '690px',
 			},
 			maxHeight: {
 				140: '140px',
