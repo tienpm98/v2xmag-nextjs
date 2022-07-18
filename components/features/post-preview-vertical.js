@@ -1,7 +1,7 @@
-import CoverImage from '../ui/cover-image'
 import Link from 'next/link'
 import TimeAgo from '../ui/timeAgo'
 import Chip from '../ui/chip'
+import CoverImage from '../ui/cover-image'
 
 export default function PostPreviewVertical({
 	title,
@@ -36,7 +36,12 @@ export default function PostPreviewVertical({
 				</h3>
 			</div>
 
-			<div className='flex justify-between'>
+			<div
+				className={`
+				flex justify-between 
+				${tags && 'md:flex-row flex-col gap-5'}
+			`}
+			>
 				<h5 className='text-gray-400 uppercase underline font-black text-xs'>
 					<Link href={`/category/${category.id}`}>
 						<a>{category.name}</a>
