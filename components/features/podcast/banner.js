@@ -71,6 +71,7 @@ const Banner = ({ post }) => {
 					className={`
 					bg-white
 					w-200 
+					lg:hidden
 					flex items-center justify-center
 					rounded-42
 					cursor-pointer
