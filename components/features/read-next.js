@@ -29,7 +29,7 @@ export default function ReadNext({ title, posts, hasAds }) {
 			/>
 			{hasAds && <AdsLayout />}
 
-			<div className='lg:pt-20'>
+			<div className='lg:pt-20 lg:block hidden'>
 				<ListPostsLayout
 					isCol
 					isSectionPost

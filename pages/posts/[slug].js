@@ -11,6 +11,10 @@ import PostHeader from '@/components/features/posts/post-header'
 import ReadNext from '@/components/features/read-next'
 import Artical from '@/components/features/artical'
 import TimeAgo from '@/components/ui/timeAgo'
+import Heart from '@/components/ui/Icon/heart'
+import Upload from '@/components/ui/Icon/upload'
+import Bookmark from '@/components/ui/Icon/bookmark'
+import CommnentIcon from '@/components/ui/Icon/comment'
 
 export async function getStaticPaths() {
 	const data = await request({ query: `{ allPosts { slug } }` })
@@ -149,9 +153,10 @@ export default function Post({ subscription, preview }) {
 						date={post.date}
 						author={post.author}
 						excerpt={post.excerpt}
+						category={post.category}
 					/>
 					<div className='flex'>
-						<div className='flex flex-col'>
+						<div className='hidden lg:flex flex-col '>
 							<Link href={`/category/${post.category.id}`}>
 								<span className='font-black text-12 leading-1 uppercase text-gray-8 underline cursor-pointer'>
 									{post.category.name}
@@ -163,7 +168,7 @@ export default function Post({ subscription, preview }) {
 							</span>
 						</div>
 						<PostBody content={post.content} />
-						<div className='flex flex-col justify-between'>
+						<div className='hidden lg:flex flex-col justify-between '>
 							{articals.map((artical, index) => (
 								<Artical
 									key={index}
@@ -176,7 +181,23 @@ export default function Post({ subscription, preview }) {
 					</div>
 				</article>
 
+				{/* divider */}
 				<div className='border-b border-black pt-20 lg:pt-60'></div>
+
+				<div className='lg:hidden flex justify-between flex-auto py-18 px-20'>
+					<span className='text-12 leading-1 text-gray-8 lg:pt-20 lg:pb-40 max-w-100'>
+						by <strong>{post.author.name}</strong>
+						<TimeAgo />
+					</span>
+
+					<div className='flex gap-16'>
+						<Heart />
+						<CommnentIcon />
+						<Upload />
+						<Bookmark />
+					</div>
+				</div>
+
 				{morePosts.length > 0 && (
 					<ReadNext title='what to read next' posts={nextPosts} hasAds />
 				)}

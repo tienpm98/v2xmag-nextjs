@@ -12,7 +12,7 @@ const Section = ({
 			<div className='flex justify-between pt-20 pb-15 md:py-9'>
 				{title && (
 					<h2
-						className={`text-xl font-bold tracking-tighter leading-tight uppercase`}
+						className={`text-12 lg:text-xl font-bold tracking-tighter leading-tight uppercase`}
 					>
 						{title}
 					</h2>
