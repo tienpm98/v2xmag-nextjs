@@ -7,6 +7,8 @@ import Layout from '@/components/layout/layout'
 import TopPost from '@/components/features/top-posts'
 import ListLatestPosts from '@/components/features/list-latest-post'
 import Pagination from '@/components/features/pagination'
+import AdsLayout from '@/components/layout/ads-layout'
+import Divide from '@/components/ui/divide'
 
 export async function getStaticProps({ preview }) {
 	const graphqlRequest = {
@@ -85,14 +87,22 @@ export default function Sections({ subscription }) {
 	const latestNewsAfterAds = latestNews.slice(-3)
 
 	const metaTags = blog.seo.concat(site.favicon)
-
+	const handleLoadmore = () => {
+		// handle loadmore
+	}
 	return (
 		<>
 			<Layout>
 				<Head>{renderMetaTags(metaTags)}</Head>
-				<div className='md:container mx-auto py-65'>
+				<div className='md:container mx-auto lg:py-65 py-18'>
 					{morePosts.length > 0 && (
-						<TopPost posts={allPosts} isVerticalPost hideAds />
+						<>
+							<TopPost posts={allPosts} isVerticalPost hideAds />
+							<div className='lg:hidden block px-20 pb-28'>
+								<AdsLayout isHorizontal={true}></AdsLayout>
+							</div>
+							<div className='lg:hidden block border-2 border-black mx-20 lg:mx-0'></div>
+						</>
 					)}
 					{morePosts.length > 0 && (
 						<ListLatestPosts
@@ -101,8 +111,29 @@ export default function Sections({ subscription }) {
 							postsAfterAds={latestNewsAfterAds}
 						/>
 					)}
-
-					<Pagination page={1} />
+					<div className='block lg:hidden'>
+						<div
+							className={`
+								bg-black
+								text-white
+								w-200 
+								lg:hidden
+								flex items-center justify-center
+								rounded-42
+								cursor-pointer
+								pt-12
+								pb-14
+								mt-30
+								mx-auto
+							`}
+							onClick={handleLoadmore}
+						>
+							<span className='font-bold text-15'>Load More</span>
+						</div>
+					</div>
+					<div className='lg:block hidden'>
+						<Pagination page={1} />
+					</div>
 				</div>
 			</Layout>
 		</>

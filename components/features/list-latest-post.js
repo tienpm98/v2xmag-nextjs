@@ -26,25 +26,26 @@ export default function ListLatestPosts({ title, posts, postsAfterAds }) {
 				))}
 				adsHorizontal={<AdsLayout isHorizontal={true}></AdsLayout>}
 			/>
-
-			<ListPostsLayout
-				isCol={true}
-				isSectionPost
-				children={postsAfterAds.map((post) => (
-					<PostPreviewVertical
-						key={post.slug}
-						title={post.title}
-						coverImage={post.coverImage}
-						date={post.date}
-						author={post.author}
-						slug={post.slug}
-						category={post.category}
-						excerpt={post.excerpt}
-						isSectionPost
-						showAuthor
-					/>
-				))}
-			/>
+			<div className='pt-38 lg:py-0'>
+				<ListPostsLayout
+					isCol={true}
+					isSectionPost
+					children={postsAfterAds.map((post) => (
+						<PostPreviewVertical
+							key={post.slug}
+							title={post.title}
+							coverImage={post.coverImage}
+							date={post.date}
+							author={post.author}
+							slug={post.slug}
+							category={post.category}
+							excerpt={post.excerpt}
+							isSectionPost
+							showAuthor
+						/>
+					))}
+				/>
+			</div>
 		</Section>
 	)
 }
