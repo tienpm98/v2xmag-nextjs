@@ -24,23 +24,24 @@ export default function ListPodcast({ title, posts, postsAfterAds, tags }) {
 				))}
 				adsHorizontal={<AdsLayout isHorizontal={true}></AdsLayout>}
 			/>
-
-			<ListPostsLayout
-				isCol={true}
-				isSectionPost
-				children={postsAfterAds.map((post) => (
-					<PostPreviewVertical
-						key={post.slug}
-						title={post.title}
-						coverImage={post.coverImage}
-						slug={post.slug}
-						category={post.category}
-						excerpt={post.excerpt}
-						isSectionPost
-						tags={tags}
-					/>
-				))}
-			/>
+			<div className='lg:pt-0 pt-18'>
+				<ListPostsLayout
+					isCol={true}
+					isSectionPost
+					children={postsAfterAds.map((post) => (
+						<PostPreviewVertical
+							key={post.slug}
+							title={post.title}
+							coverImage={post.coverImage}
+							slug={post.slug}
+							category={post.category}
+							excerpt={post.excerpt}
+							isSectionPost
+							tags={tags}
+						/>
+					))}
+				/>
+			</div>
 		</Section>
 	)
 }

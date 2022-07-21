@@ -1,3 +1,4 @@
+import React, { useState } from 'react'
 import Head from 'next/head'
 import { request } from '@/lib/datocms'
 import { renderMetaTags, useQuerySubscription } from 'react-datocms'
@@ -76,6 +77,7 @@ export default function Podcast({ subscription }) {
 		data: { allPosts, site, blog },
 	} = useQuerySubscription(subscription)
 
+	const metaTags = blog.seo.concat(site.favicon)
 	const morePosts = allPosts.slice(0, 3)
 
 	const repeat = (a, n) => Array(n).fill(a).flat(1)
@@ -84,7 +86,13 @@ export default function Podcast({ subscription }) {
 	const morePodcastsBeforeAds = morePodcasts.slice(0, 3)
 	const morePodcastsAfterAds = morePodcasts.slice(3)
 
-	const metaTags = blog.seo.concat(site.favicon)
+	const latestReleasePodcastsBeforeAds = [morePodcasts[0]]
+	const latestReleasePodcastsAfterAds = morePodcasts.slice(1)
+	const [podcastAfterAds, setPodcastAfterAds] = useState(
+		latestReleasePodcastsAfterAds.slice(0, 4)
+	)
+	const [showMoreButton, setShowMoreButton] = useState(true)
+
 	const tags = [
 		{
 			id: 1,
@@ -99,16 +107,25 @@ export default function Podcast({ subscription }) {
 			title: 'v2mix',
 		},
 	]
+
+	const handleReadMore = () => {
+		setPodcastAfterAds(latestReleasePodcastsAfterAds)
+		setShowMoreButton(false)
+	}
+
 	return (
 		<>
 			<Layout>
 				<Head>{renderMetaTags(metaTags)}</Head>
-				<div className='md:container mx-auto'>
+				<div className='md:container mx-auto lg:block hidden'>
 					<Section title='podcast'>
 						<Banner post={morePodcastsBeforeAds[0]} />
 					</Section>
 				</div>
-				<div className='md:container mx-auto lg:py-35'>
+				<div className='block lg:hidden pt-18'>
+					<Banner post={morePodcastsBeforeAds[0]} />
+				</div>
+				<div className='lg:block hidden md:container mx-auto lg:py-35'>
 					{morePosts.length > 0 && (
 						<ListPodcast
 							title='listen more'
@@ -116,6 +133,39 @@ export default function Podcast({ subscription }) {
 							postsAfterAds={morePodcastsAfterAds}
 							tags={tags}
 						/>
+					)}
+				</div>
+
+				{/* Fetch Latest releases podcast mobile version*/}
+				<div className='lg:hidden block md:container mx-auto lg:py-35'>
+					{morePosts.length > 0 && (
+						<ListPodcast
+							title='Latest releases'
+							posts={latestReleasePodcastsBeforeAds}
+							postsAfterAds={podcastAfterAds}
+							tags={tags}
+						/>
+					)}
+					{showMoreButton && (
+						<div
+							className={`
+						bg-black
+						w-200 
+						lg:hidden
+						flex 
+						items-center
+						justify-center
+						rounded-42
+						cursor-pointer
+						pt-12
+						pb-14
+						my-18
+						mx-auto
+						`}
+							onClick={handleReadMore}
+						>
+							<span className='font-bold text-15 text-white'>Read More</span>
+						</div>
 					)}
 				</div>
 			</Layout>

@@ -3,7 +3,6 @@ import Link from 'next/link'
 import Chip from '@/components/ui/chip'
 import { Play } from '@/components/ui/Icon/play'
 import CoverImage from '@/components/ui/cover-image'
-import Button from '@/components/ui/button'
 
 const Banner = ({ post }) => {
 	const [expanded, setExpanded] = useState(false)

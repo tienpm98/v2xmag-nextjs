@@ -37,10 +37,7 @@ export default function PostPreviewVertical({
 			</div>
 
 			<div
-				className={`
-				flex justify-between 
-				${tags && 'md:flex-row flex-col gap-5'}
-			`}
+				className='flex justify-between'
 			>
 				<h5 className='text-gray-400 uppercase underline font-black text-xs'>
 					<Link href={`/category/${category.id}`}>
