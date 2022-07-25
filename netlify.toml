@@ -1,5 +1,4 @@
 [build]
   publish = "out"
   command = "npm run export"
-  CI= "npm run export"
 
