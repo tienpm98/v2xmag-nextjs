@@ -168,6 +168,7 @@ module.exports = {
 				255: '255px',
 				400: '400px',
 				690: '690px',
+				'65ch': '65ch',
 			},
 			maxHeight: {
 				140: '140px',

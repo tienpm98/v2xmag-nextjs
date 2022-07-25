@@ -1,13 +1,13 @@
 import Chip from '@/components/ui/chip'
 import { StructuredText, Image } from 'react-datocms'
 
-export default function PostBody({ content }) {
+export default function PodcastBody({ content }) {
 	const tagItems = ['picante', 'class of 2022', 'danny lomas', 'spring/summer']
 
 	return (
 		<div className='md:container mx-auto flex justify-center px-20'>
 			<div className=''></div>
-			<div className='prose prose-lg prose-blue'>
+			<div className='prose text-white leading-loose max-w-65ch'>
 				<StructuredText
 					data={content}
 					renderBlock={({ record }) => {

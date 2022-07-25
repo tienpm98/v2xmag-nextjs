@@ -38,12 +38,12 @@
 	height: 9em;
 }
 
-.podcast_description.collapsed{
-  overflow: hidden;
+.podcast_description.collapsed {
+	overflow: hidden;
 }
-.podcast_description.expanded{
-  overflow: visible;
-  height: auto;
+.podcast_description.expanded {
+	overflow: visible;
+	height: auto;
 }
 
 @media only screen and (max-width: 992px) {

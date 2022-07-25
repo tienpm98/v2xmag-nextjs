@@ -6,9 +6,8 @@ import Link from 'next/link'
 
 import Container from '@/components/layout/container'
 import Layout from '@/components/layout/layout'
-import PostBody from '@/components/features/posts/post-body'
 import PodcastHeader from '@/components/features/podcast/podcast-header'
-import TimeAgo from '@/components/ui/timeAgo'
+import PodcastBody from '@/components/features/podcast/podcast-body'
 import LatestReleases from '@/components/features/podcast/latest-releases'
 
 export async function getStaticPaths() {
@@ -142,7 +141,7 @@ export default function Post({ subscription, preview }) {
 		<Layout preview={preview}>
 			<Head>{renderMetaTags(metaTags)}</Head>
 			<Container className='bg-gradient-to-b from-red-c1 to-black'>
-				<article>
+				<article className='lg:p-0 p-18 lg:mt-0 mt-18'>
 					<PodcastHeader
 						title={post.title}
 						coverImage={post.coverImage}
@@ -151,7 +150,7 @@ export default function Post({ subscription, preview }) {
 						excerpt={post.excerpt}
 					/>
 					<div className='flex justify-around md:container mx-auto'>
-						<div className='flex flex-col min-w-100'>
+						<div className='hidden lg:flex flex-col min-w-100'>
 							<Link href={`/category/${post.category.id}`}>
 								<span className='font-bold text-12 leading-1 uppercase text-white underline cursor-pointer'>
 									{post.category.name}
@@ -162,16 +161,22 @@ export default function Post({ subscription, preview }) {
 							</span>
 						</div>
 						<div className='podcast_body'>
-							<PostBody content={post.content} />
+							<PodcastBody content={post.content} />
 						</div>
-						<div className='min-w-100'></div>
+						<div className='lg:block hidden min-w-100'></div>
 					</div>
 				</article>
 
 				<div className='border-b border-white pt-20 lg:pt-60'></div>
 				{morePosts.length > 0 && (
-					<div className='md:container mx-auto text-white'>
+					<div className='lg:block hidden md:container mx-auto text-white'>
 						<LatestReleases sectionTitle='listen more' posts={morePosts} />
+					</div>
+				)}
+
+				{morePosts.length > 0 && (
+					<div className='lg:hidden block md:container mx-auto text-white'>
+						<LatestReleases sectionTitle='latest releases' posts={morePosts} />
 					</div>
 				)}
 			</Container>

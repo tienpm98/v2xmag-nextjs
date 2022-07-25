@@ -125,7 +125,8 @@ export default function Podcast({ subscription }) {
 				<div className='block lg:hidden pt-18'>
 					<Banner post={morePodcastsBeforeAds[0]} />
 				</div>
-				<div className='lg:block hidden md:container mx-auto lg:py-35'>
+
+				<div className='hidden lg:block md:container mx-auto lg:py-35'>
 					{morePosts.length > 0 && (
 						<ListPodcast
 							title='listen more'
@@ -137,7 +138,7 @@ export default function Podcast({ subscription }) {
 				</div>
 
 				{/* Fetch Latest releases podcast mobile version*/}
-				<div className='lg:hidden block md:container mx-auto lg:py-35'>
+				<div className='block lg:hidden md:container mx-auto lg:py-35'>
 					{morePosts.length > 0 && (
 						<ListPodcast
 							title='Latest releases'
