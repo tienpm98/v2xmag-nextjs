@@ -134,7 +134,7 @@ module.exports = {
 				section: '0.5px',
 			},
 			boxShadow: {
-				small: 'rgba(149, 157, 165, 0.2) 0px 8px 24px;',
+				small: ' 0px 8px 24px rgba(149, 157, 165, 0.2)',
 				medium: '0 8px 30px rgba(0, 0, 0, 0.12)',
 			},
 			width: {
