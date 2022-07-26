@@ -6,8 +6,7 @@ export default function PodcastBody({ content }) {
 
 	return (
 		<div className='md:container mx-auto flex justify-center px-20'>
-			<div className=''></div>
-			<div className='prose text-white leading-loose max-w-65ch'>
+			<div className='prose prose-invert text-white leading-loose max-w-65ch'>
 				<StructuredText
 					data={content}
 					renderBlock={({ record }) => {
