@@ -8,15 +8,15 @@ export default function CoverImage({ title, responsiveImage, slug }) {
 			data={{
 				...responsiveImage,
 				alt: `Cover Image for ${title}`,
+				style: 'object-fit:cover',
 			}}
-			className={cn('shadow-small', {
-				'hover:shadow-medium transition-shadow duration-200':
-					slug,
+			className={cn('shadow-small w-full h-full', {
+				'hover:shadow-medium transition-shadow duration-200': slug,
 			})}
 		/>
 	)
 	return (
-		<div className='sm:mx-0'>
+		<div className='sm:mx-0 w-full h-full'>
 			{slug ? (
 				<Link href={`/posts/${slug}`}>
 					<a aria-label={title}>{image}</a>

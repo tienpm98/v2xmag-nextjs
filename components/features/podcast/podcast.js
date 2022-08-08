@@ -1,23 +1,33 @@
+import { useContext } from 'react'
+import { Context } from '@/context'
 import Link from 'next/link'
 import Chip from '@/components/ui/chip'
 import { Play } from '@/components/ui/Icon/play'
 import Section from '../../layout/section'
-import AudioPlayer from './audio-player'
+import AudioPlayer, { togglePlayPause } from './audio-player'
 import LatestReleases from './latest-releases'
 import CoverImage from '@/components/ui/cover-image'
 import Banner from './banner'
 
 export default function Podcast({ title, posts }) {
-	const onClickPlayMobile = () => {
-		console.log('click play mobile')
+	const { state, dispatch } = useContext(Context)
+
+	const playPodcast = () => {
+		dispatch({
+			type: 'TOGGLE_PLAY',
+			payload: !state.togglePlay,
+		})
 	}
 
-	const chipItems = ['picante', 'class of 2022', 'danny lomas', 'spring/summer']
 	return (
 		<>
 			<div className='md:container mx-auto'>
 				<Section title={title} showViewAll categoryTitle='podcast'>
-					<Banner post={posts[0]} />
+					<Banner
+						post={posts[0]}
+						isPlaying={state.togglePlay}
+						playPodcast={playPodcast}
+					/>
 					<LatestReleases posts={posts} />
 				</Section>
 			</div>

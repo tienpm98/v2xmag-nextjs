@@ -1,10 +1,11 @@
 import { useReducer, createContext } from 'react'
 import { menu } from './reducers/menu'
-
+import { podcast } from './reducers/podcast'
 const initialState = {
 	toggleMenu: false,
 	toggleContact: false,
 	user: {},
+	togglePlay: false,
 }
 
 const Context = createContext({})
@@ -17,7 +18,10 @@ const combineReducers =
 	}
 
 const Provider = ({ children }) => {
-	const [state, dispatch] = useReducer(combineReducers(menu), initialState)
+	const [state, dispatch] = useReducer(
+		combineReducers(menu, podcast),
+		initialState
+	)
 	const value = { state, dispatch }
 
 	return <Context.Provider value={value}>{children}</Context.Provider>

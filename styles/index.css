@@ -33,17 +33,19 @@
 }
 
 .podcast_description {
-	overflow: hidden;
 	line-height: 1.5em;
 	height: 9em;
 }
 
-.podcast_description.collapsed {
-	overflow: hidden;
-}
-.podcast_description.expanded {
-	overflow: visible;
-	height: auto;
+@media only screen and (max-width: 1024px) {
+	.podcast_description.collapsed {
+		overflow: hidden;
+	}
+
+	.podcast_description.expanded {
+		overflow: visible;
+		height: auto;
+	}
 }
 
 @media only screen and (max-width: 992px) {
@@ -167,4 +169,13 @@
 ::-webkit-scrollbar-thumb {
 	border-radius: 10px;
 	-webkit-box-shadow: inset 0 0 6px #fff;
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }

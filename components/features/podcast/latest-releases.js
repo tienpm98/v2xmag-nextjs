@@ -1,6 +1,6 @@
 import ListPostsLayout from '@/components/layout/list-post-layout'
 import Section from '@/components/layout/section'
-import PostPreviewVertical from '../post-preview-vertical'
+import PodcastPreview from './podcast-preview'
 
 const LatestReleases = ({ sectionTitle, posts }) => {
 	const tags = [
@@ -19,7 +19,7 @@ const LatestReleases = ({ sectionTitle, posts }) => {
 			<ListPostsLayout
 				isScrollHorizontal
 				children={posts.map((post) => (
-					<PostPreviewVertical
+					<PodcastPreview
 						key={post.slug}
 						isScrollHorizontal
 						title={post.title}

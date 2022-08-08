@@ -1,9 +1,11 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect,useContext } from 'react'
+import { Context } from '@/context'
 import { Play } from '@/components/ui/Icon/play'
 import Pause from '@/components/ui/Icon/pause'
 
 const AudioPlayer = () => {
-	const [isPlaying, setIsPlaying] = useState(false)
+	const { state, dispatch } = useContext(Context)
+
 	const [duration, setDuration] = useState(0)
 	const [currentTime, setCurrentTime] = useState(0)
 
@@ -25,9 +27,12 @@ const AudioPlayer = () => {
 		return `${returnedMinutes}:${returnedSeconds}`
 	}
 
-	const togglePlayPause = () => {
-		const prevValue = isPlaying
-		setIsPlaying(!prevValue)
+  const togglePlayPause = () => {
+		const prevValue = state.togglePlay
+		dispatch({
+			type: 'TOGGLE_PLAY',
+			payload: !state.togglePlay,
+		})
 		if (!prevValue) {
 			audioPlayer.current.play()
 			animationRef.current = requestAnimationFrame(whilePlaying)
@@ -65,7 +70,7 @@ const AudioPlayer = () => {
 			></audio>
 
 			<button onClick={togglePlayPause}>
-				{!isPlaying ? <Play id='mask0_816_1172'/> : <Pause  />}
+				{!state.togglePlay ? <Play id='mask0_816'/> : <Pause  />}
 			</button>
 
 			<div className='hidden md:block'>
@@ -89,4 +94,4 @@ const AudioPlayer = () => {
 	)
 }
 
-export default AudioPlayer
+export default AudioPlayer 
