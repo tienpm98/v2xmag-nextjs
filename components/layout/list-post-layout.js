@@ -16,7 +16,7 @@ const ListPostsLayout = ({
 				className={`
 				
 				w-full
-				flex gap-4 pb-0 lg:pb-20
+				flex pb-0 lg:pb-20
 				justify-between
 				${isSectionPost ? 'flex-wrap' : ''}
 				${

@@ -17,7 +17,7 @@ const Banner = ({ post, isPlaying, playPodcast }) => {
 
 	return (
 		<div className='flex lg:gap-20 bg-gradient-to-b from-red-c1 to-black pt-30 pb-56 lg:pb-0 lg:pt-40 px-65 lg:pt-56 lg:pb-80 lg:pl-102 lg:pb-36 relative  min-h-318'>
-			<div className='flex-30'>
+			<div className='flex-auto'>
 				<div>
 					<h2 className='mx-auto lg:mx-0 text-center lg:text-left capitalize text-white text-17 lg:text-40 max-w-lg font-displayNormal font-bold'>
 						Sole Mates: Priya ahluwalia and the adidas origaninals superstar
@@ -31,11 +31,28 @@ const Banner = ({ post, isPlaying, playPodcast }) => {
 
 					<div className='lg:hidden block flex-50 pb-30'>
 						{post.coverImage ? (
-							<div className='lg:w-70% lg:pt-10%'>
-								<CoverImage
-									title={post.title}
-									responsiveImage={post.coverImage.responsiveImage}
-								/>
+							<div className='max-w-285 z-10 relative w-48% h-0 pb-48% mx-20%'>
+								<div className='sm:mx-0 h-full absolute'>
+									<CoverImage
+										title={post.title}
+										responsiveImage={post.coverImage.responsiveImage}
+									/>
+								</div>
+
+								<div
+									className='absolute'
+									style={{
+										top: isPlaying ? '6px' : '51%',
+										left: '50%',
+										transform: 'translate(0,-50%)',
+										zIndex: -1,
+										animation: isPlaying ? 'spin 4s linear infinite' : 'none',
+										width: '95%',
+										height: '95%',
+									}}
+								>
+									<Image layout='fill' alt='cd' src={CD} />
+								</div>
 							</div>
 						) : (
 							<img
@@ -100,22 +117,27 @@ const Banner = ({ post, isPlaying, playPodcast }) => {
 
 			<div className='lg:flex hidden flex-col justify-center flex-50'>
 				{post.coverImage ? (
-					<div className='lg:max-w-345 lg:m-h-345 h-345 z-10 relative'>
-						<CoverImage
-							title={post.title}
-							responsiveImage={post.coverImage.responsiveImage}
-						/>
+					<div className='lg:max-w-345 z-10 relative lg:w-64% h-0 pb-64% relative'>
+						<div className='sm:mx-0 h-full absolute'>
+							<CoverImage
+								title={post.title}
+								responsiveImage={post.coverImage.responsiveImage}
+							/>
+						</div>
+
 						<div
-							className='absolute w-320 h-320'
+							className='absolute'
 							style={{
-								top: isPlaying ? '15px' : '51%',
+								top: isPlaying ? '6px' : '51%',
 								left: '50%',
 								transform: 'translate(0,-50%)',
 								zIndex: -1,
 								animation: isPlaying ? 'spin 4s linear infinite' : 'none',
+								width: '95%',
+								height: '95%',
 							}}
 						>
-							<Image alt='cd' src={CD} width={320} height={320} />
+							<Image layout='fill' alt='cd' src={CD} />
 						</div>
 					</div>
 				) : (

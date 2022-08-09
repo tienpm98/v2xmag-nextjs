@@ -6,7 +6,6 @@ import { Play } from '@/components/ui/Icon/play'
 import Section from '../../layout/section'
 import AudioPlayer, { togglePlayPause } from './audio-player'
 import LatestReleases from './latest-releases'
-import CoverImage from '@/components/ui/cover-image'
 import Banner from './banner'
 
 export default function Podcast({ title, posts }) {

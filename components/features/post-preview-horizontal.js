@@ -22,7 +22,7 @@ export default function PostPreviewHorizontal({
 				isVerticalPost ? 'lg:flex-col' : 'lg:flex-row'
 			}`}
 		>
-			<div className='basis-7/12'>
+			<div className='basis-7/12 lg:max-w-610'>
 				<CoverImage
 					slug={slug}
 					title={title}
@@ -30,7 +30,7 @@ export default function PostPreviewHorizontal({
 				/>
 			</div>
 			<div
-				className={`flex flex-col text-center  justify-between basis-6 lg:basis-1/2 pt-15 lg:pt-0 ${
+				className={`flex flex-col text-center  justify-between basis-6 lg:basis-1/2 lg:max-w-525 pt-15 lg:pt-0 ${
 					isVerticalPost ? 'lg:text-center' : 'lg:text-left'
 				}`}
 			>

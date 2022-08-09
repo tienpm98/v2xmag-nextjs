@@ -16,20 +16,22 @@ export default function PodcastPreview({
 }) {
 	return (
 		<div
-			className={`flex flex-col gap-1 justify-between max-w-400 max-w-288
+			className={`flex flex-col justify-between lg:max-w-400 max-w-288
 			 ${isScrollHorizontal && 'flex-scroll-horizontal-80 lg:flex-auto'}
 			 ${isSectionPost ? 'lg:flex-3' : ''}
 			 `}
 		>
 			<div className='pb-2 lg:pb-5'>
-				<div className='max-w-288 max-h-288 lg:max-w-400 lg:max-h-400'>
+				<div className='lg:max-w-400 max-w-288'>
 					<CoverImage
 						slug={slug}
 						title={title}
 						responsiveImage={coverImage.responsiveImage}
+						className='lg:min-h-400 lg:max-h-400 max-w-288 min-h-288'
 					/>
 				</div>
-				<h3 className='pb-0 lg:pb-2.5 pt-5 font-displayNormal font-bold lg:text-20 text-17 break-words'>
+
+				<h3 className='pb-0 lg:pb-2.5 pt-5 font-displayNormal font-bold text-17 break-words'>
 					<Link href={`/posts/${slug}`}>
 						<a>{title}</a>
 					</Link>

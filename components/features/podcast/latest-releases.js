@@ -15,7 +15,7 @@ const LatestReleases = ({ sectionTitle, posts }) => {
 		},
 	]
 	return (
-		<Section title={sectionTitle ? sectionTitle : 'latest releases'}>
+		<Section noPadding title={sectionTitle ? sectionTitle : 'latest releases'}>
 			<ListPostsLayout
 				isScrollHorizontal
 				children={posts.map((post) => (

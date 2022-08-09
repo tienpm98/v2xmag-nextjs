@@ -5,7 +5,7 @@ import PostPreviewVertical from './post-preview-vertical'
 
 export default function ListPodcast({ title, posts, postsAfterAds, tags }) {
 	return (
-		<Section title={title}>
+		<Section noPadding={false} title={title}>
 			<ListPostsLayout
 				hasAds={true}
 				isCol={true}

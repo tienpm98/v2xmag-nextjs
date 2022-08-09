@@ -28,9 +28,9 @@ export default function Header() {
 						>
 							SECTIONS
 						</span>
-						<span className='font-black text-xs lg:text-[15px] cursor-pointer hover:underline'>
+						{/* <span className='font-black text-xs lg:text-[15px] cursor-pointer hover:underline'>
 							SHOP
-						</span>
+						</span> */}
 					</div>
 					<div className='lg:hidden flex'>
 						<PersonIcon />
@@ -42,7 +42,7 @@ export default function Header() {
 					</div>
 					<div className='hidden lg:flex items-center gap-30'>
 						<MoonIcon />
-						<GolbeIcon />
+						{/* <GolbeIcon /> */}
 						<PersonIcon />
 						<SearchIcon />
 					</div>

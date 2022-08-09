@@ -16,29 +16,27 @@ export default function PostPreviewVertical({
 }) {
 	return (
 		<div
-			className={`flex flex-col gap-1 justify-between
-			 ${isScrollHorizontal && 'flex-scroll-horizontal-80 lg:flex-auto'}
+			className={`flex flex-col justify-between
+			 lg:w-32.2582%
 			 ${isSectionPost ? 'lg:flex-3' : ''}
 			 `}
 		>
 			<div className='pb-2 lg:pb-5'>
-				<div className='lg:pb-20'>
-					<CoverImage
-						slug={slug}
-						title={title}
-						responsiveImage={coverImage.responsiveImage}
-					/>
-				</div>
-				<h3 className='pb-0 lg:pb-2.5 pt-5 font-displayNormal font-bold text-xl break-words'>
+				<CoverImage
+					slug={slug}
+					title={title}
+					responsiveImage={coverImage.responsiveImage}
+					className='min-h-520 max-h-520'
+				/>
+
+				<h3 className='pb-0 lg:pb-2.5 pt-5 font-displayNormal font-bold text-17 break-words'>
 					<Link href={`/posts/${slug}`}>
 						<a>{title}</a>
 					</Link>
 				</h3>
 			</div>
 
-			<div
-				className='flex justify-between'
-			>
+			<div className='flex justify-between'>
 				<h5 className='text-gray-400 uppercase underline font-black text-12'>
 					<Link href={`/category/${category.id}`}>
 						<a>{category.name}</a>
