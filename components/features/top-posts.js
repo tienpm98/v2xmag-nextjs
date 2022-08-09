@@ -2,8 +2,14 @@ import Section from '../layout/section'
 import ListPostsLayout from '../layout/list-post-layout'
 import AdsLayout from '../layout/ads-layout'
 import PostPreviewVertical from './post-preview-vertical'
-import PostPreviewHorizontal from './post-preview-horizontal'
-export default function TopPosts({ posts, isVerticalPost, hideAds }) {
+import TopHighlight from './top-highlight'
+
+export default function TopPosts({
+	posts,
+	isVerticalPost,
+	isSectionPage,
+	hideAds,
+}) {
 	const topPost = posts[0]
 	const restPosts = posts.slice(1, 4)
 	/*
@@ -13,7 +19,7 @@ export default function TopPosts({ posts, isVerticalPost, hideAds }) {
 	return (
 		<div className='flex flex-wrap justify-between lg:pt-60'>
 			<div className='basis-auto'>
-				<PostPreviewHorizontal
+				<TopHighlight
 					key={topPost.slug}
 					title={topPost.title}
 					coverImage={topPost.coverImage}
@@ -24,6 +30,7 @@ export default function TopPosts({ posts, isVerticalPost, hideAds }) {
 					excerpt={topPost.excerpt}
 					uppercaseTitle={true}
 					isVerticalPost={isVerticalPost}
+					isSectionPage={isSectionPage}
 				/>
 
 				<Section title='Highlights'>

@@ -97,7 +97,7 @@ export default function Sections({ subscription }) {
 				<div className='md:container mx-auto lg:py-65 py-18'>
 					{morePosts.length > 0 && (
 						<>
-							<TopPost posts={allPosts} isVerticalPost hideAds />
+							<TopPost posts={allPosts} isVerticalPost hideAds isSectionPage />
 							<div className='lg:hidden block px-20 pb-28'>
 								<AdsLayout isHorizontal={true}></AdsLayout>
 							</div>

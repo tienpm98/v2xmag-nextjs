@@ -42,7 +42,7 @@ const Banner = ({ post, isPlaying, playPodcast }) => {
 								<div
 									className='absolute'
 									style={{
-										top: isPlaying ? '6px' : '51%',
+										top: isPlaying ? '6px' : '50%',
 										left: '50%',
 										transform: 'translate(0,-50%)',
 										zIndex: -1,
@@ -128,7 +128,7 @@ const Banner = ({ post, isPlaying, playPodcast }) => {
 						<div
 							className='absolute'
 							style={{
-								top: isPlaying ? '6px' : '51%',
+								top: isPlaying ? '6px' : '49%',
 								left: '50%',
 								transform: 'translate(0,-50%)',
 								zIndex: -1,
