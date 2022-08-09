@@ -22,7 +22,7 @@ export default function TopHighlight({
 				isVerticalPost ? 'lg:flex-col' : 'lg:flex-row'
 			}`}
 		>
-			<div className={`${isSectionPage ? ' w-full' : 'lg:w-[58.6%] w-full'}`}>
+			<div className={`${isSectionPage ? ' w-full' : 'lg:w-59-percent w-full'}`}>
 				<CoverImage
 					slug={slug}
 					title={title}
@@ -33,7 +33,7 @@ export default function TopHighlight({
 				className={`flex flex-col text-center justify-between  pt-15 lg:pt-0 lg:px-0 px-4 ${
 					isVerticalPost ? 'lg:text-center' : 'lg:text-left'
 				}
-                    ${isSectionPage ? 'w-[80%] mx-auto' : 'w-[41.8%] w-full'}
+                    ${isSectionPage ? 'w-80-percent mx-auto' : 'w-42-percent w-full'}
                 `}
 			>
 				<div
