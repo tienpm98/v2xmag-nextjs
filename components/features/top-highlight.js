@@ -33,7 +33,7 @@ export default function TopHighlight({
 				className={`flex flex-col text-center justify-between  pt-15 lg:pt-0 lg:px-0 px-4 ${
 					isVerticalPost ? 'lg:text-center' : 'lg:text-left'
 				}
-                    ${isSectionPage ? 'w-[80%] mx-auto' : 'lg:max-w-525'}
+                    ${isSectionPage ? 'w-[80%] mx-auto' : 'w-[42%]'}
                 `}
 			>
 				<div
