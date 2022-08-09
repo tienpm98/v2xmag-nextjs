@@ -31,7 +31,7 @@ const Banner = ({ post, isPlaying, playPodcast }) => {
 
 					<div className='lg:hidden block flex-50 pb-30'>
 						{post.coverImage ? (
-							<div className='max-w-285 z-10 relative w-48% h-0 pb-48% mx-20%'>
+							<div className='max-w-285 z-10 relative w-48-percent h-0 pb-48-percent mx-20-percent'>
 								<div className='sm:mx-0 h-full absolute'>
 									<CoverImage
 										title={post.title}
@@ -117,7 +117,7 @@ const Banner = ({ post, isPlaying, playPodcast }) => {
 
 			<div className='lg:flex hidden flex-col justify-center flex-50'>
 				{post.coverImage ? (
-					<div className='lg:max-w-345 z-10 relative lg:w-64% h-0 pb-64% relative'>
+					<div className='lg:max-w-345 z-10 relative lg:w-64-percent h-0 pb-64-percent relative'>
 						<div className='sm:mx-0 h-full absolute'>
 							<CoverImage
 								title={post.title}

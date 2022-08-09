@@ -17,7 +17,7 @@ export default function PostPreviewVertical({
 	return (
 		<div
 			className={`flex flex-col justify-between
-			 lg:w-32.2582%
+			 lg:w-32-percent
 			 ${isSectionPost ? 'lg:flex-3' : ''}
 			 `}
 		>

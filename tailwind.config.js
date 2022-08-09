@@ -91,8 +91,12 @@ module.exports = {
 				'48%': '48%',
 				'64%': '64%',
 				'10-percen': '10%',
+				'20-percent': '20%',
+				'22-percent': '22%',
 				'40-percent': '40%',
+				'48-percent': '48%',
 				'50-percent': '50%',
+				'64-percent': '64%',
 			},
 			gap: {
 				10: '10px',
@@ -162,6 +166,10 @@ module.exports = {
 				300: '300px',
 				345: '345px',
 				400: '400px',
+				'32-percent': '32.2582%',
+				'48-percent': '48%',
+				'64-percent': '64%',
+				'70-percent': '70%',
 			},
 			height: {
 				5: '5px',
