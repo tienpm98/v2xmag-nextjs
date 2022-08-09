@@ -18,11 +18,11 @@ export default function TopHighlight({
 }) {
 	return (
 		<div
-			className={`flex flex-col gap-1 lg:flex-row lg:gap-20 py-2.5 ${
+			className={`flex flex-col lg:flex-row lg:gap-20 ${
 				isVerticalPost ? 'lg:flex-col' : 'lg:flex-row'
 			}`}
 		>
-			<div className={`${isSectionPage ? ' w-full' : 'lg:w-59-percent w-full'}`}>
+			<div className={`${isSectionPage ? ' w-full' : 'lg:w-59-percent w-full'} pt-20 lg:pt-0`}>
 				<CoverImage
 					slug={slug}
 					title={title}
