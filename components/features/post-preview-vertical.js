@@ -19,6 +19,7 @@ export default function PostPreviewVertical({
 			className={`flex flex-col justify-between
 			 lg:w-32-percent
 			 ${isSectionPost ? 'lg:flex-3' : ''}
+			 ${isScrollHorizontal && 'flex-scroll-horizontal-65 lg:flex-initial'}
 			 `}
 		>
 			<div className='pb-2 lg:pb-5'>
@@ -26,7 +27,7 @@ export default function PostPreviewVertical({
 					slug={slug}
 					title={title}
 					responsiveImage={coverImage.responsiveImage}
-					className='min-h-520 max-h-520'
+					className='lg:min-h-520 lg:max-h-520 min-h-300 max-h-300'
 				/>
 
 				<h3 className='pb-0 lg:pb-2.5 pt-5 font-displayNormal font-bold text-17 break-words'>

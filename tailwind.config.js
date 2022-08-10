@@ -18,6 +18,7 @@ module.exports = {
 				30: '1 1 30%',
 				50: '1 1 50%',
 				'scroll-horizontal-80': '0 0 80%',
+				'scroll-horizontal-65': '0 0 65%',
 				3: '1 0 30%',
 			},
 			colors: {
@@ -97,6 +98,7 @@ module.exports = {
 				'48-percent': '48%',
 				'50-percent': '50%',
 				'64-percent': '64%',
+				'65-percent': '65%',
 			},
 			gap: {
 				10: '10px',

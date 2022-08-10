@@ -16,7 +16,7 @@ const Banner = ({ post, isPlaying, playPodcast }) => {
 	}
 
 	return (
-		<div className='flex lg:gap-20 bg-gradient-to-b from-red-c1 to-black pt-30 pb-56 lg:pb-0 lg:pt-40 px-65 lg:pt-56 lg:pb-80 lg:pl-102 lg:pb-36 relative  min-h-318'>
+		<div className='flex lg:gap-20 bg-gradient-to-b from-red-c1 to-black pt-30 pb-56 lg:pb-0 lg:pt-40 lg:px-65 px-30 lg:pt-56 lg:pb-80 lg:pl-102 lg:pb-36 relative  min-h-318'>
 			<div className='flex-auto'>
 				<div>
 					<h2 className='mx-auto lg:mx-0 text-center lg:text-left capitalize text-white text-17 lg:text-40 max-w-lg font-displayNormal font-bold'>

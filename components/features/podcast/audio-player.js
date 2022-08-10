@@ -84,7 +84,7 @@ const AudioPlayer = () => {
 					/>
 				</div>
 				<div className='flex justify-between text-sm'>
-					<span>{calculateTime(currentTime)}</span>
+					<span>{calculateTime(currentTime) || '0'}</span>
 
 					<span>{duration && !isNaN(duration) && calculateTime(duration)}</span>
 				</div>

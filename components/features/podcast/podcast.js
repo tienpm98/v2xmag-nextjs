@@ -1,10 +1,7 @@
 import { useContext } from 'react'
 import { Context } from '@/context'
-import Link from 'next/link'
-import Chip from '@/components/ui/chip'
-import { Play } from '@/components/ui/Icon/play'
 import Section from '../../layout/section'
-import AudioPlayer, { togglePlayPause } from './audio-player'
+import AudioPlayer from './audio-player'
 import LatestReleases from './latest-releases'
 import Banner from './banner'
 

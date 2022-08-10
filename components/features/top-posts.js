@@ -37,6 +37,7 @@ export default function TopPosts({
 					<ListPostsLayout
 						hasAds={true}
 						isScrollHorizontal
+						hasBorderBottom={true}
 						children={restPosts.map((post) => (
 							<PostPreviewVertical
 								key={post.slug}
