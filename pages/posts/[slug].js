@@ -38,6 +38,7 @@ export async function getStaticProps({ params, preview = false }) {
           seo: _seoMetaTags {
             ...metaTagsFragment
           }
+		  _publishedAt
           title
           slug
           excerpt
@@ -84,6 +85,7 @@ export async function getStaticProps({ params, preview = false }) {
           slug
           excerpt
           date
+		  _publishedAt
           category {
             id
             slug
@@ -164,7 +166,7 @@ export default function Post({ subscription, preview }) {
 							</Link>
 							<span className='text-12 leading-1 text-gray-8 lg:pt-20 lg:pb-40'>
 								by <strong>{post.author.name}</strong>
-								<TimeAgo />
+								<TimeAgo time={post._publishedAt} />
 							</span>
 						</div>
 						<PostBody content={post.content} />
@@ -187,7 +189,7 @@ export default function Post({ subscription, preview }) {
 				<div className='lg:hidden flex justify-between flex-auto py-18 px-20'>
 					<span className='text-12 leading-1 text-gray-8 lg:pt-20 lg:pb-40 max-w-100'>
 						by <strong>{post.author.name}</strong>
-						<TimeAgo />
+						<TimeAgo time={post._publishedAt} />
 					</span>
 
 					<div className='flex gap-16'>

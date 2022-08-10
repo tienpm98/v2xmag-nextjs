@@ -1,7 +1,7 @@
-import { formatDistance, subHours } from 'date-fns'
+import formatDistanceToNow from 'date-fns/formatDistanceToNow'
 
-const TimeAgo = () => {
-	return formatDistance(subHours(new Date(), 3), new Date(), {
+const TimeAgo = ({ time }) => {
+	return formatDistanceToNow(new Date(time), {
 		addSuffix: true,
 	})
 }

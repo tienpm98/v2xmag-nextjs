@@ -9,8 +9,8 @@ export default function PostPreviewHorizontal({
 	excerpt,
 	category,
 	slug,
-	date,
 	author,
+	_publishedAt,
 	uppercaseTitle,
 	topTitle,
 	showAuthor,
@@ -63,7 +63,7 @@ export default function PostPreviewHorizontal({
 								<span>{author.name}</span>
 								&nbsp;/&nbsp;
 								<span className='text-xs hidden lg:block'>
-									<TimeAgo />
+									<TimeAgo time={_publishedAt} />
 								</span>
 							</p>
 						)}
@@ -82,7 +82,7 @@ export default function PostPreviewHorizontal({
 						<span>{author.name}</span>
 						&nbsp;/&nbsp;
 						<span className='text-xs lg:block'>
-							<TimeAgo />
+							<TimeAgo time={_publishedAt} />
 						</span>
 					</p>
 				</div>

@@ -8,8 +8,8 @@ export default function TopHighlight({
 	excerpt,
 	category,
 	slug,
-	date,
 	author,
+	_publishedAt,
 	uppercaseTitle,
 	topTitle,
 	showAuthor,
@@ -22,19 +22,27 @@ export default function TopHighlight({
 				isVerticalPost ? 'lg:flex-col' : 'lg:flex-row'
 			}`}
 		>
-			<div className={`${isSectionPage ? ' w-full' : 'lg:w-59-percent w-full'} pt-20 lg:pt-0`}>
+			<div
+				className={`${
+					isSectionPage ? ' w-full' : 'lg:w-59-percent w-full'
+				} pt-20 lg:pt-0`}
+			>
 				<CoverImage
 					slug={slug}
 					title={title}
 					responsiveImage={coverImage.responsiveImage}
-					className="lg:aspect-7/5"
+					className='lg:aspect-7/5'
 				/>
 			</div>
 			<div
 				className={`flex flex-col text-center justify-between  pt-15 lg:pt-0 lg:px-0 px-4 ${
 					isVerticalPost ? 'lg:text-center' : 'lg:text-left'
 				}
-                    ${isSectionPage ? 'w-80-percent mx-auto' : 'lg:w-42-percent w-full'}
+                    ${
+											isSectionPage
+												? 'w-80-percent mx-auto'
+												: 'lg:w-42-percent w-full'
+										}
                 `}
 			>
 				<div
@@ -63,7 +71,7 @@ export default function TopHighlight({
 								<span>{author.name}</span>
 								&nbsp;/&nbsp;
 								<span className='text-xs hidden lg:block'>
-									<TimeAgo />
+									<TimeAgo time={_publishedAt} />
 								</span>
 							</p>
 						)}

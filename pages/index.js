@@ -8,6 +8,7 @@ import LatestPost from '@/components/features/latest-post'
 import PopularPost from '@/components/features/popular-posts'
 import TopPost from '@/components/features/top-posts'
 import Podcast from '@/components/features/podcast/podcast'
+import { useEffect, useState } from 'react'
 
 export async function getStaticProps({ preview }) {
 	const graphqlRequest = {
@@ -23,11 +24,14 @@ export async function getStaticProps({ preview }) {
             ...metaTagsFragment
           }
         }
-        allPosts(orderBy: date_DESC, first: 20) {
-          title
-          slug
-          excerpt
-          date
+		
+        allPosts(orderBy: _publishedAt_DESC, first: 20) {
+			title
+			slug
+			excerpt
+			date
+			_publishedAt
+		  isHighlighted
 		  category {
 			id
 			slug
@@ -40,11 +44,6 @@ export async function getStaticProps({ preview }) {
           }
           author {
             name
-            picture {
-              responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 100, h: 100, sat: -100}) {
-                ...responsiveImageFragment
-              }
-            }
           }
         }
       }
@@ -76,16 +75,21 @@ export default function Index({ subscription }) {
 	const {
 		data: { allPosts, site, blog },
 	} = useQuerySubscription(subscription)
-
+	console.log(allPosts)
 	const morePosts = allPosts.slice(0, 3)
+
 	const metaTags = blog.seo.concat(site.favicon)
+
+	const highlightedPosts = allPosts.filter(
+		(post) => post.isHighlighted === true
+	)
 
 	return (
 		<>
 			<Layout>
 				<Head>{renderMetaTags(metaTags)}</Head>
 				<div className='md:container mx-auto'>
-					{morePosts.length > 0 && <TopPost posts={allPosts} />}
+					<TopPost posts={highlightedPosts} />
 					{morePosts.length > 0 && (
 						<LatestPost title='latest news' posts={morePosts} />
 					)}

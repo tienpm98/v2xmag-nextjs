@@ -19,6 +19,7 @@ export default function LatestPosts({ title, posts }) {
 						slug={post.slug}
 						category={post.category}
 						excerpt={post.excerpt}
+						_publishedAt={post._publishedAt}
 						showAuthor
 					/>
 				))}

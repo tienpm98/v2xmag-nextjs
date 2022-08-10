@@ -12,6 +12,7 @@ export default function PostPreviewVertical({
 	isScrollHorizontal,
 	isSectionPost,
 	showAuthor,
+	_publishedAt,
 	tags,
 }) {
 	return (
@@ -51,7 +52,7 @@ export default function PostPreviewVertical({
 							<span>{author?.name}</span>
 							&nbsp;/&nbsp;
 							<span className='text-xs hidden lg:block'>
-								<TimeAgo />
+								<TimeAgo time={_publishedAt} />
 							</span>
 						</p>
 					)}

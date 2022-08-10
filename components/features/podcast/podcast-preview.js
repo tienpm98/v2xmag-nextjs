@@ -13,6 +13,7 @@ export default function PodcastPreview({
 	isSectionPost,
 	showAuthor,
 	tags,
+	_publishedAt,
 }) {
 	return (
 		<div
@@ -52,7 +53,7 @@ export default function PodcastPreview({
 							<span>{author?.name}</span>
 							&nbsp;/&nbsp;
 							<span className='text-xs hidden lg:block'>
-								<TimeAgo />
+								<TimeAgo time={_publishedAt} />
 							</span>
 						</p>
 					)}
