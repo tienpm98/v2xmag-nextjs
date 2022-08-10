@@ -36,6 +36,7 @@ const Banner = ({ post, isPlaying, playPodcast }) => {
 									<CoverImage
 										title={post.title}
 										responsiveImage={post.coverImage.responsiveImage}
+										className="aspect-square"
 									/>
 								</div>
 
@@ -122,6 +123,7 @@ const Banner = ({ post, isPlaying, playPodcast }) => {
 							<CoverImage
 								title={post.title}
 								responsiveImage={post.coverImage.responsiveImage}
+								className="aspect-square"
 							/>
 						</div>
 

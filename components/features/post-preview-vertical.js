@@ -27,7 +27,7 @@ export default function PostPreviewVertical({
 					slug={slug}
 					title={title}
 					responsiveImage={coverImage.responsiveImage}
-					className='lg:min-h-520 lg:max-h-520 min-h-300 max-h-300'
+					className='aspect-2/3 lg:aspect-10/13'
 				/>
 
 				<h3 className='pb-0 lg:pb-2.5 pt-5 font-displayNormal font-bold text-17 break-words'>

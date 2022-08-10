@@ -27,6 +27,7 @@ export default function TopHighlight({
 					slug={slug}
 					title={title}
 					responsiveImage={coverImage.responsiveImage}
+					className="lg:aspect-7/5"
 				/>
 			</div>
 			<div
@@ -38,7 +39,7 @@ export default function TopHighlight({
 			>
 				<div
 					className={`flex flex-col ${
-						isVerticalPost ? 'lg:pt-5' : 'lg:pt-10-percen'
+						isVerticalPost ? 'lg:pt-5' : 'lg:pt-10-percen lg:my-auto'
 					}`}
 				>
 					<h3

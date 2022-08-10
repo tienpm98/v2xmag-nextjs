@@ -17,7 +17,7 @@ export default function PodcastPreview({
 	return (
 		<div
 			className={`flex flex-col justify-between lg:max-w-400 max-w-288
-			 ${isScrollHorizontal && 'flex-scroll-horizontal-80 lg:flex-auto'}
+			 ${isScrollHorizontal && 'flex-scroll-horizontal-80 lg:flex-initial'}
 			 ${isSectionPost ? 'lg:flex-3' : ''}
 			 `}
 		>
@@ -27,7 +27,7 @@ export default function PodcastPreview({
 						slug={slug}
 						title={title}
 						responsiveImage={coverImage.responsiveImage}
-						className='lg:min-h-400 lg:max-h-400 max-w-288 min-h-288'
+						className='aspect-square'
 					/>
 				</div>
 

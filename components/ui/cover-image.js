@@ -15,7 +15,7 @@ export default function CoverImage({
 				alt: `Cover Image for ${title}`,
 			}}
 			pictureStyle={{ objectFit: 'cover' }}
-			className={cn(`shadow-small w-full h-full ${className}`, {
+			className={cn(`shadow-small ${className}`, {
 				'hover:shadow-medium transition-shadow duration-200': slug,
 			})}
 		/>

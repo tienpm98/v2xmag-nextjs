@@ -18,30 +18,31 @@ export default function PostPreviewHorizontal({
 }) {
 	return (
 		<div
-			className={`flex flex-col gap-1 lg:flex-row lg:gap-20 py-2.5 ${
+			className={`flex flex-col gap-1 lg:flex-row lg:gap-20 pb-20 lg:pb-30 ${
 				isVerticalPost ? 'lg:flex-col' : 'lg:flex-row'
 			}`}
 		>
-			<div className='basis-7/12 lg:max-w-610'>
+			<div className='lg:max-w-610'>
 				<CoverImage
 					slug={slug}
 					title={title}
 					responsiveImage={coverImage.responsiveImage}
+					className='lg:aspect-3/2'
 				/>
 			</div>
 			<div
-				className={`flex flex-col text-center  justify-between basis-6 lg:basis-1/2 lg:max-w-525 pt-15 lg:pt-0 ${
+				className={`flex flex-col justify-between basis-6 lg:basis-1/2 lg:max-w-525 ${
 					isVerticalPost ? 'lg:text-center' : 'lg:text-left'
 				}`}
 			>
 				<div
 					className={`flex flex-col ${
-						isVerticalPost ? 'lg:pt-5' : 'lg:pt-10-percen'
+						isVerticalPost ? 'lg:pt-5' : 'lg:pt-10-percen lg:my-auto'
 					}`}
 				>
 					<h3
-						className={`mb-2 lg:mb-25 font-displayNormal font-bold text-3xl ${
-							topTitle ? 'lg:text-45' : 'lg:text-40'
+						className={`mb-2 lg:mb-25 font-displayNormal font-bold ${
+							topTitle ? 'lg:text-45' : 'lg:text-40 text-17'
 						} ${
 							uppercaseTitle ? 'uppercase' : 'capitalize'
 						} uppercase break-words lg:leading-topTitle`}
@@ -52,7 +53,10 @@ export default function PostPreviewHorizontal({
 					</h3>
 
 					<div className='flex flex-col'>
-						<span className='pb-2 lg:pb-2.5 text-xs lg:text-15'>{excerpt}</span>
+						<span className='hidden lg:block pb-2 lg:pb-2.5 text-xs lg:text-15'>
+							{excerpt}
+						</span>
+
 						{showAuthor && (
 							<p className='text-xs text-gray-8 hidden lg:flex'>
 								<span>by&nbsp;</span>
@@ -66,11 +70,22 @@ export default function PostPreviewHorizontal({
 					</div>
 				</div>
 
-				<h5 className='text-gray-8 uppercase underline font-black text-xs lg:pt-1.5 text-xs'>
-					<Link href={`/category/${category.id}`}>
-						<a>{category.name}</a>
-					</Link>
-				</h5>
+				<div className='flex justify-between'>
+					<h5 className='text-gray-8 uppercase underline font-black text-xs lg:pt-1.5 text-xs'>
+						<Link href={`/category/${category.id}`}>
+							<a>{category.name}</a>
+						</Link>
+					</h5>
+
+					<p className='text-12 text-gray-8 lg:flex'>
+						<span>by&nbsp;</span>
+						<span>{author.name}</span>
+						&nbsp;/&nbsp;
+						<span className='text-xs lg:block'>
+							<TimeAgo />
+						</span>
+					</p>
+				</div>
 			</div>
 		</div>
 	)
