@@ -77,7 +77,7 @@ export default function PostPreviewHorizontal({
 						</Link>
 					</h5>
 
-					<p className='text-12 text-gray-8 lg:flex'>
+					<p className='lg:hidden flex text-12 text-gray-8'>
 						<span>by&nbsp;</span>
 						<span>{author.name}</span>
 						&nbsp;/&nbsp;
