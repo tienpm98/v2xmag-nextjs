@@ -1,8 +1,7 @@
 import { useContext } from 'react'
 import { Context } from '@/context'
+import { useScrollDirection } from 'hooks/useScrollDirection'
 
-import GolbeIcon from '../ui/Icon/globe'
-import MenuIcon from '../ui/Icon/menu'
 import MoonIcon from '../ui/Icon/moon'
 import PersonIcon from '../ui/Icon/person'
 import SearchIcon from '../ui/Icon/search'
@@ -11,19 +10,28 @@ import Menu from '../features/menu'
 
 export default function Header() {
 	const { dispatch } = useContext(Context)
+	const scrollDirection = useScrollDirection()
+
 	const clickMenu = () => {
 		dispatch({
 			type: 'TOGGLE_MENU',
 			payload: true,
 		})
 	}
+
 	return (
 		<>
-			<div className='flex w-full bg-black fixed z-50'>
+			<div
+				className={`
+				flex w-full bg-black sticky z-50
+				transition-all duration-500
+				 ${scrollDirection === 'down' ? '-top-80' : 'top-0'} 
+					`}
+			>
 				<div className='container mx-auto flex justify-between items-center text-white px-30 lg:px-0 py-20 lg:pt-27 lg:pb-23'>
 					<div className='hidden lg:flex gap-26'>
 						<span
-							className='font-black text-xs lg:text-[15px] cursor-pointer hover:underline'
+							className='font-black text-12 lg:text-15 cursor-pointer hover:underline'
 							onClick={clickMenu}
 						>
 							SECTIONS
