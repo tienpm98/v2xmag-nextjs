@@ -48,7 +48,9 @@ export default function TopPosts({ posts, isVerticalPost, isSectionPage }) {
 						))}
 					/>
 
-					<AdsLayout></AdsLayout>
+					<div className='lg:pb-40 pb-20'>
+						<AdsLayout></AdsLayout>
+					</div>
 				</Section>
 			</div>
 		</div>

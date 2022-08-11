@@ -140,6 +140,8 @@ module.exports = {
 				topTitle: '47px',
 				loose: '150%',
 				extra: '200%',
+				22: '22px',
+				42: '42px',
 			},
 			fontFamily: {
 				displayNormal: 'HelveticaNowDisplay',

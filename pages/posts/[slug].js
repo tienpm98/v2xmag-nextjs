@@ -98,11 +98,6 @@ export async function getStaticProps({ params, preview = false }) {
           }
           author {
             name
-            picture {
-              responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 100, h: 100, sat: -100}) {
-                ...responsiveImageFragment
-              }
-            }
           }
         }
       }
@@ -165,9 +160,16 @@ export default function Post({ subscription, preview }) {
 								</span>
 							</Link>
 							<span className='text-12 leading-1 text-gray-8 lg:pt-20 lg:pb-40'>
-								by <strong>{post.author.name}</strong>
+								by <strong>{post.author.name} </strong>
 								<TimeAgo time={post._publishedAt} />
 							</span>
+
+							<div className='hidden lg:flex lg:flex-col gap-16 color-gray-8'>
+								<Heart />
+								<CommnentIcon />
+								<Upload />
+								<Bookmark />
+							</div>
 						</div>
 						<PostBody content={post.content} />
 						<div className='hidden lg:flex flex-col justify-between '>
@@ -184,11 +186,11 @@ export default function Post({ subscription, preview }) {
 				</article>
 
 				{/* divider */}
-				<div className='border-b border-black pt-20 lg:pt-60'></div>
+				<div className='border-b-2 border-black pt-20 lg:pt-60 lg:mx-0'></div>
 
 				<div className='lg:hidden flex justify-between flex-auto py-18 px-20'>
 					<span className='text-12 leading-1 text-gray-8 lg:pt-20 lg:pb-40 max-w-100'>
-						by <strong>{post.author.name}</strong>
+						by <strong>{post.author.name} </strong>
 						<TimeAgo time={post._publishedAt} />
 					</span>
 

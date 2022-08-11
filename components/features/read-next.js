@@ -1,6 +1,7 @@
 import AdsLayout from '../layout/ads-layout'
 import ListPostsLayout from '../layout/list-post-layout'
 import Section from '../layout/section'
+import ArticalPosts from './artical-posts'
 import PostPreviewVertical from './post-preview-vertical'
 
 export default function ReadNext({ title, posts, hasAds }) {
@@ -13,8 +14,7 @@ export default function ReadNext({ title, posts, hasAds }) {
 				isCol
 				isSectionPost
 				children={beforeAdsPosts.map((post) => (
-					<PostPreviewVertical
-						isSectionPost
+					<ArticalPosts
 						key={post.slug}
 						title={post.title}
 						coverImage={post.coverImage}
@@ -23,6 +23,7 @@ export default function ReadNext({ title, posts, hasAds }) {
 						slug={post.slug}
 						category={post.category}
 						excerpt={post.excerpt}
+						_publishedAt={post._publishedAt}
 						showAuthor
 					/>
 				))}
@@ -34,8 +35,7 @@ export default function ReadNext({ title, posts, hasAds }) {
 					isCol
 					isSectionPost
 					children={afterAdsPosts.map((post) => (
-						<PostPreviewVertical
-							isSectionPost
+						<ArticalPosts
 							key={post.slug}
 							title={post.title}
 							coverImage={post.coverImage}
@@ -44,6 +44,7 @@ export default function ReadNext({ title, posts, hasAds }) {
 							slug={post.slug}
 							category={post.category}
 							excerpt={post.excerpt}
+							_publishedAt={post._publishedAt}
 							showAuthor
 						/>
 					))}

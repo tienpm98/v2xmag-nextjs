@@ -4,7 +4,10 @@ import Title from './title'
 
 const ArticalCard = ({ title, slug, coverImage }) => {
 	return (
-		<div className='max-w-255 flex flex-col rounded-3'>
+		<div
+			className='max-w-255 flex flex-col rounded-3 shadow-small'
+		
+		>
 			<CoverImage
 				slug={slug}
 				title={title}
