@@ -99,7 +99,7 @@ export default function Sections({ subscription }) {
 						<>
 							<TopPost posts={allPosts} isVerticalPost hideAds isSectionPage />
 							<div className='lg:hidden block px-20 pb-28'>
-								<AdsLayout isHorizontal={true}></AdsLayout>
+								<AdsLayout></AdsLayout>
 							</div>
 							<div className='lg:hidden block border-2 border-black mx-20 lg:mx-0'></div>
 						</>

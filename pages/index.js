@@ -9,6 +9,8 @@ import PopularPost from '@/components/features/popular-posts'
 import TopPost from '@/components/features/top-posts'
 import Podcast from '@/components/features/podcast/podcast'
 import { useEffect, useState } from 'react'
+import SectionDivide from '@/components/ui/section-divide'
+import Section from '@/components/layout/section'
 
 export async function getStaticProps({ preview }) {
 	const graphqlRequest = {
@@ -75,7 +77,7 @@ export default function Index({ subscription }) {
 	const {
 		data: { allPosts, site, blog },
 	} = useQuerySubscription(subscription)
-	console.log(allPosts)
+
 	const morePosts = allPosts.slice(0, 3)
 
 	const metaTags = blog.seo.concat(site.favicon)
@@ -90,12 +92,15 @@ export default function Index({ subscription }) {
 				<Head>{renderMetaTags(metaTags)}</Head>
 				<div className='md:container mx-auto'>
 					<TopPost posts={highlightedPosts} />
+					<SectionDivide />
 					{morePosts.length > 0 && (
 						<LatestPost title='latest news' posts={morePosts} />
 					)}
+					<SectionDivide />
 					{morePosts.length > 0 && (
 						<PopularPost title='popular' posts={morePosts} />
 					)}
+					<SectionDivide />
 				</div>
 				<Podcast title='podcast' posts={morePosts} />
 			</Layout>

@@ -1,16 +1,12 @@
 const ListPostsLayout = ({
 	children,
-	adsHorizontal,
 	isCol,
 	isScrollHorizontal,
-	hasBorderBottom,
 	isSectionPost,
 }) => {
 	return (
 		<div
-			className={`flex flex-col flex-wrap lg:py-20 py-20 lg:flex-row justify-between ${
-				hasBorderBottom ? 'border-b border-black' : ''
-			} `}
+			className={`flex flex-col flex-wrap py-20 lg:flex-row justify-between`}
 		>
 			<div
 				className={`
@@ -29,8 +25,6 @@ const ListPostsLayout = ({
 			>
 				{children}
 			</div>
-
-			{adsHorizontal && <div className='w-full'>{adsHorizontal}</div>}
 		</div>
 	)
 }

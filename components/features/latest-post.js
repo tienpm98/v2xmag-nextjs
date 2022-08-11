@@ -23,8 +23,8 @@ export default function LatestPosts({ title, posts }) {
 						showAuthor
 					/>
 				))}
-				adsHorizontal={<AdsLayout isHorizontal={true}></AdsLayout>}
 			/>
+			<AdsLayout></AdsLayout>
 		</Section>
 	)
 }

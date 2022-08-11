@@ -22,7 +22,6 @@ export default function ListPodcast({ title, posts, postsAfterAds, tags }) {
 						tags={tags}
 					/>
 				))}
-				adsHorizontal={<AdsLayout isHorizontal={true}></AdsLayout>}
 			/>
 			<div className='lg:pt-0 pt-18'>
 				<ListPostsLayout

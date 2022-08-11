@@ -7,7 +7,6 @@ export default function ListLatestPosts({ title, posts, postsAfterAds }) {
 	return (
 		<Section title={title}>
 			<ListPostsLayout
-				hasAds={true}
 				isCol={true}
 				isSectionPost
 				children={posts.map((post) => (
@@ -24,7 +23,6 @@ export default function ListLatestPosts({ title, posts, postsAfterAds }) {
 						showAuthor
 					/>
 				))}
-				adsHorizontal={<AdsLayout isHorizontal={true}></AdsLayout>}
 			/>
 			<div className='pt-38 lg:py-0'>
 				<ListPostsLayout

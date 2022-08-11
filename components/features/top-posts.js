@@ -4,12 +4,7 @@ import AdsLayout from '../layout/ads-layout'
 import PostPreviewVertical from './post-preview-vertical'
 import TopHighlight from './top-highlight'
 
-export default function TopPosts({
-	posts,
-	isVerticalPost,
-	isSectionPage,
-	hideAds,
-}) {
+export default function TopPosts({ posts, isVerticalPost, isSectionPage }) {
 	const topPost = posts[0]
 	const restPosts = posts.slice(1, 4)
 	/*
@@ -51,10 +46,9 @@ export default function TopPosts({
 								isScrollHorizontal
 							/>
 						))}
-						adsHorizontal={
-							hideAds ? null : <AdsLayout isHorizontal={true}></AdsLayout>
-						}
 					/>
+
+					<AdsLayout></AdsLayout>
 				</Section>
 			</div>
 		</div>
