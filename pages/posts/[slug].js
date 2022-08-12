@@ -80,7 +80,7 @@ export async function getStaticProps({ params, preview = false }) {
           }
         }
 
-        morePosts: allPosts(orderBy: date_DESC, first: 2, filter: {slug: {neq: $slug}}) {
+        morePosts: allPosts(orderBy: _publishedAt_DESC, first: 2, filter: {slug: {neq: $slug}}) {
           title
           slug
           excerpt
@@ -186,7 +186,7 @@ export default function Post({ subscription, preview }) {
 				</article>
 
 				{/* divider */}
-				<div className='border-b-2 border-black pt-20 lg:pt-60 lg:mx-0'></div>
+				<div className='border-b-2 border-black pt-20 lg:pt-60 mx-20 lg:mx-0'></div>
 
 				<div className='lg:hidden flex justify-between flex-auto py-18 px-20'>
 					<span className='text-12 leading-1 text-gray-8 lg:pt-20 lg:pb-40 max-w-100'>

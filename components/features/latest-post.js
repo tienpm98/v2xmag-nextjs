@@ -1,7 +1,6 @@
 import ListPostsLayout from '../layout/list-post-layout'
 import PostPreviewHorizontal from './post-preview-horizontal'
 import Section from '../layout/section'
-import AdsLayout from '../layout/ads-layout'
 
 export default function LatestPosts({ title, posts }) {
 	return (
@@ -24,9 +23,6 @@ export default function LatestPosts({ title, posts }) {
 					/>
 				))}
 			/>
-			<div className='lg:pb-40 pb-20'>
-				<AdsLayout></AdsLayout>
-			</div>
 		</Section>
 	)
 }

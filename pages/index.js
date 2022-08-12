@@ -8,9 +8,10 @@ import LatestPost from '@/components/features/latest-post'
 import PopularPost from '@/components/features/popular-posts'
 import TopPost from '@/components/features/top-posts'
 import Podcast from '@/components/features/podcast/podcast'
-import { useEffect, useState } from 'react'
+
 import SectionDivide from '@/components/ui/section-divide'
-import Section from '@/components/layout/section'
+
+import AdsLayout from '@/components/layout/ads-layout'
 
 export async function getStaticProps({ preview }) {
 	const graphqlRequest = {
@@ -92,10 +93,16 @@ export default function Index({ subscription }) {
 				<Head>{renderMetaTags(metaTags)}</Head>
 				<div className='md:container mx-auto'>
 					<TopPost posts={highlightedPosts} />
+					<div className='lg:pb-40 pb-20'>
+						<AdsLayout></AdsLayout>
+					</div>
 					<SectionDivide />
 					{morePosts.length > 0 && (
 						<LatestPost title='latest news' posts={morePosts} />
 					)}
+					<div className='lg:pb-40 pb-20'>
+						<AdsLayout></AdsLayout>
+					</div>
 					<SectionDivide />
 					{morePosts.length > 0 && (
 						<PopularPost title='popular' posts={morePosts} />

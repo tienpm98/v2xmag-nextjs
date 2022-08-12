@@ -1,6 +1,6 @@
 import Section from '../layout/section'
 import ListPostsLayout from '../layout/list-post-layout'
-import AdsLayout from '../layout/ads-layout'
+
 import PostPreviewVertical from './post-preview-vertical'
 import TopHighlight from './top-highlight'
 
@@ -48,9 +48,9 @@ export default function TopPosts({ posts, isVerticalPost, isSectionPage }) {
 						))}
 					/>
 
-					<div className='lg:pb-40 pb-20'>
+					{/* <div className='lg:pb-40 pb-20'>
 						<AdsLayout></AdsLayout>
-					</div>
+					</div> */}
 				</Section>
 			</div>
 		</div>

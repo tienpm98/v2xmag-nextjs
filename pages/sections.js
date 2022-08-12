@@ -5,10 +5,9 @@ import { metaTagsFragment, responsiveImageFragment } from '@/lib/fragments'
 
 import Layout from '@/components/layout/layout'
 import TopPost from '@/components/features/top-posts'
-import ListLatestPosts from '@/components/features/list-latest-post'
+import SectionListLatestPosts from '@/components/features/section-list-latest-posts'
 import Pagination from '@/components/features/pagination'
 import AdsLayout from '@/components/layout/ads-layout'
-import Divide from '@/components/ui/divide'
 
 export async function getStaticProps({ preview }) {
 	const graphqlRequest = {
@@ -24,11 +23,11 @@ export async function getStaticProps({ preview }) {
             ...metaTagsFragment
           }
         }
-        allPosts(orderBy: date_DESC, first: 20) {
+        allPosts(orderBy: _publishedAt_DESC, first: 20) {
           title
           slug
           excerpt
-          date
+          _publishedAt
 		  category {
 			id
 			slug
@@ -41,11 +40,6 @@ export async function getStaticProps({ preview }) {
           }
           author {
             name
-            picture {
-              responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 100, h: 100, sat: -100}) {
-                ...responsiveImageFragment
-              }
-            }
           }
         }
       }
@@ -105,7 +99,7 @@ export default function Sections({ subscription }) {
 						</>
 					)}
 					{morePosts.length > 0 && (
-						<ListLatestPosts
+						<SectionListLatestPosts
 							title='latest news'
 							posts={latestNewsBeforeAds}
 							postsAfterAds={latestNewsAfterAds}

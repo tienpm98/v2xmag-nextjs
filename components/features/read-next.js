@@ -24,11 +24,10 @@ export default function ReadNext({ title, posts, hasAds }) {
 						category={post.category}
 						excerpt={post.excerpt}
 						_publishedAt={post._publishedAt}
-						showAuthor
 					/>
 				))}
 			/>
-			{hasAds && <AdsLayout />}
+			<div className='pb-20 lg:pb-0'>{hasAds && <AdsLayout />}</div>
 
 			<div className='lg:pt-20 lg:block hidden'>
 				<ListPostsLayout
@@ -45,7 +44,6 @@ export default function ReadNext({ title, posts, hasAds }) {
 							category={post.category}
 							excerpt={post.excerpt}
 							_publishedAt={post._publishedAt}
-							showAuthor
 						/>
 					))}
 				/>
