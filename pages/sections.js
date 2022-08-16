@@ -77,8 +77,6 @@ export default function Sections({ subscription }) {
 	const repeat = (a, n) => Array(n).fill(a).flat(1)
 
 	const latestNews = repeat(morePosts, 4)
-	const latestNewsBeforeAds = latestNews.slice(3)
-	const latestNewsAfterAds = latestNews.slice(-3)
 
 	const metaTags = blog.seo.concat(site.favicon)
 	const handleLoadmore = () => {
@@ -99,11 +97,7 @@ export default function Sections({ subscription }) {
 						</>
 					)}
 					{morePosts.length > 0 && (
-						<SectionListLatestPosts
-							title='latest news'
-							posts={latestNewsBeforeAds}
-							postsAfterAds={latestNewsAfterAds}
-						/>
+						<SectionListLatestPosts title='latest news' posts={latestNews} />
 					)}
 					<div className='block lg:hidden'>
 						<div
@@ -125,7 +119,7 @@ export default function Sections({ subscription }) {
 							<span className='font-bold text-15'>Load More</span>
 						</div>
 					</div>
-					<div className='lg:block hidden'>
+					<div className='lg:block hidden py-20'>
 						<Pagination page={1} />
 					</div>
 				</div>

@@ -14,11 +14,7 @@ export default function ArticalPosts({
 	tags,
 }) {
 	return (
-		<div
-			className={`flex flex-col justify-between
-			 lg:w-32-percent
-			  `}
-		>
+		<div className='flex flex-col justify-between'>
 			<div className='pb-2 lg:pb-5'>
 				<CoverImage
 					slug={slug}
