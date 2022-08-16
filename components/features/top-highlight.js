@@ -31,7 +31,6 @@ export default function TopHighlight({
 					slug={slug}
 					title={title}
 					responsiveImage={coverImage.responsiveImage}
-					className='lg:aspect-7/5'
 				/>
 			</div>
 			<div

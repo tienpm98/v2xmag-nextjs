@@ -7,10 +7,9 @@ module.exports = {
 	theme: {
 		container: {
 			screens: {
-				sm: '600px',
-				md: '728px',
-				lg: '984px',
-				xl: '1240px',
+				sm: '576px',
+				md: '960px',
+				lg: '1440px',
 			},
 		},
 		extend: {
@@ -123,6 +122,7 @@ module.exports = {
 				17: '17px',
 				18: '18px',
 				20: '20px',
+				24: '24px',
 				25: '25px',
 				40: '40px',
 				45: '45px',
@@ -142,6 +142,7 @@ module.exports = {
 				extra: '200%',
 				22: '22px',
 				42: '42px',
+				1.1: 1.1,
 			},
 			fontFamily: {
 				displayNormal: 'HelveticaNowDisplay',
@@ -234,9 +235,11 @@ module.exports = {
 
 			aspectRatio: {
 				'2/3': '2/3',
-				'10/13': '10/13',
+				'5/3': '5/3',
+				'4/5': '4/5',
 				'3/2': '3/2',
 				'7/5': '7/5',
+				'8/5': '8/5',
 			},
 
 			typography: {

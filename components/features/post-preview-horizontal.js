@@ -22,16 +22,16 @@ export default function PostPreviewHorizontal({
 				isVerticalPost ? 'lg:flex-col' : 'lg:flex-row'
 			}`}
 		>
-			<div className='lg:max-w-610'>
+			<div className='lg:w-1/2 w-full'>
 				<CoverImage
 					slug={slug}
 					title={title}
 					responsiveImage={coverImage.responsiveImage}
-					className='lg:aspect-3/2'
+					className='lg:aspect-5/3'
 				/>
 			</div>
 			<div
-				className={`flex flex-col justify-between basis-6 lg:basis-1/2 lg:max-w-525 ${
+				className={`flex flex-col justify-between basis-6 lg:basis-1/2 ${
 					isVerticalPost ? 'lg:text-center' : 'lg:text-left'
 				}`}
 			>
@@ -42,7 +42,9 @@ export default function PostPreviewHorizontal({
 				>
 					<h3
 						className={`mb-2 lg:mb-25 font-displayNormal font-bold ${
-							topTitle ? 'lg:text-45' : 'lg:text-40 text-17'
+							topTitle
+								? 'lg:text-45 md:text-24px leading-1.1'
+								: 'lg:text-40 md:text-24px text-17 leading-1.1'
 						} ${
 							uppercaseTitle ? 'uppercase' : 'capitalize'
 						} uppercase break-words lg:leading-topTitle`}
