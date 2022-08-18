@@ -119,34 +119,21 @@ export default function Podcast({ subscription }) {
 				<Head>{renderMetaTags(metaTags)}</Head>
 				<div className='md:container mx-auto lg:block hidden'>
 					<Section title='podcast'>
-						<Banner post={morePodcastsBeforeAds[0]} />
+						<Banner post={morePodcasts[0]} />
 					</Section>
 				</div>
 				<div className='block lg:hidden pt-18'>
-					<Banner post={morePodcastsBeforeAds[0]} />
+					<Banner post={morePodcasts[0]} />
 				</div>
 
-				<div className='hidden lg:block md:container mx-auto lg:py-35'>
+				<div className='md:container mx-auto py-20 lg:py-35'>
 					{morePosts.length > 0 && (
-						<ListPodcast
-							title='listen more'
-							posts={morePodcastsBeforeAds}
-							postsAfterAds={morePodcastsAfterAds}
-							tags={tags}
-						/>
+						<ListPodcast title='listen more' posts={morePodcasts} tags={tags} />
 					)}
 				</div>
 
 				{/* Fetch Latest releases podcast mobile version*/}
-				<div className='block lg:hidden md:container mx-auto lg:py-35'>
-					{morePosts.length > 0 && (
-						<ListPodcast
-							title='Latest releases'
-							posts={latestReleasePodcastsBeforeAds}
-							postsAfterAds={podcastAfterAds}
-							tags={tags}
-						/>
-					)}
+				<div className='md:container mx-auto lg:py-35'>
 					{showMoreButton && (
 						<div
 							className={`
