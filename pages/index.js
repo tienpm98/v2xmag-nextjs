@@ -93,14 +93,14 @@ export default function Index({ subscription }) {
 				<Head>{renderMetaTags(metaTags)}</Head>
 				<div className='md:container mx-auto'>
 					<TopPost posts={highlightedPosts} />
-					<div className='lg:pb-40 pb-20'>
+					<div className='lg:pb-40 pb-20 px-16 lg:px-0 md:px-0'>
 						<AdsLayout></AdsLayout>
 					</div>
 					<SectionDivide />
 					{morePosts.length > 0 && (
 						<LatestPost title='latest news' posts={morePosts} />
 					)}
-					<div className='lg:pb-40 pb-20'>
+					<div className='lg:pb-40 pb-20 px-16 lg:px-0 md:px-0'>
 						<AdsLayout></AdsLayout>
 					</div>
 					<SectionDivide />

@@ -27,7 +27,7 @@ export default function PostPreviewHorizontal({
 					slug={slug}
 					title={title}
 					responsiveImage={coverImage.responsiveImage}
-					className='lg:aspect-5/3'
+					className='lg:aspect-5/3 h-full'
 				/>
 			</div>
 			<div

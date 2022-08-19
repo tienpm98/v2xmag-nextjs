@@ -17,13 +17,13 @@ export default function PodcastPreview({
 }) {
 	return (
 		<div
-			className={`flex flex-col justify-between lg:max-w-400 max-w-288
-			 ${isScrollHorizontal && 'flex-scroll-horizontal-80 lg:flex-initial'}
+			className={`flex flex-col justify-between w-[33%] max-w[33%]
+			 ${isScrollHorizontal && 'flex-scroll-horizontal-80 lg:flex-none'}
 			 ${isSectionPost ? 'lg:flex-3' : ''}
 			 `}
 		>
 			<div className='pb-2 lg:pb-5'>
-				<div className='lg:max-w-400 max-w-288'>
+				<div className=''>
 					<CoverImage
 						slug={slug}
 						title={title}
