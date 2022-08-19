@@ -20,7 +20,10 @@ export default function PostPreviewVertical({
 			className={`flex flex-col justify-between
 			 lg:w-32-percent
 			 ${isSectionPost ? 'lg:flex-3' : ''}
-			 ${isScrollHorizontal && 'flex-scroll-horizontal-80 lg:flex-initial md:flex-initial'}
+			 ${
+					isScrollHorizontal &&
+					'flex-scroll-horizontal-70 lg:flex-initial md:flex-scroll-horizontal-65'
+				}
 			 `}
 		>
 			<div className='pb-2 lg:pb-5'>
