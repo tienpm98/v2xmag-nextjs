@@ -167,7 +167,7 @@ export default function Post({ subscription, preview }) {
 					</div>
 				</article>
 
-				<div className='border-b border-white pt-20 lg:pt-60'></div>
+				<div className='md:container mx-auto border-b border-white pt-20 lg:pt-60'></div>
 				{morePosts.length > 0 && (
 					<div className='lg:block hidden md:container mx-auto text-white'>
 						<LatestReleases sectionTitle='listen more' posts={morePosts} />
@@ -175,7 +175,7 @@ export default function Post({ subscription, preview }) {
 				)}
 
 				{morePosts.length > 0 && (
-					<div className='lg:hidden block md:container mx-auto text-white'>
+					<div className='lg:hidden md:container mx-auto block px-18 text-white'>
 						<LatestReleases sectionTitle='latest releases' posts={morePosts} />
 					</div>
 				)}

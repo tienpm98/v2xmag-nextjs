@@ -6,7 +6,7 @@ const ListPostsLayout = ({
 }) => {
 	return (
 		<div
-			className={`flex flex-col flex-wrap py-20 lg:flex-row justify-between`}
+			className={`flex flex-col flex-wrap py-20 lg:flex-row justify-between overflow-hidden`}
 		>
 			<div
 				className={`

@@ -5,13 +5,6 @@ module.exports = {
 	],
 
 	theme: {
-		container: {
-			screens: {
-				sm: '576px',
-				md: '960px',
-				lg: '1440px',
-			},
-		},
 		extend: {
 			flex: {
 				30: '1 1 30%',

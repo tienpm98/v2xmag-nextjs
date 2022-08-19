@@ -90,10 +90,10 @@ export default function Sections({ subscription }) {
 					{morePosts.length > 0 && (
 						<>
 							<TopPost posts={allPosts} isVerticalPost hideAds isSectionPage />
-							<div className='lg:hidden block px-20 pb-28'>
+							<div className='lg:hidden block px-20 pb-28 md:px-0'>
 								<AdsLayout></AdsLayout>
 							</div>
-							<div className='lg:hidden block border-2 border-black mx-20 lg:mx-0'></div>
+							<div className='lg:hidden block border-2 border-black mx-20 lg:mx-0 md:mx-0'></div>
 						</>
 					)}
 					{morePosts.length > 0 && (

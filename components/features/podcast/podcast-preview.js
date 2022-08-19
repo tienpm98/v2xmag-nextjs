@@ -17,7 +17,7 @@ export default function PodcastPreview({
 }) {
 	return (
 		<div
-			className={`flex flex-col justify-between w-[33%] max-w[33%]
+			className={`flex flex-col justify-between w-[33%] max-w-400
 			 ${isScrollHorizontal && 'flex-scroll-horizontal-80 lg:flex-none'}
 			 ${isSectionPost ? 'lg:flex-3' : ''}
 			 `}
