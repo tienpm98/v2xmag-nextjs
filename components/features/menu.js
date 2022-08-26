@@ -69,7 +69,7 @@ export default function Menu() {
 
 	return (
 		<Layout isShow={state.toggleMenu}>
-			<ul className='h-full w-full lg:w-fit bg-black font-white text-center lg:text-left px-35 lg:px-100  pt-23 lg:pt-40 pb-45 lg:pb-75 border-gray-menu lg:border-t relative box-border'>
+			<ul className='h-full w-full lg:w-fit bg-white font-white text-center lg:text-left px-35 lg:px-100  pt-23 lg:pt-40 pb-45 lg:pb-75 border-gray-menu lg:border-t relative box-border'>
 				<div
 					className='absolute right-40 cursor-pointer'
 					onClick={clickOutside}
@@ -82,7 +82,7 @@ export default function Menu() {
 							{menuItems.map((item, index) => (
 								<li
 									key={index}
-									className='text-25 lg:text-3xl uppercase text-white leading-tight font-black hover:underline leading-extra'
+									className='text-25 lg:text-3xl uppercase text-black leading-tight font-black hover:underline leading-extra'
 									onMouseEnter={() => onMouseEnter(item.id)}
 									onMouseLeave={() => setHover(-1)}
 								>
@@ -101,7 +101,7 @@ export default function Menu() {
 							{subMenuItems.map((item, index) => (
 								<li
 									key={index}
-									className='text-15 uppercase text-white leading-tight hover:underline leading-extra'
+									className='text-15 uppercase text-black leading-tight hover:underline leading-extra'
 									onMouseEnter={() => onMouseEnter(item.id)}
 									onMouseLeave={() => setHover(-1)}
 								>
