@@ -1,12 +1,16 @@
 import { useContext } from 'react'
 import { Context } from '@/context'
+import { useScrollDirection } from 'hooks/useScrollDirection'
+
 import Footer from './footer'
 import Header from './header'
 import Container from './container'
 import Menu from '../features/menu'
 
 export default function Layout({ children }) {
-	const { dispatch } = useContext(Context)
+	const { state, dispatch } = useContext(Context)
+	const scrollDirection = useScrollDirection()
+	const toggleMenu = state.toggleMenu
 
 	const clickMenu = () => {
 		dispatch({
@@ -15,13 +19,29 @@ export default function Layout({ children }) {
 		})
 	}
 
+	const checkScroll = () => {
+		if (toggleMenu) {
+			return 'top-70'
+		}
+		if (!toggleMenu) {
+			if (scrollDirection === 'down') {
+				return '-top-70'
+			} else {
+				return 'top-70'
+			}
+		}
+	}
+
 	return (
 		<>
 			<div className='min-h-screen'>
 				<Container>
 					<Header />
 					<div
-						className={`sticky flex lg:hidden w-full border-b-section border-gray-menu font-black z-50 bg-white
+						className={`sticky flex lg:hidden w-full border-gray-menu font-black z-50 bg-white
+						transition-all duration-500
+						border-b border-t border-gray-menu
+						${checkScroll()}
 						 `}
 					>
 						<span
