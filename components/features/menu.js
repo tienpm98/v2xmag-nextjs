@@ -78,11 +78,11 @@ export default function Menu() {
 				</div>
 				<div className='flex flex-col justify-between h-full'>
 					<div className='flex flex-col gap-30'>
-						<div className='flex flex-col pt-40 lg:pt-65 lg:gap-30'>
+						<div className='flex flex-col pt-40 lg:pt-65'>
 							{menuItems.map((item, index) => (
 								<li
 									key={index}
-									className='text-25 lg:text-3xl uppercase text-black leading-tight font-black hover:underline leading-extra'
+									className='text-25 lg:text-30 uppercase text-black font-black hover:underline leading-60'
 									onMouseEnter={() => onMouseEnter(item.id)}
 									onMouseLeave={() => setHover(-1)}
 								>
@@ -97,7 +97,7 @@ export default function Menu() {
 							))}
 						</div>
 
-						<div className='flex flex-col lg:py-30 lg:gap-10'>
+						<div className='flex flex-col lg:py-30 text-15 leading-30'>
 							{subMenuItems.map((item, index) => (
 								<li
 									key={index}

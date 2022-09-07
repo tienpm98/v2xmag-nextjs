@@ -89,7 +89,7 @@ const AudioPlayer = () => {
 					<span>{duration && !isNaN(duration) && calculateTime(duration)}</span>
 				</div>
 			</div>
-			<span className='text-xs lg:text-xl capitalize px-20 lg:px-25'>Sole Mates: Priya Ahluwalia And The Adidas Orginals Superstar</span>
+			<span className='text-xs lg:text-20 lg:leading-20 capitalize px-20 lg:px-25'>Sole Mates: Priya Ahluwalia And The Adidas Orginals Superstar</span>
 		</div>
 	)
 }
