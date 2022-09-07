@@ -9,6 +9,11 @@ import Layout from '@/components/layout/layout'
 import PodcastHeader from '@/components/features/podcast/podcast-header'
 import PodcastBody from '@/components/features/podcast/podcast-body'
 import LatestReleases from '@/components/features/podcast/latest-releases'
+import TimeAgo from '@/components/ui/timeAgo'
+import Heart from '@/components/ui/Icon/heart'
+import Upload from '@/components/ui/Icon/upload'
+import Bookmark from '@/components/ui/Icon/bookmark'
+import CommnentIcon from '@/components/ui/Icon/comment'
 
 export async function getStaticPaths() {
 	const data = await request({ query: `{ allPosts { slug } }` })
@@ -35,6 +40,7 @@ export async function getStaticProps({ params, preview = false }) {
           title
           slug
           excerpt
+		  _publishedAt
           content {
             value
             blocks {
@@ -140,8 +146,8 @@ export default function Post({ subscription, preview }) {
 	return (
 		<Layout preview={preview}>
 			<Head>{renderMetaTags(metaTags)}</Head>
-			<Container className='bg-gradient-to-b from-red-c1 to-black'>
-				<article className='lg:p-0 p-18 lg:mt-0 mt-18'>
+			<Container className='bg-gradient-to-b from-red-c1 to-black '>
+				<article className='lg:p-0 p-18 lg:mt-0 mt-18 md:container mx-auto lg:px-6-percen'>
 					<PodcastHeader
 						title={post.title}
 						coverImage={post.coverImage}
@@ -157,8 +163,16 @@ export default function Post({ subscription, preview }) {
 								</span>
 							</Link>
 							<span className='text-12 leading-1 text-white lg:pt-20 lg:pb-40'>
-								{new Date(post.date).toLocaleDateString('en-US', options)}
+								by <strong>{post.author.name} </strong>
+								<TimeAgo time={post.date} />
 							</span>
+
+							<div className='hidden lg:flex lg:flex-col gap-16 color-gray-8'>
+								<Heart fill='white' />
+								<CommnentIcon fill='white' />
+								<Upload fill='white' />
+								<Bookmark fill='white' />
+							</div>
 						</div>
 						<div className='podcast_body'>
 							<PodcastBody content={post.content} />

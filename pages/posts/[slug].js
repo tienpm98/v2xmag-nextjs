@@ -142,7 +142,7 @@ export default function Post({ subscription, preview }) {
 	return (
 		<Layout preview={preview}>
 			<Head>{renderMetaTags(metaTags)}</Head>
-			<Container className='md:container mx-auto'>
+			<Container className='md:container mx-auto lg:px-6-percen'>
 				<article>
 					<PostHeader
 						title={post.title}
