@@ -1,6 +1,6 @@
 const FooterNavigation = ({ footerNavigation }) => {
 	return (
-		<ul className='flex gap-4 text-sm'>
+		<ul className='flex gap-4 text-14 leading-22'>
 			{footerNavigation.map((item, index) => (
 				<li
 					key={index}

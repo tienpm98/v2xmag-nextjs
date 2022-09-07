@@ -12,7 +12,7 @@ const FooterMenu = ({ title, menuItems }) => {
 	return (
 		<ul className='flex flex-col gap-20 px-2'>
 			<span className='font-black'>{title}</span>
-			<div className='flex flex-col text-sm'>
+			<div className='flex flex-col text-14 leading-22'>
 				{menuItems.map((item, index) => (
 					<FooterMenuItem key={index} {...item} />
 				))}

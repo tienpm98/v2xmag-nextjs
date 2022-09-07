@@ -135,6 +135,7 @@ module.exports = {
 				topTitle: '47px',
 				loose: '150%',
 				extra: '200%',
+				18: '18px',
 				22: '22px',
 				42: '42px',
 				1.1: 1.1,
