@@ -203,7 +203,9 @@ export default function Post({ subscription, preview }) {
 				</div>
 
 				{morePosts.length > 0 && (
-					<ReadNext title='what to read next' posts={nextPosts} hasAds />
+					<div className='lg:pb-40 pb-20'>
+						<ReadNext title='what to read next' posts={nextPosts} hasAds />
+					</div>
 				)}
 			</Container>
 		</Layout>
