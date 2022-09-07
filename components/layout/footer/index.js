@@ -30,7 +30,7 @@ export default function Footer() {
 					</div>
 					<Divide />
 
-					<div className='hidden lg:flex flex-wrap justify-between py-45'>
+					<div className='hidden lg:flex flex-wrap py-45 lg:justify-between lg:max-w-4/5 w-full'>
 						{footerMenu.map((menu, index) => (
 							<FooterMenu
 								key={index}
