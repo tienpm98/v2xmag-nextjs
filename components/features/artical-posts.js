@@ -23,7 +23,7 @@ export default function ArticalPosts({
 					className='aspect-14/9 lg:aspect-8/5'
 				/>
 
-				<h3 className='pb-0 lg:pb-2.5 pt-5 font-displayNormal font-bold text-17 lg:text-20 break-words'>
+				<h3 className='pb-0 pt-5 font-displayNormal font-bold text-17 lg:text-20 break-words'>
 					<Link href={`/posts/${slug}`}>
 						<a>{title}</a>
 					</Link>

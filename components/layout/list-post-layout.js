@@ -6,12 +6,12 @@ const ListPostsLayout = ({
 }) => {
 	return (
 		<div
-			className={`flex flex-col flex-wrap py-20 lg:flex-row justify-between overflow-hidden`}
+			className={`flex flex-col flex-wrap lg:flex-row justify-between overflow-hidden`}
 		>
 			<div
 				className={`
 				w-full
-				flex pb-0 lg:pb-20
+				flex pb-0 lg:pb-40
 				justify-between
 				${isSectionPost ? 'flex-wrap' : ''}
 				${

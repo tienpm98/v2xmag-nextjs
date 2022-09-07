@@ -17,7 +17,7 @@ export default function PodcastPreview({
 }) {
 	return (
 		<div
-			className={`flex flex-col justify-between w-32-percent max-w-400
+			className={`flex flex-col justify-between w-32-percent
 			 ${isScrollHorizontal && 'flex-scroll-horizontal-70 lg:flex-none'}
 			 ${isSectionPost ? 'lg:flex-3' : ''}
 			 `}
@@ -32,7 +32,7 @@ export default function PodcastPreview({
 					/>
 				</div>
 
-				<h3 className='pb-0 lg:pb-2.5 pt-5 font-displayNormal font-bold text-17 lg:text-20 break-words'>
+				<h3 className='pb-0 pt-5 font-displayNormal font-bold text-17 lg:text-20 break-words'>
 					<Link href={`/posts/${slug}`}>
 						<a>{title}</a>
 					</Link>
