@@ -152,7 +152,7 @@ export default function Post({ subscription, preview }) {
 					<div className='flex justify-around md:container mx-auto'>
 						<div className='hidden lg:flex flex-col min-w-100'>
 							<Link href={`/category/${post.category.id}`}>
-								<span className='font-bold text-12 leading-1 uppercase text-white underline cursor-pointer'>
+								<span className='font-bold text-12 leading-1 uppercase text-white underline underline-offset-4 cursor-pointer'>
 									{post.category.name}
 								</span>
 							</Link>

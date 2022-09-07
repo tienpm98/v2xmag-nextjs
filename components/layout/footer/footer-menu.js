@@ -1,7 +1,11 @@
 import React from 'react'
 
 const FooterMenuItem = (item) => {
-	return <li className='cursor-pointer hover:underline'>{item.name}</li>
+	return (
+		<li className='cursor-pointer hover:underline underline-offset-4'>
+			{item.name}
+		</li>
+	)
 }
 
 const FooterMenu = ({ title, menuItems }) => {

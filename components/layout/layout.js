@@ -45,12 +45,12 @@ export default function Layout({ children }) {
 						 `}
 					>
 						<span
-							className='flex-50 py-18 text-center uppercase border-r-section border-gray-menu hover:underline leading-base'
+							className='flex-50 py-18 text-center uppercase border-r-section border-gray-menu hover:underline underline-offset-4 leading-base'
 							onClick={clickMenu}
 						>
 							sections
 						</span>
-						<span className='flex-50 py-18 text-center uppercase hover:underline leading-base'>
+						<span className='flex-50 py-18 text-center uppercase hover:underline underline-offset-4 leading-base'>
 							shop
 						</span>
 					</div>

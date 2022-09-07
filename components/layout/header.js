@@ -47,7 +47,7 @@ export default function Header() {
 				<div className='container mx-auto flex justify-between items-center text-white px-30 lg:px-0 py-20 lg:pt-27 lg:pb-23'>
 					<div className='hidden lg:flex gap-26'>
 						<span
-							className='text-black font-black text-12 lg:text-15 cursor-pointer hover:underline'
+							className='text-black font-black text-12 lg:text-15 cursor-pointer hover:underline underline-offset-4'
 							onClick={clickMenu}
 						>
 							SECTIONS

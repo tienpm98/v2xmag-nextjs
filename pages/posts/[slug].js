@@ -155,11 +155,11 @@ export default function Post({ subscription, preview }) {
 					<div className='flex'>
 						<div className='hidden lg:flex flex-col '>
 							<Link href={`/category/${post.category.id}`}>
-								<span className='font-black text-12 leading-1 uppercase text-gray-8 underline cursor-pointer'>
+								<span className='font-black text-12 leading-1 uppercase text-gray-default underline underline-offset-4 cursor-pointer'>
 									{post.category.name}
 								</span>
 							</Link>
-							<span className='text-12 leading-1 text-gray-8 lg:pt-20 lg:pb-40'>
+							<span className='text-12 leading-1 text-gray-default lg:pt-20 lg:pb-40'>
 								by <strong>{post.author.name} </strong>
 								<TimeAgo time={post._publishedAt} />
 							</span>
@@ -189,7 +189,7 @@ export default function Post({ subscription, preview }) {
 				<div className='border-b-2 border-black pt-20 lg:pt-60 mx-20 lg:mx-0'></div>
 
 				<div className='lg:hidden flex justify-between flex-auto py-18 px-20'>
-					<span className='text-12 leading-1 text-gray-8 lg:pt-20 lg:pb-40 max-w-100'>
+					<span className='text-12 leading-1 text-gray-default lg:pt-20 lg:pb-40 max-w-100'>
 						by <strong>{post.author.name} </strong>
 						<TimeAgo time={post._publishedAt} />
 					</span>

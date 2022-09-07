@@ -31,7 +31,7 @@ export default function ArticalPosts({
 			</div>
 
 			<div className='flex justify-between'>
-				<h5 className='text-gray-400 uppercase underline font-black text-12'>
+				<h5 className='text-gray-default uppercase underline underline-offset-4 font-black text-12'>
 					<Link href={`/category/${category.id}`}>
 						<a>{category.name}</a>
 					</Link>
@@ -39,7 +39,7 @@ export default function ArticalPosts({
 
 				<div className='flex flex-col'>
 					{showAuthor && (
-						<p className='text-xs text-gray-8 hidden lg:flex'>
+						<p className='text-xs text-gray-default hidden lg:flex'>
 							<span>by&nbsp;</span>
 							<span>{author?.name}</span>
 							&nbsp;/&nbsp;

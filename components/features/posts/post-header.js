@@ -14,7 +14,7 @@ export default function PostHeader({
 		<div className='md:container mx-auto lg:pt-90'>
 			<div className='lg:hidden flex justify-center py-18'>
 				<Link href={`/category/${category?.id}`}>
-					<span className='font-black text-12 leading-1 uppercase text-gray-8 underline cursor-pointer'>
+					<span className='font-black text-12 leading-1 uppercase text-gray-default underline underline-offset-4 cursor-pointer'>
 						{category?.name}
 					</span>
 				</Link>

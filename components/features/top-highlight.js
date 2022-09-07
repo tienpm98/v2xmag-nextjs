@@ -31,7 +31,7 @@ export default function TopHighlight({
 					slug={slug}
 					title={title}
 					responsiveImage={coverImage.responsiveImage}
-					className="aspect-7/5"
+					className='aspect-7/5'
 				/>
 			</div>
 			<div
@@ -66,7 +66,7 @@ export default function TopHighlight({
 					<div className='flex flex-col'>
 						<span className='text-xs lg:text-15'>{excerpt}</span>
 						{showAuthor && (
-							<p className='text-xs text-gray-8 hidden lg:flex'>
+							<p className='text-xs text-gray-default hidden lg:flex'>
 								<span>by&nbsp;</span>
 								<span>{author.name}</span>
 								&nbsp;/&nbsp;
@@ -76,7 +76,7 @@ export default function TopHighlight({
 							</p>
 						)}
 					</div>
-					<h5 className='text-gray-8 uppercase underline font-black text-xs lg:pt-1.5 text-xs'>
+					<h5 className='text-gray-default uppercase underline underline-offset-4 font-black text-xs lg:pt-1.5 text-xs'>
 						<Link href={`/category/${category.id}`}>
 							<a>{category.name}</a>
 						</Link>

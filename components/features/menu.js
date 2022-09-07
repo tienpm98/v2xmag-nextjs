@@ -101,7 +101,7 @@ export default function Menu() {
 							{subMenuItems.map((item, index) => (
 								<li
 									key={index}
-									className='text-15 uppercase text-black leading-tight hover:underline leading-extra'
+									className='text-15 uppercase text-black leading-tight hover:underline underline-offset-4 leading-extra'
 									onMouseEnter={() => onMouseEnter(item.id)}
 									onMouseLeave={() => setHover(-1)}
 								>

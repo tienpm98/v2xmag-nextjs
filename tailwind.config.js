@@ -20,6 +20,7 @@ module.exports = {
 				'accent-7': '#333',
 				success: '#0070f3',
 				cyan: '#79FFE1',
+				'gray-default': '#7d7d7d',
 				'gray-menu': '#DADADA',
 				'gray-d5': '#d5d5d5',
 				'gray-8': '#888888',

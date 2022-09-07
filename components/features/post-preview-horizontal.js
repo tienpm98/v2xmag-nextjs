@@ -60,7 +60,7 @@ export default function PostPreviewHorizontal({
 						</span>
 
 						{showAuthor && (
-							<p className='text-xs text-gray-8 hidden lg:flex'>
+							<p className='text-xs text-gray-default hidden lg:flex'>
 								<span>by&nbsp;</span>
 								<span>{author.name}</span>
 								&nbsp;/&nbsp;
@@ -73,13 +73,13 @@ export default function PostPreviewHorizontal({
 				</div>
 
 				<div className='flex justify-between'>
-					<h5 className='text-gray-8 uppercase underline font-black text-xs lg:pt-1.5 text-xs'>
+					<h5 className='text-gray-default uppercase underline underline-offset-4 font-black text-xs lg:pt-1.5 text-xs'>
 						<Link href={`/category/${category.id}`}>
 							<a>{category.name}</a>
 						</Link>
 					</h5>
 
-					<p className='lg:hidden flex text-12 text-gray-8'>
+					<p className='lg:hidden flex text-12 text-gray-default'>
 						<span>by&nbsp;</span>
 						<span>{author.name}</span>
 						&nbsp;/&nbsp;

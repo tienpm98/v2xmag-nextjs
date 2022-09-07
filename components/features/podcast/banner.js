@@ -23,7 +23,7 @@ const Banner = ({ post, isPlaying, playPodcast }) => {
 						Sole Mates: Priya ahluwalia and the adidas origaninals superstar
 					</h2>
 
-					<h5 className='text-center lg:text-left text-12 text-white uppercase underline font-black pt-15 pb-30 lg:pt-20 lg:pb-0'>
+					<h5 className='text-center lg:text-left text-12 text-white uppercase underline underline-offset-4 font-black pt-15 pb-30 lg:pt-20 lg:pb-0'>
 						<Link href='#'>
 							<a>curture</a>
 						</Link>
@@ -36,7 +36,7 @@ const Banner = ({ post, isPlaying, playPodcast }) => {
 									<CoverImage
 										title={post.title}
 										responsiveImage={post.coverImage.responsiveImage}
-										className="aspect-square"
+										className='aspect-square'
 									/>
 								</div>
 
@@ -123,7 +123,7 @@ const Banner = ({ post, isPlaying, playPodcast }) => {
 							<CoverImage
 								title={post.title}
 								responsiveImage={post.coverImage.responsiveImage}
-								className="aspect-square"
+								className='aspect-square'
 							/>
 						</div>
 
