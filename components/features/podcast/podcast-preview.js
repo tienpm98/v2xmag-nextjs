@@ -33,7 +33,7 @@ export default function PodcastPreview({
 				</div>
 
 				<h3 className='pb-0 lg:pt-15 pt-5 font-displayNormal font-bold text-17 lg:text-20 break-words'>
-					<Link href={`/posts/${slug}`}>
+					<Link href={`/podcast/${slug}`}>
 						<a>{title}</a>
 					</Link>
 				</h3>

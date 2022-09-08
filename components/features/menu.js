@@ -22,6 +22,11 @@ const menuItems = [
 		name: 'style',
 		path: '#',
 	},
+	{
+		id: 3,
+		name: 'podcast',
+		path: '/podcast',
+	},
 ]
 
 const subMenuItems = [
