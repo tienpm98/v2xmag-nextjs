@@ -140,6 +140,7 @@ module.exports = {
 				18: '18px',
 				22: '22px',
 				42: '42px',
+				60: '60px',
 				1.1: 1.1,
 			},
 			fontFamily: {
