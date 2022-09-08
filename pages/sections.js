@@ -86,7 +86,7 @@ export default function Sections({ subscription }) {
 		<>
 			<Layout>
 				<Head>{renderMetaTags(metaTags)}</Head>
-				<div className='md:container mx-auto lg:py-65 py-18'>
+				<div className='md:container mx-auto lg:py-0 py-18'>
 					{morePosts.length > 0 && (
 						<>
 							<TopPost posts={allPosts} isVerticalPost hideAds isSectionPage />
@@ -119,7 +119,7 @@ export default function Sections({ subscription }) {
 							<span className='font-bold text-15'>Load More</span>
 						</div>
 					</div>
-					<div className='lg:block hidden py-20'>
+					<div className='lg:block hidden py-40'>
 						<Pagination page={1} />
 					</div>
 				</div>
