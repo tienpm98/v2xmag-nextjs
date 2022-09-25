@@ -26,7 +26,7 @@ export default function PostPreviewVertical({
 				}
 			 `}
 		>
-			<div className='pb-2 lg:pb-5'>
+			<div className='pb-2 lg:pb-10'>
 				<CoverImage
 					slug={slug}
 					title={title}

@@ -46,7 +46,9 @@ export default function Footer() {
 						<div className='flex flex-wrap justify-center lg:justify-between gap-4 lg:gap-12'>
 							<FooterNavigation footerNavigation={footerNavigation} />
 
-							<p className='text-14 leading-22'>© V2X Media 2022</p>
+							<p className='text-14 leading-22 lg:pl-80 pl-0'>
+								© V2X Media 2022
+							</p>
 						</div>
 					</div>
 

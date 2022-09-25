@@ -126,7 +126,7 @@ export default function Podcast({ subscription }) {
 					<Banner post={morePodcasts[0]} />
 				</div>
 
-				<div className='md:container mx-auto py-20 lg:py-35'>
+				<div className='md:container mx-auto pb-20 lg:pb-35'>
 					{morePosts.length > 0 && (
 						<ListPodcast title='listen more' posts={morePodcasts} tags={tags} />
 					)}

@@ -22,7 +22,7 @@ export default function PodcastPreview({
 			 ${isSectionPost ? 'lg:flex-3' : ''}
 			 `}
 		>
-			<div className='pb-2 lg:pb-5'>
+			<div className='pb-2 lg:pb-10'>
 				<div className=''>
 					<CoverImage
 						slug={slug}
