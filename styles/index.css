@@ -24,15 +24,15 @@
 }
 
 .breadcrumb_text > nav > ol {
-	@apply flex items-center list-none p-0 m-0;
+	@apply flex items-center list-none p-0 m-0 !important;
 }
 
 .breadcrumb_text > nav > ol > li {
-	@apply p-0 m-0 mr-4 after:content-['›'] after:inline-block after:ml-4 last:after:content-[''];
+	@apply p-0 m-0 mr-4 after:content-['›'] after:inline-block after:ml-4 last:after:content-[''] !important;
 }
 
 .breadcrumb_text nav ol a {
-	@apply text-12 no-underline text-black font-displayNormal font-bold;
+	@apply text-12 no-underline text-black font-displayNormal font-bold !important;
 }
 
 .podcast_body {
