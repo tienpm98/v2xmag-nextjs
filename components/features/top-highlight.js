@@ -18,7 +18,7 @@ export default function TopHighlight({
 }) {
 	return (
 		<div
-			className={`flex flex-col lg:flex-row lg:gap-20 ${
+			className={`flex flex-col lg:flex-row lg:gap-20 lg:pb-20 pb-0 ${
 				isVerticalPost ? 'lg:flex-col' : 'lg:flex-row'
 			}`}
 		>
