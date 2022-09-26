@@ -22,7 +22,7 @@
 		font-family: 'HelveticaNowDisplayBlack';
 	}
 
-	.breadcrumb > nav > ol {
+	.breadcrumb_text > nav > ol {
 		display: flex;
 		align-items: center;
 		list-style: none;
@@ -30,23 +30,23 @@
 		margin: 0;
 	}
 
-	.breadcrumb > nav > ol > li {
+	.breadcrumb_text > nav > ol > li {
 		padding: 0;
 		margin: 0;
 		margin-right: 4px;
 	}
 
-	.breadcrumb > nav > ol > li:after {
+	.breadcrumb_text > nav > ol > li:after {
 		content: '›';
 		display: inline-block;
 		margin-left: 4px;
 	}
 
-	.breadcrumb nav ol li:last-child:after {
+	.breadcrumb_text nav ol li:last-child:after {
 		content: '';
 	}
 
-	.breadcrumb nav ol a {
+	.breadcrumb_text nav ol a {
 		font-size: 12px;
 		text-decoration: none;
 		color: #000;

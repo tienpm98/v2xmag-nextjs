@@ -29,7 +29,7 @@ export default function PodcastBody({ content }) {
 						<Chip key={index} title={tag} />
 					))}
 				</div>
-				<div className='breadcrumb podcast_body pt-20'>
+				<div className='breadcrumb_text podcast_body pt-20'>
 					<Breadcrumb />
 				</div>
 			</div>
