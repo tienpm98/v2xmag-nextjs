@@ -2,7 +2,7 @@ import Breadcrumbs from 'nextjs-breadcrumbs'
 import styles from './breadcrumb.module.css'
 const Breadcrumb = () => {
 	return (
-		<div className={styles.breadcrumb_text}>
+		<div id={styles['breadcrumb_text']}>
 			<Breadcrumbs
 				useDefaultStyle
 				rootLabel='HOME'
