@@ -1,5 +1,6 @@
 import Chip from '@/components/ui/chip'
 import { StructuredText, Image } from 'react-datocms'
+import Breadcrumb from '@/components/layout/breadcrumb/breadcrumb'
 
 export default function PodcastBody({ content }) {
 	const tagItems = ['picante', 'class of 2022', 'danny lomas', 'spring/summer']
@@ -27,6 +28,9 @@ export default function PodcastBody({ content }) {
 					{tagItems.map((tag, index) => (
 						<Chip key={index} title={tag} />
 					))}
+				</div>
+				<div className='breadcrumb podcast_body pt-20'>
+					<Breadcrumb />
 				</div>
 			</div>
 		</div>
