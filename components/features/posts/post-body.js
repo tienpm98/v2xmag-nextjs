@@ -30,7 +30,7 @@ export default function PostBody({ content }) {
 						<Chip key={index} title={tag} />
 					))}
 				</div>
-				<div className='pt-20 breadcrumb_text'>
+				<div className='pt-20'>
 					<Breadcrumb />
 				</div>
 			</div>
