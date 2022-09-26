@@ -6,6 +6,10 @@ module.exports = {
 
 	theme: {
 		extend: {
+			content: {
+				empty: '',
+				rightArrow: '›',
+			},
 			flex: {
 				30: '1 1 30%',
 				50: '1 1 50%',
@@ -31,6 +35,7 @@ module.exports = {
 			},
 			spacing: {
 				3: '3px',
+				4: '4px',
 				5: '5px',
 				6: '6px',
 				7: '7px',
@@ -95,6 +100,7 @@ module.exports = {
 				'64-percent': '64%',
 				'65-percent': '65%',
 			},
+
 			gap: {
 				10: '10px',
 

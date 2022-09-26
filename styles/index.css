@@ -23,6 +23,18 @@
 	}
 }
 
+.breadcrumb_text > nav > ol {
+	@apply flex items-center list-none p-0 m-0;
+}
+
+.breadcrumb_text > nav > ol > li {
+	@apply p-0 m-0 mr-4 after:content-['›'] after:inline-block after:ml-4 last:after:content-[''];
+}
+
+.breadcrumb_text nav ol a {
+	@apply text-12 no-underline text-black font-displayNormal font-bold;
+}
+
 .podcast_body {
 	color: white;
 }
