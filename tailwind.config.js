@@ -4,6 +4,8 @@ module.exports = {
 		'./components/**/*.{js,ts,jsx,tsx}',
 	],
 
+	safelist: ['breadcrumb_text'],
+
 	theme: {
 		extend: {
 			flex: {
