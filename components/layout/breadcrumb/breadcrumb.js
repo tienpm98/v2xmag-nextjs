@@ -4,11 +4,11 @@ const Breadcrumb = () => {
 	return (
 		<div
 			className='
-			[&>nav>ol]:flex [&>nav>ol]:items-center [&>nav>ol]:list-none [&>nav>ol]:p-0
-			[&>nav>ol>li]:p-0 [&>nav>ol>li]:m-0 [&>nav>ol>li]:mr-4
-			[&>nav>ol>li:after]:content-["›"] [&>nav>ol>li:after]:inline-block [&>nav>ol>li:after]:ml-4
-			[&>nav>ol>li:last-child:after]:content-[""]
-			[&>nav>ol>li>a]:text-12 [&>nav>ol>li>a]:no-underline [&>nav>ol>li>a]:text-black [&>nav>ol>li>a]:font-displayNormal [&>nav>ol>li>a]:font-bold
+			list_breadcrumb:flex list_breadcrumb:items-center list_breadcrumb:list-none list_breadcrumb:p-0
+			breadcrumb_items:p-0 breadcrumb_items:m-0 breadcrumb_items:mr-4
+			breadcrumb_next:content-["›"] breadcrumb_next:inline-block breadcrumb_next:ml-4
+			breadcrumb_items_last:after:content-[""]
+			breadcrumb_link:text-12 breadcrumb_link:no-underline breadcrumb_link:text-black breadcrumb_link:font-displayNormal breadcrumb_link:font-bold
 		'
 		>
 			<Breadcrumbs
