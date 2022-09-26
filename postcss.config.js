@@ -18,6 +18,6 @@ module.exports = {
 			  ]
 			: undefined,
 		'postcss-preset-env',
-		'tailwindcss/nesting',
+		'postcss-nesting',
 	].filter((x) => !!x),
 }
