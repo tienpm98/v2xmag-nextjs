@@ -1,6 +1,7 @@
 module.exports = {
 	plugins: [
 		'tailwindcss',
+
 		process.env.NODE_ENV === 'production'
 			? [
 					'@fullhuman/postcss-purgecss',
@@ -17,5 +18,6 @@ module.exports = {
 			  ]
 			: undefined,
 		'postcss-preset-env',
+		'tailwindcss/nesting',
 	].filter((x) => !!x),
 }
