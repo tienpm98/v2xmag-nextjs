@@ -4,6 +4,7 @@ const Breadcrumb = () => {
 	return (
 		<div
 			className='
+			not-prose
 			list_breadcrumb:flex list_breadcrumb:items-center list_breadcrumb:list-none list_breadcrumb:p-0
 			breadcrumb_items:p-0 breadcrumb_items:m-0 breadcrumb_items:mr-4
 			breadcrumb_next:content-["›"] breadcrumb_next:inline-block breadcrumb_next:ml-4
