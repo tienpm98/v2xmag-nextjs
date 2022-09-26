@@ -16,7 +16,6 @@ module.exports = withFonts({
 				{
 					loader: 'file-loader',
 				},
-				{ loader: 'css-loader' },
 			],
 		})
 		return config
