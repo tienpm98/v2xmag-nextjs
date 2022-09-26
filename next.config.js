@@ -16,6 +16,9 @@ module.exports = withFonts({
 				{
 					loader: 'file-loader',
 				},
+				{
+					localIdentName: '[hash:base64:6]',
+				},
 			],
 		})
 		return config
