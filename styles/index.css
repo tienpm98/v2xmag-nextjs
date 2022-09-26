@@ -184,7 +184,7 @@
 	}
 }
 
-.breadcrumb nav ol {
+.breadcrumb > nav > ol {
 	display: flex;
 	align-items: center;
 	list-style: none;
@@ -192,13 +192,13 @@
 	margin: 0;
 }
 
-.breadcrumb nav ol li {
+.breadcrumb > nav > ol > li {
 	padding: 0;
 	margin: 0;
 	margin-right: 4px;
 }
 
-.breadcrumb nav ol li:after {
+.breadcrumb > nav > ol > li:after {
 	content: '›';
 	display: inline-block;
 	margin-left: 4px;
