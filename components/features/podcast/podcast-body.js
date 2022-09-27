@@ -30,7 +30,7 @@ export default function PodcastBody({ content }) {
 					))}
 				</div>
 				<div className='pt-20'>
-					<Breadcrumb />
+					<Breadcrumb isPodcast />
 				</div>
 			</div>
 		</div>

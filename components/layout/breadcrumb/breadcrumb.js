@@ -1,13 +1,13 @@
 import Breadcrumbs from 'nextjs-breadcrumbs'
 
-const Breadcrumb = () => {
+const Breadcrumb = ({ isPodcast }) => {
 	return (
 		<>
 			<Breadcrumbs
 				rootLabel='HOME'
 				transformLabel={(title) => title.toUpperCase()}
 				omitIndexList={[1]}
-				listClassName='list_breadcrumb'
+				listClassName={isPodcast ? 'list_breadcrumb podcast_body' : 'list_breadcrumb'}
 			/>
 		</>
 	)
