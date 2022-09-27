@@ -1,5 +1,3 @@
-const plugin = require('tailwindcss/plugin')
-
 module.exports = {
 	content: [
 		'./pages/**/*.{js,ts,jsx,tsx}',
@@ -268,15 +266,5 @@ module.exports = {
 		extend: {},
 	},
 
-	plugins: [
-		require('@tailwindcss/typography'),
-		require('@tailwindcss/forms'),
-		plugin(function ({ addVariant }) {
-			addVariant('list_breadcrumb', '&>nav>ol')
-			addVariant('breadcrumb_items', '&>nav>ol>li')
-			addVariant('breadcrumb_items_last', '&>nav>ol>li:last-child')
-			addVariant('breadcrumb_next', '&>nav>ol>li:after')
-			addVariant('breadcrumb_link', '&>nav>ol>li>a')
-		}),
-	],
+	plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')],
 }
