@@ -73,13 +73,13 @@ export default function PostPreviewHorizontal({
 				</div>
 
 				<div className='flex justify-between'>
-					<h5 className='text-gray-default uppercase underline underline-offset-4 font-black text-xs lg:pt-1.5 text-xs'>
+					<h5 className='text-gray-category uppercase underline underline-offset-4 font-black text-xs lg:pt-1.5 text-xs'>
 						<Link href={`/category/${category.id}`}>
 							<a>{category.name}</a>
 						</Link>
 					</h5>
 
-					<p className='lg:hidden flex text-12 text-gray-default'>
+					<p className='lg:hidden flex text-12 text-gray-category'>
 						<span>by&nbsp;</span>
 						<span>{author.name}</span>
 						&nbsp;/&nbsp;

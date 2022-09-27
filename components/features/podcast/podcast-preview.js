@@ -40,11 +40,11 @@ export default function PodcastPreview({
 			</div>
 
 			<div className='flex justify-between'>
-				<h5 className='text-gray-default uppercase underline underline-offset-4 font-black text-12'>
+				<h5 className='text-gray-category uppercase underline underline-offset-4 font-black text-15'>
 					<Link href={`/category/${category.id}`}>
 						<a>{category.name}</a>
 					</Link>
-				</h5>
+			</h5>
 
 				<div className='flex flex-col'>
 					{showAuthor && (

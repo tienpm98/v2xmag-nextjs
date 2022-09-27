@@ -18,7 +18,7 @@ export default function TopHighlight({
 }) {
 	return (
 		<div
-			className={`flex flex-col lg:flex-row lg:gap-20 lg:pb-20 pb-0 ${
+			className={`flex flex-col lg:flex-row lg:gap-25 lg:pb-20 pb-0 ${
 				isVerticalPost ? 'lg:flex-col' : 'lg:flex-row'
 			}`}
 		>
@@ -76,7 +76,7 @@ export default function TopHighlight({
 							</p>
 						)}
 					</div>
-					<h5 className='text-gray-default uppercase underline underline-offset-4 font-black text-xs lg:pt-1.5 text-xs'>
+					<h5 className='text-gray-category uppercase underline underline-offset-4 font-black text-xs lg:pt-1.5 text-xs'>
 						<Link href={`/category/${category.id}`}>
 							<a>{category.name}</a>
 						</Link>

@@ -25,6 +25,7 @@ module.exports = {
 				success: '#0070f3',
 				cyan: '#79FFE1',
 				'gray-default': '#7d7d7d',
+				'gray-category': '#b9b9b9',
 				'gray-menu': '#DADADA',
 				'gray-d5': '#d5d5d5',
 				'gray-8': '#888888',

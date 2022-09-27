@@ -12,7 +12,7 @@ const Section = ({
 		<section className={`${className} ${noPadding ? 'px-0' : 'px-4'} md:px-0`}>
 			<div className='flex justify-between lg:pt-40 lg:pb-40 pt-20 pb-20 items-center'>
 				{title && (
-					<h2 className={`text-12 lg:text-20 font-bold uppercase leading-tight`}>{title}</h2>
+					<h2 className={`text-12 lg:text-24 font-bold uppercase leading-tight`}>{title}</h2>
 				)}
 				{showViewAll && (
 					<Link href={`${categoryTitle}`}>
