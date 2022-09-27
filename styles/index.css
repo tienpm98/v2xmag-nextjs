@@ -23,6 +23,9 @@
 	}
 }
 
+.breadcrumb_text {
+}
+
 .breadcrumb_text > nav > ol {
 	@apply flex items-center list-none p-0 m-0;
 }
