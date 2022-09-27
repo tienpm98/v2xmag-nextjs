@@ -27,12 +27,18 @@
 	display: block;
 }
 
-.next_breadcrumb > nav > ol {
+.list_breadcrumb {
 	display: flex;
 	align-items: center;
 	list-style: none;
 	padding: 0;
 	margin: 0;
+}
+
+.list_breadcrumb > li:after {
+	content: '›';
+	display: inline-block;
+	margin-left: 4px;
 }
 
 .breadcrumb_text > nav > ol {
