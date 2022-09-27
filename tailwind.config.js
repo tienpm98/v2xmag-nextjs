@@ -28,6 +28,7 @@ module.exports = {
 				'gray-menu': '#DADADA',
 				'gray-d5': '#d5d5d5',
 				'gray-8': '#888888',
+				'gray-footer': '#6f6f6f',
 				black: '#000000',
 				'red-c1': '#C10000',
 				'black-1': '#1F1F1D',
