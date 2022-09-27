@@ -23,10 +23,6 @@
 	}
 }
 
-.next_breadcrumb {
-	display: block;
-}
-
 .list_breadcrumb {
 	display: flex;
 	align-items: center;
@@ -35,30 +31,28 @@
 	margin: 0;
 }
 
+.list_breadcrumb > li {
+	padding: 0;
+	margin: 0;
+	margin-right: 4px;
+}
+
 .list_breadcrumb > li:after {
 	content: '›';
 	display: inline-block;
 	margin-left: 4px;
 }
 
-.breadcrumb_text > nav > ol {
-	@apply flex items-center list-none p-0 m-0;
+.list_breadcrumb li:last-child:after {
+	content: '';
 }
 
-.breadcrumb_text > nav > ol > li {
-	@apply p-0 m-0 mr-4;
-}
-
-.breadcrumb_text > nav > ol > li:after {
-	@apply content-['›'] inline-block ml-4;
-}
-
-.breadcrumb_text nav ol li:last-child:after {
-	@apply content-[''];
-}
-
-.breadcrumb_text nav ol a {
-	@apply text-12 no-underline text-black font-displayNormal font-bold;
+.list_breadcrumb li a {
+	font-size: 12px;
+	text-decoration: none;
+	color: #000;
+	font-family: 'HelveticaNowDisplay';
+	font-weight: bold;
 }
 
 .podcast_body {
