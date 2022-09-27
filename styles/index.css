@@ -23,7 +23,8 @@
 	}
 }
 
-.breadcrumb_text {
+.next_breadcrumb {
+	display: block;
 }
 
 .breadcrumb_text > nav > ol {
