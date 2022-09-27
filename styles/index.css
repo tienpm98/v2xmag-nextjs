@@ -27,6 +27,14 @@
 	display: block;
 }
 
+.next_breadcrumb > nav > ol {
+	display: flex;
+	align-items: center;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
 .breadcrumb_text > nav > ol {
 	@apply flex items-center list-none p-0 m-0;
 }
