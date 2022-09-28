@@ -152,7 +152,9 @@ module.exports = {
 				1.1: 1.1,
 			},
 			fontFamily: {
+				displayRegular: 'HelveticaNowDisplayRegular',
 				displayNormal: 'HelveticaNowDisplay',
+				displayBold: 'HelveticaNowDisplayBold',
 				black: 'HelveticaNowDisplayBlack',
 			},
 			backgroundColor: {

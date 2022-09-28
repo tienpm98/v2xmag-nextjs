@@ -10,7 +10,7 @@ export default function PodcastHeader({
 }) {
 	return (
 		<div className='md:container mx-auto lg:pt-90'>
-			<div className='flex flex-col justify-center text-center gap-5 lg:pb-30'>
+			<div className='flex flex-col justify-center text-center lg:pb-30'>
 				<PodcastTitle>{title}</PodcastTitle>
 				<span className='lg:text-15 text-white'>{excerpt}</span>
 			</div>

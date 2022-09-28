@@ -64,7 +64,7 @@ export default function TopHighlight({
 				</div>
 				<div className='flex flex-col lg:gap-30 gap-10'>
 					<div className='flex flex-col'>
-						<span className='text-xs lg:text-15'>{excerpt}</span>
+						<span className='text-xs lg:text-15 font-displayRegular'>{excerpt}</span>
 						{showAuthor && (
 							<p className='text-xs text-gray-default hidden lg:flex'>
 								<span>by&nbsp;</span>
@@ -76,7 +76,7 @@ export default function TopHighlight({
 							</p>
 						)}
 					</div>
-					<h5 className='text-gray-category uppercase underline underline-offset-4 font-black text-xs lg:pt-1.5 text-xs'>
+					<h5 className='text-gray-category uppercase underline underline-offset-4 font-black text-15 lg:pt-1.5'>
 						<Link href={`/category/${category.id}`}>
 							<a>{category.name}</a>
 						</Link>

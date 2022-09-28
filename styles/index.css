@@ -4,18 +4,25 @@
 
 @layer base {
 	@font-face {
-		font-family: 'HelveticaNowDisplay';
+		font-family: 'HelveticaNowDisplayRegular';
 		src: url('/fonts/HelveticaNowDisplay-Regular.woff') format('woff');
-		font-weight: 400;
+	}
+	@font-face {
+		font-family: 'HelveticaNowDisplay';
+		src: url('/fonts/HelveticaNowDisplay-Medium.woff') format('woff');
+	}
+	@font-face {
+		font-family: 'HelveticaNowDisplayBold';
+		src: url('/fonts/HelveticaNowDisplay-Bold.woff') format('woff');
 	}
 	@font-face {
 		font-family: 'HelveticaNowDisplayBlack';
 		src: url('/fonts/HelveticaNowDisplay-Black.woff') format('woff');
-		font-weight: 400;
 	}
 
 	body {
-		font-family: 'HelveticaNowDisplay', 'HelveticaNowDisplayBlack';
+		font-family: 'HelveticaNowDisplay', 'HelveticaNowDisplayBlack',
+			'HelveticaNowDisplayBold' 'HelveticaNowDisplayRegular';
 	}
 	h2,
 	h3 {
@@ -48,10 +55,10 @@
 }
 
 .list_breadcrumb li a {
-	font-size: 12px;
+	font-size: 15px;
 	text-decoration: none;
 	color: #000;
-	font-family: 'HelveticaNowDisplay';
+	font-family: 'HelveticaNowDisplayBold';
 	font-weight: bold;
 }
 

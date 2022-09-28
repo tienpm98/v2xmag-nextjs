@@ -55,7 +55,7 @@ export default function PostPreviewHorizontal({
 					</h3>
 
 					<div className='flex flex-col'>
-						<span className='hidden lg:block pb-2 lg:pb-2.5 text-xs lg:text-15'>
+						<span className='hidden lg:block pb-2 lg:pb-2.5 text-xs lg:text-15 font-displayRegular'>
 							{excerpt}
 						</span>
 
@@ -73,7 +73,7 @@ export default function PostPreviewHorizontal({
 				</div>
 
 				<div className='flex justify-between'>
-					<h5 className='text-gray-category uppercase underline underline-offset-4 font-black text-xs lg:pt-1.5 text-xs'>
+					<h5 className='text-gray-category uppercase underline underline-offset-4 font-black text-xs lg:pt-1.5 lg:text-15'>
 						<Link href={`/category/${category.id}`}>
 							<a>{category.name}</a>
 						</Link>

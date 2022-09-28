@@ -23,7 +23,7 @@ const Banner = ({ post, isPlaying, playPodcast }) => {
 						Sole Mates: Priya ahluwalia and the adidas origaninals superstar
 					</h2>
 
-					<h5 className='text-center lg:text-left text-12 text-white uppercase underline underline-offset-4 font-black pt-15 pb-30 lg:pt-20 lg:pb-0'>
+					<h5 className='text-center lg:text-left text-15 text-white uppercase underline underline-offset-4 font-black pt-15 pb-30 lg:pt-20 lg:pb-0'>
 						<Link href='#'>
 							<a>curture</a>
 						</Link>
@@ -74,7 +74,7 @@ const Banner = ({ post, isPlaying, playPodcast }) => {
 				<div
 					className={`mx-auto lg:mx-0 podcast_description text-white max-w-400 lg:max-h-140 overflow-y-auto ${toggledClass} `}
 				>
-					<span className='text-15 leading-loose'>
+					<span className='text-15 leading-loose font-displayRegular'>
 						There are many variations of passages of Lorem Ipsum available, but
 						the majority have suffered alteration in some form, by injected
 						humour, or randomised words which don't look even slightly

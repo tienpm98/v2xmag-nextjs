@@ -19,7 +19,7 @@ export default function PostHeader({
 					</span>
 				</Link>
 			</div>
-			<div className='flex flex-col justify-center text-center gap-5 lg:pb-30 pb-18'>
+			<div className='flex flex-col justify-center text-center lg:pb-30 pb-18'>
 				<PostTitle>{title}</PostTitle>
 				<span className='text-15 text-black-1'>{excerpt}</span>
 			</div>
