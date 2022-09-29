@@ -137,7 +137,7 @@ export default function Post({ subscription, preview }) {
 	const repeat = (a, n) => Array(n).fill(a).flat(1)
 	const nextPosts = repeat(morePosts, 3)
 
-	const articals = morePosts
+	const articals = [morePosts[0]]
 
 	return (
 		<Layout preview={preview}>
@@ -172,15 +172,17 @@ export default function Post({ subscription, preview }) {
 							</div>
 						</div>
 						<PostBody content={post.content} />
-						<div className='hidden lg:flex flex-col justify-between '>
-							{articals.map((artical, index) => (
-								<Artical
-									key={index}
-									slug={artical.slug}
-									coverImage={artical.coverImage}
-									title={artical.title}
-								/>
-							))}
+						<div className='hidden lg:flex flex-col justify-between relative'>
+							<div className='sticky top-70'>
+								{articals.map((artical, index) => (
+									<Artical
+										key={index}
+										slug={artical.slug}
+										coverImage={artical.coverImage}
+										title={artical.title}
+									/>
+								))}
+							</div>
 						</div>
 					</div>
 				</article>
